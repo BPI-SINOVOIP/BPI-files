@@ -1,0 +1,88 @@
+
+root@bpi-iot-ros-ai:~/memtest/tinymembench# ./tinymembench                      
+tinymembench v0.4.9 (simple benchmark for memory throughput and latency)        
+                                                                                
+==========================================================================      
+== Memory bandwidth tests                                               ==      
+==                                                                      ==      
+== Note 1: 1MB = 1000000 bytes                                          ==      
+== Note 2: Results for 'copy' tests show how many bytes can be          ==      
+==         copied per second (adding together read and writen           ==      
+==         bytes would have provided twice higher numbers)              ==      
+== Note 3: 2-pass copy means that we are using a small temporary buffer ==      
+==         to first fetch data into it, and only then write it to the   ==      
+==         destination (source -> L1 cache, L1 cache -> destination)    ==      
+== Note 4: If sample standard deviation exceeds 0.1%, it is shown in    ==      
+==         brackets                                                     ==      
+==========================================================================      
+                                                                                
+ C copy backwards                                     :   1167.5 MB/s (1.2%)    
+ C copy backwards (32 byte blocks)                    :   1186.1 MB/s (0.8%)    
+ C copy backwards (64 byte blocks)                    :   1190.6 MB/s (0.5%)    
+ C copy                                               :   1191.1 MB/s (0.5%)    
+ C copy prefetched (32 bytes step)                    :   1222.5 MB/s (0.8%)    
+ C copy prefetched (64 bytes step)                    :   1215.7 MB/s (0.6%)    
+ C 2-pass copy                                        :   1185.2 MB/s (0.4%)    
+ C 2-pass copy prefetched (32 bytes step)             :   1183.2 MB/s (0.3%)    
+ C 2-pass copy prefetched (64 bytes step)             :   1181.6 MB/s (0.5%)    
+ C fill                                               :   2943.3 MB/s           
+ C fill (shuffle within 16 byte blocks)               :   2944.8 MB/s (0.5%)    
+ C fill (shuffle within 32 byte blocks)               :   2943.5 MB/s           
+ C fill (shuffle within 64 byte blocks)               :   2943.7 MB/s (0.5%)    
+ ---                                                                            
+ standard memcpy                                      :   1245.9 MB/s           
+ standard memset                                      :   2944.6 MB/s (0.5%)    
+ ---                                                                            
+ NEON LDP/STP copy                                    :   1236.4 MB/s (0.5%)    
+ NEON LDP/STP copy pldl2strm (32 bytes step)          :    930.8 MB/s (0.6%)    
+ NEON LDP/STP copy pldl2strm (64 bytes step)          :   1112.9 MB/s (0.3%)    
+ NEON LDP/STP copy pldl1keep (32 bytes step)          :   1293.2 MB/s (0.5%)    
+ NEON LDP/STP copy pldl1keep (64 bytes step)          :   1293.3 MB/s (0.4%)    
+ NEON LD1/ST1 copy                                    :   1240.5 MB/s (0.6%)    
+ NEON STP fill                                        :   2945.2 MB/s (0.6%)    
+ NEON STNP fill                                       :   2701.9 MB/s           
+ ARM LDP/STP copy                                     :   1232.2 MB/s (0.4%)    
+ ARM STP fill                                         :   2944.6 MB/s           
+ ARM STNP fill                                        :   2702.5 MB/s (1.2%)    
+                                                                                
+==========================================================================      
+== Memory latency test                                                  ==      
+==                                                                      ==      
+== Average time is measured for random memory accesses in the buffers   ==      
+== of different sizes. The larger is the buffer, the more significant   ==      
+== are relative contributions of TLB, L1/L2 cache misses and SDRAM      ==      
+== accesses. For extremely large buffer sizes we are expecting to see   ==      
+== page table walk with several requests to SDRAM for almost every      ==      
+== memory access (though 64MiB is not nearly large enough to experience ==      
+== this effect to its fullest).                                         ==      
+==                                                                      ==      
+== Note 1: All the numbers are representing extra time, which needs to  ==      
+==         be added to L1 cache latency. The cycle timings for L1 cache ==      
+==         latency can be usually found in the processor documentation. ==      
+== Note 2: Dual random read means that we are simultaneously performing ==      
+==         two independent memory accesses at a time. In the case if    ==      
+==         the memory subsystem can't handle multiple outstanding       ==      
+==         requests, dual random read has the same timings as two       ==      
+==         single reads performed one after another.                    ==      
+==========================================================================      
+                                                                                
+block size : single random read / dual random read                              
+      1024 :    0.0 ns          /     0.0 ns                                    
+      2048 :    0.0 ns          /     0.0 ns                                    
+      4096 :    0.0 ns          /     0.0 ns                                    
+      8192 :    0.0 ns          /     0.0 ns                                    
+     16384 :    0.0 ns          /     0.0 ns                                    
+     32768 :    0.0 ns          /     0.1 ns                                    
+     65536 :    4.7 ns          /     8.5 ns                                    
+    131072 :    7.2 ns          /    12.0 ns                                    
+    262144 :    8.5 ns          /    13.5 ns                                    
+    524288 :   10.3 ns          /    16.2 ns                                    
+   1048576 :   73.8 ns          /   115.7 ns                                    
+   2097152 :  108.8 ns          /   151.2 ns                                    
+   4194304 :  130.3 ns          /   170.6 ns                                    
+   8388608 :  141.5 ns          /   179.6 ns                                    
+  16777216 :  147.9 ns          /   185.1 ns                                    
+  33554432 :  152.2 ns          /   188.6 ns                                    
+  67108864 :  154.9 ns          /   190.5 ns                                    
+root@bpi-iot-ros-ai:~/memtest/tinymembench# 
+
