@@ -1,0 +1,36 @@
+#!/bin/bash
+LCD1602="lcd1602"
+LCD1602="mosquitto_pub -t bananapi/rfid -m "
+
+# Print the IP address
+_HOSTNAME=$(hostname)
+_IP=$(hostname -I 2>/dev/null) || true
+if [ "$_IP" ]; then
+  printf "My IP address is %s\n" "$_IP"
+  lcd1602 $_HOSTNAME $_IP
+  sleep 5
+fi
+
+
+lcd1602 'Please Insert...' 'USB UHF RFID'
+while [ 1 ] ; do
+  if [ -c /dev/ttyUSB1 ] ; then
+    lcd1602 'Please Insert...' 'USB UHF RFID OK!'
+    sleep 3
+    break;
+  fi
+  sleep 1
+done
+
+
+lcd1602 'start...' 'mqtt_lcd1602'
+mqtt_lcd1602.sh &
+sleep 3
+
+mqtt_rfid.sh &
+sleep 5
+
+mqtt_epc.sh &
+sleep 5
+
+lcd1602 'Banana Pi' 'RFID DEMO'
