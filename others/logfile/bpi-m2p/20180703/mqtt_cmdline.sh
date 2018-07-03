@@ -1,6 +1,13 @@
 #!/bin/bash
+#./mqtt_cmdline.sh 192.168.88.100
+LOCAL="127.0.0.1"
+GW=$1
+if [ -z ${GW} ] ; then
+  GW=$LOCAL
+fi
 LCD1602="lcd1602"
-LCD1602="mosquitto_pub -t bananapi/rfid -m "
+LCD1602="mosquitto_pub -h $GW -t bananapi/rfid -m "
+echo LCD1602=$LCD1602
 
 LCD="Hello, BananaPi"
 RFID=""
@@ -13,9 +20,9 @@ get_rfid() {
 T=0
 P=0
 while [ 1 ] ; do
-  LCD=`mosquitto_sub -C 1 -t bananapi/rfid`
+  LCD=`mosquitto_sub -h $GW -C 1 -t bananapi/rfid`
   get_rfid
-  echo $RFID
+  echo $LCD
   case ${LCD} in
   *D0020C3047172380)
     echo "MIKEY"
