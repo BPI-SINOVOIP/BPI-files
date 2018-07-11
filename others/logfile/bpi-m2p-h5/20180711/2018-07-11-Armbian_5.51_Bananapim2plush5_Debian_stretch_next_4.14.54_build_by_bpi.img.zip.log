@@ -1,0 +1,860 @@
+U-Boot SPL 2017.11-armbian (Jul 11 2018 - 16:22:24)
+DRAM: 1024 MiB
+Trying to boot from MMC1
+NOTICE:  BL3-1: Running on H5 (1718) in SRAM A2 (@0x44000)
+NOTICE:  Configuring SPC Controller
+NOTICE:  BL3-1: v1.0(debug):c9f55c0
+NOTICE:  BL3-1: Built : 16:22:14, Jul 11 2018
+NOTICE:  DT: sun50i-h5-bananapi-m2-plus
+NOTICE:  SCPI: dummy stub handler, implementation level: 000000
+INFO:    BL3-1: Initializing runtime services
+INFO:    BL3-1: Preparing for EL3 exit to normal world
+INFO:    BL3-1: Next image address: 0x4a000000, SPSR: 0x3c9
+
+
+U-Boot 2017.11-armbian (Jul 11 2018 - 16:22:24 +0800) Allwinner Technology
+
+CPU:   Allwinner H5 (SUN50I)
+Model: Banana Pi BPI-M2+ (H5)
+DRAM:  1 GiB
+MMC:   SUNXI SD/MMC: 0
+*** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Net:   No ethernet found.
+starting USB...
+USB0:   USB EHCI 1.00
+USB1:   USB OHCI 1.0
+scanning bus 0 for devices... 1 USB Device(s) found
+scanning bus 1 for devices... 2 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+Autoboot in 1 seconds, press <Space> to stop
+switch to partitions #0, OK
+mmc0 is current device
+Scanning mmc 0:1...
+Found U-Boot script /boot/boot.scr
+3090 bytes read in 193 ms (15.6 KiB/s)
+## Executing script at 4fc00000
+U-boot loaded from SD
+Boot script loaded from mmc
+116 bytes read in 155 ms (0 Bytes/s)
+31150 bytes read in 320 ms (94.7 KiB/s)
+4179 bytes read in 407 ms (9.8 KiB/s)
+Applying kernel provided DT fixup script (sun50i-h5-fixup.scr)
+## Executing script at 44000000
+4924079 bytes read in 515 ms (9.1 MiB/s)
+13080584 bytes read in 899 ms (13.9 MiB/s)
+## Loading init Ramdisk from Legacy Image at 4fe00000 ...
+   Image Name:   uInitrd
+   Image Type:   AArch64 Linux RAMDisk Image (gzip compressed)
+   Data Size:    4924015 Bytes = 4.7 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 4fa00000
+   Booting using the fdt blob at 0x4fa00000
+   Loading Ramdisk to 49b4d000, end 49fff26f ... OK
+   reserving fdt memory region: addr=4fa00000 size=6d000
+   Loading Device Tree to 0000000049add000, end 0000000049b4cfff ... OK
+
+Starting kernel ...
+
+Loading, please wait...
+starting version 232
+Begin: Loading essential drivers ... done.
+Begin: Running /scripts/init-premount ... done.
+Begin: Mounting root file system ... Begin: Running /scripts/local-top ... done.
+Begin: Running /scripts/local-premount ... Scanning for Btrfs filesystems
+done.
+Begin: Will now check root file system ... fsck from util-linux 2.29.2
+[/sbin/fsck.ext4 (1) -- /dev/mmcblk0p1] fsck.ext4 -a -C0 /dev/mmcblk0p1 
+/dev/mmcblk0p1: clean, 37388/73296 files, 270063/292864 blocks
+done.
+done.
+Begin: Running /scripts/local-bottom ... done.
+Begin: Running /scripts/init-bottom ... done.
+
+Welcome to Debian GNU/Linux 9 (stretch)!
+
+[  OK  ] Listening on Syslog Socket.
+[  OK  ] Set up automount Arbitrary Executab…rmats File System Automount Point.
+[  OK  ] Started Forward Password Requests to Wall Directory Watch.
+[  OK  ] Created slice User and Session Slice.
+[  OK  ] Reached target Swap.
+[  OK  ] Listening on Journal Audit Socket.
+[  OK  ] Reached target Remote File Systems.
+[  OK  ] Listening on udev Kernel Socket.
+[  OK  ] Listening on Journal Socket.
+[  OK  ] Started Dispatch Password Requests to Console Directory Watch.
+[  OK  ] Reached target Paths.
+[  OK  ] Created slice System Slice.
+         Starting Load Kernel Modules...
+         Starting Create list of required st…ce nodes for the current kernel...
+         Mounting Debug File System...
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+[  OK  ] Reached target Slices.
+         Mounting POSIX Message Queue File System...
+[  OK  ] Listening on Journal Socket (/dev/log).
+         Starting Restore / save the current clock...
+[  OK  ] Reached target Encrypted Volumes.
+         Starting Journal Service...
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.
+[  OK  ] Listening on fsck to fsckd communication Socket.
+         Starting Remount Root and Kernel File Systems...
+         Starting Nameserver information manager...
+[  OK  ] Listening on udev Control Socket.
+         Mounting Huge Pages File System...
+         Starting Set the console keyboard layout...
+[  OK  ] Mounted Debug File System.
+[  OK  ] Mounted Huge Pages File System.
+[  OK  ] Mounted POSIX Message Queue File System.
+[  OK  ] Started Journal Service.
+[  OK  ] Started Load Kernel Modules.
+[  OK  ] Started Create list of required sta…vice nodes for the current kernel.
+[  OK  ] Started Restore / save the current clock.
+[  OK  ] Started Remount Root and Kernel File Systems.
+         Starting Load/Save Random Seed...
+         Starting udev Coldplug all Devices...
+         Starting Create Static Device Nodes in /dev...
+         Starting Apply Kernel Variables...
+         Mounting Configuration File System...
+         Starting Flush Journal to Persistent Storage...
+[  OK  ] Mounted Configuration File System.
+[  OK  ] Started Nameserver information manager.
+[  OK  ] Started Load/Save Random Seed.
+[  OK  ] Started Create Static Device Nodes in /dev.
+[  OK  ] Started Apply Kernel Variables.
+         Starting udev Kernel Device Manager...
+[  OK  ] Started Flush Journal to Persistent Storage.
+[  OK  ] Started Set the console keyboard layout.
+[  OK  ] Reached target Local File Systems (Pre).
+         Mounting /tmp...
+[  OK  ] Mounted /tmp.
+[  OK  ] Started udev Kernel Device Manager.
+[  OK  ] Started udev Coldplug all Devices.
+[  OK  ] Reached target Local File Systems.
+         Starting Raise network interfaces...
+         Starting Create Volatile Files and Directories...
+         Starting Armbian ZRAM config...
+         Starting Set console font and keymap...
+[  OK  ] Started Create Volatile Files and Directories.
+[  OK  ] Reached target System Time Synchronized.
+[  OK  ] Started Entropy daemon using the HAVEGE algorithm.
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Started Set console font and keymap.
+[  OK  ] Found device /dev/ttyS0.
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+[  OK  ] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[  OK  ] Reached target Sound Card.
+         Starting Load/Save RF Kill Switch Status...
+[  OK  ] Started Load/Save RF Kill Switch Status.
+[  OK  ] Started Armbian ZRAM config.
+         Starting Armbian memory supported logging...
+[  OK  ] Started Raise network interfaces.
+[FAILED] Failed to start Armbian memory supported logging.
+See 'systemctl status armbian-ramlog.service' for details.
+[  OK  ] Reached target System Initialization.
+         Starting Armbian filesystem resize...
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Started Daily apt download activities.
+         Starting Armbian hardware optimization...
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Reached target Sockets.
+         Starting Armbian hardware monitoring...
+[  OK  ] Started Daily apt upgrade and clean activities.
+[  OK  ] Reached target Timers.
+[  OK  ] Started Armbian hardware optimization.
+[  OK  ] Started Armbian filesystem resize.
+[  OK  ] Started Armbian hardware monitoring.
+[  OK  ] Reached target Basic System.
+[  OK  ] Started Armbian first run tasks.
+[  OK  ] Created slice system-getty.slice.
+[  OK  ] Started Regular background program processing daemon.
+[  OK  ] Started D-Bus System Message Bus.
+         Starting Network Manager...
+         Starting System Logging Service...
+         Starting Login Service...
+         Starting LSB: Start/stop sysstat's sadc...
+         Starting Save/Restore Sound Card State...
+         Starting LSB: Load kernel modules needed to enable cpufreq scaling...
+[  OK  ] Started Save/Restore Sound Card State.
+[  OK  ] Started System Logging Service.
+[  OK  ] Started LSB: Start/stop sysstat's sadc.
+[  OK  ] Started Login Service.
+[  OK  ] Started LSB: Load kernel modules needed to enable cpufreq scaling.
+         Starting LSB: set CPUFreq kernel parameters...
+[  OK  ] Started LSB: set CPUFreq kernel parameters.
+         Starting LSB: Set sysfs variables from /etc/sysfs.conf...
+[  OK  ] Started LSB: Set sysfs variables from /etc/sysfs.conf.
+[  OK  ] Started Network Manager.
+         Starting Network Manager Wait Online...
+[  OK  ] Reached target Network.
+         Starting Permit User Sessions...
+[  OK  ] Started Unattended Upgrades Shutdown.
+         Starting OpenBSD Secure Shell server...
+[  OK  ] Started Permit User Sessions.
+         Starting Network Manager Script Dispatcher Service...
+[  OK  ] Started Network Manager Script Dispatcher Service.
+         Starting Hostname Service...
+[  OK  ] Started OpenBSD Secure Shell server.
+[  OK  ] Started Hostname Service.
+         Starting Authorization Manager...
+         Starting WPA supplicant...
+[  OK  ] Started Authorization Manager.
+[  OK  ] Started WPA supplicant.
+[  OK  ] Started Network Manager Wait Online.
+[  OK  ] Reached target Network is Online.
+         Starting LSB: Start NTP daemon...
+         Starting /etc/rc.local Compatibility...
+         Starting LSB: Advanced IEEE 802.11 management daemon...
+[  OK  ] Started /etc/rc.local Compatibility.
+[  OK  ] Started LSB: Advanced IEEE 802.11 management daemon.
+[  OK  ] Started Serial Getty on ttyS0.
+[  OK  ] Started Getty on tty1.
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Started LSB: Start NTP daemon.
+[  OK  ] Reached target Multi-User System.
+[  OK  ] Reached target Graphical Interface.
+         Starting Update UTMP about System Runlevel Changes...
+[  OK  ] Started Update UTMP about System Runlevel Changes.
+
+Debian GNU/Linux 9 bananapim2plush5 ttyS0
+
+bananapim2plush5 login: root
+Password: 
+You are required to change your password immediately (root enforced)
+Changing password for root.
+(current) UNIX password: 
+Enter new UNIX password: 
+Retype new UNIX password: 
+ ____                                  ____  _   __  __ ____          ___   _ 
+| __ )  __ _ _ __   __ _ _ __   __ _  |  _ \(_) |  \/  |___ \  _     / / | | |
+|  _ \ / _` | '_ \ / _` | '_ \ / _` | | |_) | | | |\/| | __) || |_  | || |_| |
+| |_) | (_| | | | | (_| | | | | (_| | |  __/| | | |  | |/ __/_   _| | ||  _  |
+|____/ \__,_|_| |_|\__,_|_| |_|\__,_| |_|   |_| |_|  |_|_____||_|   | ||_| |_|
+                                                                     \_\      
+ ______                                                                       
+| ___\ \                                                                      
+|___ \| |                                                                     
+ ___) | |                                                                     
+|____/| |                                                                     
+     /_/                                                                      
+
+Welcome to ARMBIAN 5.51 user-built Debian GNU/Linux 9 (stretch) 4.14.54-sunxi64   
+System load:   0.37 0.09 0.03  	Up time:       0 min		
+Memory usage:  5 % of 994MB  	IP:            192.168.88.101
+Usage of /:    4% of 29G    	
+
+New to Armbian? Check the documentation first: https://docs.armbian.com
+
+
+Thank you for choosing Armbian! Support: www.armbian.com
+
+Creating a new user account. Press <Ctrl-C> to abort
+
+Please provide a username (eg. your forename): pi
+Trying to add user pi
+Adding user `pi' ...
+Adding new group `pi' (1000) ...
+Adding new user `pi' (1000) with group `pi' ...
+Creating home directory `/home/pi' ...
+Copying files from `/etc/skel' ...
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+Changing the user information for pi
+Enter the new value, or press ENTER for the default
+	Full Name []: Banana Pi
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] Y
+
+Dear Banana Pi, your account pi has been created and is sudo enabled.
+Please use this account for your daily work from now on.
+
+root@bananapim2plush5:~# uname -a
+Linux bananapim2plush5 4.14.54-sunxi64 #6 SMP Wed Jul 11 16:28:11 CST 2018 aarch64 GNU/Linux
+root@bananapim2plush5:~# reboot
+[  OK  ] Stopped target Sound Card.
+[  OK  ] Stopped target Timers.
+[  OK  ] Close         Unmounting /var/log.hdd...
+         Stopping Armbian ZRAM config...
+[  OK  ] Stopped Daily apt upgrade and clean activities.
+[  OK  ] Stopped Daily apt download activities.
+[  OK  ] Stopped target System Time Synchronized.
+         Stopping User Manager for UID 0...
+[  OK  ] Stopped target Graphical Interface.
+[  OK  ] Stopped target Multi-User System.
+         Stopping Regular background program processing daemon...
+[  OK  ] Stopped target Login Prompts.
+         Stopping Getty on tty1...
+         Stopping Serial Getty on ttyS0...
+         Stopping OpenBSD Secure Shell server...
+         Stopping Unattended Upgrades Shutdown...
+         Stopping LSB: Set sysfs variables from /etc/sysfs.conf...
+         Stopping System Logging Service...
+         Stopping LSB: Advanced IEEE 802.11 management daemon...
+         Stopping LSB: Start/stop sysstat's sadc...
+         Stopping LSB: Start NTP daemon...
+[  OK  ] Stopped Regular background program processing daemon.
+[  OK  ] Stopped System Logging Service.
+[  OK  ] Stopped Authorization Manager.
+[  OK  ] Stopped Serial Getty on ttyS0.
+[  OK  ] Stopped Getty on tty1.
+[  OK  ] Stopped OpenBSD Secure Shell server.
+[  OK  ] Stopped User Manager for UID 0.
+[  OK  ] Stopped Save/Restore Sound Card State.
+[  OK  ] Unmounted /var/log.hdd.
+[  OK  ] Stopped Session 1 of user root.
+[  OK  ] Stopped Armbian ZRAM config.
+[  OK  ] Stopped LSB: Advanced IEEE 802.11 management daemon.
+[  OK  ] Stopped LSB: Set sysfs variables from /etc/sysfs.conf.
+[  OK  ] Stopped LSB: Start/stop sysstat's sadc.
+         Stopping LSB: set CPUFreq kernel parameters...
+[  OK  ] Removed slice User Slice of root.
+         Stopping Login Service...
+[  OK  ] Removed slice system-getty.slice.
+[  OK  ] Stopped Armbian first run tasks.
+[  OK  ] Stopped /etc/rc.local Compatibility.
+         Stopping Permit User Sessions...
+[  OK  ] Removed slice system-serial\x2dgetty.slice.
+[  OK  ] Stopped Login Service.
+[  OK  ] Stopped LSB: Start NTP daemon.
+[  OK  ] Stopped Permit User Sessions.
+[  OK  ] Stopped target Network is Online.
+[  OK  ] Stopped Network Manager Wait Online.
+[  OK  ] Stopped LSB: set CPUFreq kernel parameters.
+         Stopping LSB: Load kernel modules needed to enable cpufreq scaling...
+[  OK  ] Stopped LSB: Load kernel modules needed to enable cpufreq scaling.
+[  OK  ] Stopped target Remote File Systems.
+[  OK  ] Stopped Unattended Upgrades Shutdown.
+[  OK  ] Stopped target Network.
+         Stopping Network Manager...
+         Stopping Raise network interfaces...
+         Stopping WPA supplicant...
+[  OK  ] Stopped Raise network interfaces.
+[  OK  ] Stopped WPA supplicant.
+[  OK  ] Stopped Network Manager.
+         Stopping D-Bus System Message Bus...
+[  OK  ] Stopped D-Bus System Message Bus.
+[  OK  ] Stopped target Basic System.
+[  OK  ] Stopped target Slices.
+[  OK  ] Removed slice User and Session Slice.
+[  OK  ] Stopped target Sockets.
+[  OK  ] Closed Syslog Socket.
+[  OK  ] Stopped target Paths.
+[  OK  ] Closed D-Bus System Message Bus Socket.
+[  OK  ] Stopped target System Initialization.
+         Stopping Entropy daemon using the HAVEGE algorithm...
+[  OK  ] Stopped target Swap.
+         Deactivating swap /dev/zram1...
+         Deactivating swap /dev/zram2...
+         Deactivating swap /dev/zram4...
+         Deactivating swap /dev/zram3...
+         Stopping Update UTMP about System Boot/Shutdown...
+[  OK  ] Stopped target Encrypted Volumes.
+[  OK  ] Stopped Forward Password Requests to Wall Directory Watch.
+[  OK  ] Stopped Dispatch Password Requests to Console Directory Watch.
+[  OK  ] Stopped Apply Kernel Variables.
+[  OK  ] Stopped Load Kernel Modules.
+         Stopping Restore / save the current clock...
+[  OK  ] Stopped Entropy daemon using the HAVEGE algorithm.
+[  OK  ] Deactivated swap /dev/zram1.
+[  OK  ] Deactivated swap /dev/zram2.
+[  OK  ] Deactivated swap /dev/zram4.
+[  OK  ] Deactivated swap /dev/zram3.
+[  OK  ] Stopped Restore / save the current clock.
+[  OK  ] Stopped Update UTMP about System Boot/Shutdown.
+         Unmounting /var/log...
+[  OK  ] Stopped Create Volatile Files and Directories.
+[  OK  ] Stopped target Local File Systems.
+         Unmounting /run/user/0...
+         Unmounting /tmp...
+         Stopping Load/Save Random Seed...
+[  OK  ] Unmounted /var/log.
+[  OK  ] Unmounted /run/user/0.
+[  OK  ] Unmounted /tmp.
+[  OK  ] Stopped Load/Save Random Seed.
+[  OK  ] Reached target Unmount All Filesystems.
+[  OK  ] Stopped target Local File Systems (Pre).
+[  OK  ] Stopped Remount Root and Kernel File Systems.
+[  OK  ] Stopped Create Static Device Nodes in /dev.
+[  OK  ] Reached target Shutdown.
+[   68.105047] reboot: Restarting system
+INFO:    PSCI Affinity Map:
+INFO:      AffInst: Level 0, MPID 0x0, State ON
+INFO:      AffInst: Level 0, MPID 0x1, State ON
+INFO:      AffInst: Level 0, MPID 0x2, State ON
+INFO:      AffInst: Level 0, MPID 0x3, State ON
+
+U-Boot SPL 2017.11-armbian (Jul 11 2018 - 16:22:24)
+DRAM: 1024 MiB
+Trying to boot from MMC1
+NOTICE:  BL3-1: Running on H5 (1718) in SRAM A2 (@0x44000)
+NOTICE:  Configuring SPC Controller
+NOTICE:  BL3-1: v1.0(debug):c9f55c0
+NOTICE:  BL3-1: Built : 16:22:14, Jul 11 2018
+NOTICE:  DT: sun50i-h5-bananapi-m2-plus
+NOTICE:  SCPI: dummy stub handler, implementation level: 000000
+INFO:    BL3-1: Initializing runtime services
+INFO:    BL3-1: Preparing for EL3 exit to normal world
+INFO:    BL3-1: Next image address: 0x4a000000, SPSR: 0x3c9
+
+
+U-Boot 2017.11-armbian (Jul 11 2018 - 16:22:24 +0800) Allwinner Technology
+
+CPU:   Allwinner H5 (SUN50I)
+Model: Banana Pi BPI-M2+ (H5)
+DRAM:  1 GiB
+MMC:   SUNXI SD/MMC: 0
+*** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Net:   No ethernet found.
+starting USB...
+USB0:   USB EHCI 1.00
+USB1:   USB OHCI 1.0
+scanning bus 0 for devices... 1 USB Device(s) found
+scanning bus 1 for devices... 2 USB Device(s) found
+       scanning usb for storage devices... 0 Storage Device(s) found
+Autoboot in 1 seconds, press <Space> to stop
+switch to partitions #0, OK
+mmc0 is current device
+Scanning mmc 0:1...
+Found U-Boot script /boot/boot.scr
+3090 bytes read in 192 ms (15.6 KiB/s)
+## Executing script at 4fc00000
+U-boot loaded from SD
+Boot script loaded from mmc
+165 bytes read in 154 ms (1000 Bytes/s)
+31150 bytes read in 321 ms (94.7 KiB/s)
+4179 bytes read in 408 ms (9.8 KiB/s)
+Applying kernel provided DT fixup script (sun50i-h5-fixup.scr)
+## Executing script at 44000000
+4924079 bytes read in 512 ms (9.2 MiB/s)
+13080584 bytes read in 899 ms (13.9 MiB/s)
+## Loading init Ramdisk from Legacy Image at 4fe00000 ...
+   Image Name:   uInitrd
+   Image Type:   AArch64 Linux RAMDisk Image (gzip compressed)
+   Data Size:    4924015 Bytes = 4.7 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 4fa00000
+   Booting using the fdt blob at 0x4fa00000
+   Loading Ramdisk to 49b4d000, end 49fff26f ... OK
+   reserving fdt memory region: addr=4fa00000 size=6d000
+   Loading Device Tree to 0000000049add000, end 0000000049b4cfff ... OK
+
+Starting kernel ...
+
+Loading, please wait...
+starting version 232
+Begin: Loading essential drivers ... done.
+Begin: Running /scripts/init-premount ... done.
+Begin: Mounting root file system ... Begin: Running /scripts/local-top ... done.
+Begin: Running /scripts/local-premount ... Scanning for Btrfs filesystems
+done.
+Begin: Will now check root file system ... fsck from util-linux 2.29.2
+[/sbin/fsck.ext4 (1) -- /dev/mmcblk0p1] fsck.ext4 -a -C0 /dev/mmcblk0p1 
+/dev/mmcblk0p1: clean, 37417/1921984 files, 386530/7712800 blocks
+done.
+done.
+Begin: Running /scripts/local-bottom ... done.
+Begin: Running /scripts/init-bottom ... done.
+
+Welcome to Debian GNU/Linux 9 (stretch)!
+
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.
+[  OK  ] Listening on Journal Socket (/dev/log).
+[  OK  ] Started Forward Password Requests to Wall Directory Watch.
+[  OK  ] Listening on Journal Socket.
+[  OK  ] Reached target Remote File Systems.
+[  OK  ] Set up automount Arbitrary Executab…rmats File System Automount Point.
+[  OK  ] Listening on Journal Audit Socket.
+[  OK  ] Reached target Swap.
+[  OK  ] Listening on Syslog Socket.
+[  OK  ] Created slice User and Session Slice.
+[  OK  ] Listening on fsck to fsckd communication Socket.
+[  OK  ] Created slice System Slice.
+[  OK  ] Created slice system-getty.slice.
+[  OK  ] Reached target Slices.
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+         Mounting Debug File System...
+         Starting Nameserver information manager...
+         Starting Create list of required st…ce nodes for the current kernel...
+         Starting Remount Root and Kernel File Systems...
+         Starting Set the console keyboard layout...
+         Starting Restore / save the current clock...
+[  OK  ] Listening on udev Control Socket.
+         Mounting Huge Pages File System...
+[  OK  ] Started Dispatch Password Requests to Console Directory Watch.
+[  OK  ] Reached target Encrypted Volumes.
+[  OK  ] Reached target Paths.
+[  OK  ] Listening on udev Kernel Socket.
+         Starting Load Kernel Modules...
+         Mounting POSIX Message Queue File System...
+         Starting Journal Service...
+[  OK  ] Mounted Debug File System.
+[  OK  ] Mounted Huge Pages File System.
+[  OK  ] Mounted POSIX Message Queue File System.
+[  OK  ] Started Create list of required sta…vice nodes for the current kernel.
+[  OK  ] Started Remount Root and Kernel File Systems.
+[  OK  ] Started Restore / save the current clock.
+[  OK  ] Started Load Kernel Modules.
+[  OK  ] Started Nameserver information manager.
+[  OK  ] Started Journal Service.
+         Mounting Configuration File System...
+         Starting Apply Kernel Variables...
+         Starting Load/Save Random Seed...
+         Starting Flush Journal to Persistent Storage...
+         Starting udev Coldplug all Devices...
+         Starting Create Static Device Nodes in /dev...
+[  OK  ] Mounted Configuration File System.
+[  OK  ] Started Set the console keyboard layout.
+[  OK  ] Started Apply Kernel Variables.
+[  OK  ] Started Load/Save Random Seed.
+[  OK  ] Started Create Static Device Nodes in /dev.
+         Starting udev Kernel Device Manager...
+[  OK  ] Reached target Local File Systems (Pre).
+         Mounting /tmp...
+[  OK  ] Mounted /tmp.
+[  OK  ] Started Flush Journal to Persistent Storage.
+[  OK  ] Reached target Local File Systems.
+         Starting Armbian ZRAM config...
+         Starting Raise network interfaces...
+         Starting Create Volatile Files and Directories...
+         Starting Set console font and keymap...
+[  OK  ] Started udev Kernel Device Manager.
+[  OK  ] Started udev Coldplug all Devices.
+[  OK  ] Started Set console font and keymap.
+[  OK  ] Started Create Volatile Files and Directories.
+[  OK  ] Started Entropy daemon using the HAVEGE algorithm.
+[  OK  ] Reached target System Time Synchronized.
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+[  OK  ] Found device /dev/ttyS0.
+[  OK  ] Listening on Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[  OK  ] Reached target Sound Card.
+         Starting Load/Save RF Kill Switch Status...
+[  OK  ] Started Load/Save RF Kill Switch Status.
+[  OK  ] Started Armbian ZRAM config.
+         Starting Armbian memory supported logging...
+[  OK  ] Started Raise network interfaces.
+[FAILED] Failed to start Armbian memory supported logging.
+See 'systemctl status armbian-ramlog.service' for details.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Started Daily apt download activities.
+         Starting Armbian hardware monitoring...
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Started Daily apt upgrade and clean activities.
+[  OK  ] Reached target Timers.
+         Starting Armbian hardware optimization...
+[  OK  ] Started Armbian hardware optimization.
+[  OK  ] Started Armbian hardware monitoring.
+[  OK  ] Reached target Basic System.
+[  OK  ] Started Regular background program processing daemon.
+         Starting System Logging Service...
+         Starting Save/Restore Sound Card State...
+         Starting LSB: Load kernel modules needed to enable cpufreq scaling...
+         Starting LSB: Start/stop sysstat's sadc...
+         Starting Login Service...
+[  OK  ] Started D-Bus System Message Bus.
+         Starting Network Manager...
+[  OK  ] Started System Logging Service.
+[  OK  ] Started Save/Restore Sound Card State.
+[  OK  ] Started Login Service.
+[  OK  ] Started LSB: Start/stop sysstat's sadc.
+[  OK  ] Started LSB: Load kernel modules needed to enable cpufreq scaling.
+         Starting LSB: set CPUFreq kernel parameters...
+[  OK  ] Started LSB: set CPUFreq kernel parameters.
+         Starting LSB: Set sysfs variables from /etc/sysfs.conf...
+[  OK  ] Started LSB: Set sysfs variables from /etc/sysfs.conf.
+[  OK  ] Started Network Manager.
+[  OK  ] Reached target Network.
+         Starting OpenBSD Secure Shell server...
+[  OK  ] Started Unattended Upgrades Shutdown.
+         Starting Permit User Sessions...
+         Starting Network Manager Wait Online...
+[  OK  ] Started Permit User Sessions.
+         Starting Network Manager Script Dispatcher Service...
+[  OK  ] Started Network Manager Script Dispatcher Service.
+         Starting Hostname Service...
+[  OK  ] Started OpenBSD Secure Shell server.
+[  OK  ] Started Hostname Service.
+         Starting Authorization Manager...
+         Starting WPA supplicant...
+[  OK  ] Started Authorization Manager.
+[  OK  ] Started WPA supplicant.
+[  OK  ] Started Network Manager Wait Online.
+[  OK  ] Reached target Network is Online.
+         Starting /etc/rc.local Compatibility...
+         Starting LSB: Start NTP daemon...
+         Starting LSB: Advanced IEEE 802.11 management daemon...
+[  OK  ] Started /etc/rc.local Compatibility.
+[  OK  ] Started LSB: Advanced IEEE 802.11 management daemon.
+[  OK  ] Started Serial Getty on ttyS0.
+[  OK  ] Started Getty on tty1.
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Started LSB: Start NTP daemon.
+[  OK  ] Reached target Multi-User System.
+[  OK  ] Reached target Graphical Interface.
+         Starting Update UTMP about System Runlevel Changes...
+[  OK  ] Started Update UTMP about System Runlevel Changes.
+
+Debian GNU/Linux 9 bananapim2plush5 ttyS0
+
+bananapim2plush5 login: root
+Password: 
+ ____                                  ____  _   __  __ ____          ___   _ 
+| __ )  __ _ _ __   __ _ _ __   __ _  |  _ \(_) |  \/  |___ \  _     / / | | |
+|  _ \ / _` | '_ \ / _` | '_ \ / _` | | |_) | | | |\/| | __) || |_  | || |_| |
+| |_) | (_| | | | | (_| | | | | (_| | |  __/| | | |  | |/ __/_   _| | ||  _  |
+|____/ \__,_|_| |_|\__,_|_| |_|\__,_| |_|   |_| |_|  |_|_____||_|   | ||_| |_|
+                                                                     \_\      
+ ______                                                                       
+| ___\ \                                                                      
+|___ \| |                                                                     
+ ___) | |                                                                     
+|____/| |                                                                     
+     /_/                                                                      
+
+Welcome to ARMBIAN 5.51 user-built Debian GNU/Linux 9 (stretch) 4.14.54-sunxi64   
+System load:   1.03 0.24 0.08  	Up time:       0 min		
+Memory usage:  11 % of 994MB  	IP:            192.168.88.101
+Usage of /:    4% of 29G    	
+
+
+root@bananapim2plush5:~# ifconfig -a
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.88.101  netmask 255.255.255.0  broadcast 192.168.88.255
+        inet6 fe80::8e3f:d92c:8338:13ef  prefixlen 64  scopeid 0x20<link>
+        ether 02:01:6b:5f:78:c3  txqueuelen 1000  (Ethernet)
+        RX packets 31  bytes 3781 (3.6 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 46  bytes 4378 (4.2 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+        device interrupt 26  
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+wlan0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+        ether b0:f1:ec:fb:ea:a7  txqueuelen 1000  (Ethernet)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@bananapim2plush5:~# lsmod
+Module                  Size  Used by
+snd_soc_hdmi_codec     16384  1
+rc_cec                 16384  0
+dw_hdmi_i2s_audio      16384  0
+dw_hdmi_cec            16384  0
+brcmfmac              229376  0
+brcmutil               16384  1 brcmfmac
+cfg80211              299008  1 brcmfmac
+rfkill                 28672  4 cfg80211
+sun8i_dw_hdmi          16384  0
+dw_hdmi                28672  2 dw_hdmi_i2s_audio,sun8i_dw_hdmi
+ir_lirc_codec          16384  0
+zram                   28672  5
+cec                    53248  2 dw_hdmi_cec,dw_hdmi
+lirc_dev               20480  1 ir_lirc_codec
+sunxi_cir              16384  0
+sun4i_i2s              20480  2
+rc_core                32768  7 rc_cec,lirc_dev,ir_lirc_codec,sunxi_cir,cec
+sun4i_codec            49152  3
+snd_soc_simple_card    16384  0
+sun8i_codec_analog     28672  1
+snd_soc_simple_card_utils    16384  1 snd_soc_simple_card
+snd_soc_core          155648  6 sun4i_i2s,sun8i_codec_analog,snd_soc_hdmi_codec,sun4i_codec,snd_soc_simple_card_utils,snd_soc_simple_card
+sun4i_gpadc_iio        16384  0
+snd_pcm_dmaengine      16384  1 snd_soc_core
+snd_pcm               106496  4 sun4i_i2s,snd_soc_hdmi_codec,snd_soc_core,snd_pcm_dmaengine
+snd_timer              32768  1 snd_pcm
+iio_hwmon              16384  0
+sun4i_tcon             28672  1 sun8i_dw_hdmi
+sun8i_mixer            16384  0
+sun4i_drm              16384  0
+industrialio           65536  2 sun4i_gpadc_iio,iio_hwmon
+sunxi                  20480  0
+musb_hdrc              98304  1 sunxi
+root@bananapim2plush5:~# iperf3 -s
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+Accepted connection from 192.168.88.102, port 56778
+[  5] local 192.168.88.101 port 5201 connected to 192.168.88.102 port 56780
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-1.00   sec  99.8 MBytes   833 Mbits/sec                  
+[  5]   1.00-2.00   sec   111 MBytes   932 Mbits/sec                  
+[  5]   2.00-3.00   sec   110 MBytes   924 Mbits/sec                  
+[  5]   3.00-4.00   sec   102 MBytes   860 Mbits/sec                  
+[  5]   4.00-5.00   sec   110 MBytes   925 Mbits/sec                  
+[  5]   5.00-6.00   sec   102 MBytes   857 Mbits/sec                  
+[  5]   6.00-7.00   sec   108 MBytes   906 Mbits/sec                  
+[  5]   7.00-8.00   sec   110 MBytes   923 Mbits/sec                  
+[  5]   8.00-9.00   sec   110 MBytes   925 Mbits/sec                  
+[  5]   9.00-10.00  sec   110 MBytes   924 Mbits/sec                  
+[  5]  10.00-10.02  sec  2.11 MBytes   918 Mbits/sec                  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth
+[  5]   0.00-10.02  sec  0.00 Bytes  0.00 bits/sec                  sender
+[  5]   0.00-10.02  sec  1.05 GBytes   901 Mbits/sec                  receiver
+-----------------------------------------------------------
+Server listening on 5201
+-----------------------------------------------------------
+^Ciperf3: interrupt - the server has terminated
+root@bananapim2plush5:~# iperf3 -c 192.168.9988.102
+Connecting to host 192.168.88.102, port 5201
+[  4] local 192.168.88.101 port 44286 connected to 192.168.88.102 port 5201
+[ ID] Interval           Transfer     Bandwidth       Retr  Cwnd
+[  4]   0.00-1.00   sec   112 MBytes   937 Mbits/sec    0    342 KBytes       
+[  4]   1.00-2.00   sec   110 MBytes   922 Mbits/sec    0    359 KBytes       
+[  4]   2.00-3.00   sec   110 MBytes   921 Mbits/sec    0    359 KBytes       
+[  4]   3.00-4.00   sec   110 MBytes   921 Mbits/sec    0    359 KBytes       
+[  4]   4.00-5.00   sec   110 MBytes   921 Mbits/sec    0    359 KBytes       
+[  4]   5.00-6.00   sec   110 MBytes   921 Mbits/sec    0    359 KBytes       
+[  4]   6.00-7.00   sec   110 MBytes   921 Mbits/sec    0    359 KBytes       
+[  4]   7.00-8.00   sec   110 MBytes   921 Mbits/sec    0    359 KBytes       
+[  4]   8.00-9.00   sec   110 MBytes   921 Mbits/sec    0    359 KBytes       
+[  4]   9.00-10.00  sec   110 MBytes   921 Mbits/sec    0    359 KBytes       
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bandwidth       Retr
+[  4]   0.00-10.00  sec  1.07 GBytes   923 Mbits/sec    0             sender
+[  4]   0.00-10.00  sec  1.07 GBytes   921 Mbits/sec                  receiver
+
+iperf Done.
+root@bananapim2plush5:~# cat /sys/class/thermal/thermal_zone0/temp 
+61589
+root@bananapim2plush5:~# ppoweroff
+[  OK  ] Stopped target Sound Card.
+[  OK  ] Closed Load/Sa         Stopping Authorization Manager...
+         Stopping Armbian ZRAM config...
+[  OK  ] Stopped target Graphical Interface.
+[  OK  ] Stopped target Multi-User System.
+[  OK  ] Stopped target Login Prompts.
+         Stopping Getty on tty1...
+         Stopping Serial Getty on ttyS0...
+         Stopping Unattended Upgrades Shutdown...
+         Stopping OpenBSD Secure Shell server...
+         Stopping LSB: Start NTP daemon...
+         Stopping LSB: Set sysfs variables from /etc/sysfs.conf...
+         Stopping System Logging Service...
+         Stopping LSB: Start/stop sysstat's sadc...
+[  OK  ] Stopped target Timers.
+[  OK  ] Stopped Daily Cleanup of Temporary Directories.
+[  OK  ] Stopped Daily apt upgrade and clean activities.
+[  OK  ] Stopped Daily apt download activities.
+[  OK  ] Stopped target System Time Synchronized.
+         Stopping User Manager for UID 0...
+         Stopping Regular background program processing daemon...
+         Stopping Save/Restore Sound Card State...
+         Stopping LSB: Advanced IEEE 802.11 management daemon...
+[  OK  ] Stopped Regular background program processing daemon.
+[  OK  ] Stopped System Logging Service.
+[  OK  ] Stopped OpenBSD Secure Shell server.
+[  OK  ] Stopped Authorization Manager.
+[  OK  ] Stopped Serial Getty on ttyS0.
+[  OK  ] Stopped Getty on tty1.
+[  OK  ] Stopped User Manager for UID 0.
+[  OK  ] Stopped Session 2 of user root.
+[  OK  ] Stopped Armbian ZRAM config.
+[  OK  ] Stopped Save/Restore Sound Card State.
+[  OK  ] Stopped LSB: Advanced IEEE 802.11 management daemon.
+[  OK  ] Stopped LSB: Set sysfs variables from /etc/sysfs.conf.
+[  OK  ] Stopped LSB: Start/stop sysstat's sadc.
+[  OK  ] Stopped LSB: Start NTP daemon.
+[  OK  ] Stopped Unattended Upgrades Shutdown.
+         Stopping LSB: set CPUFreq kernel parameters...
+[  OK  ] Removed slice User Slice of root.
+         Stopping Login Service...
+[  OK  ] Removed slice system-getty.slice.
+         Stopping Permit User Sessions...
+[  OK  ] Stopped /etc/rc.local Compatibility.
+[  OK  ] Stopped target Network is Online.
+[  OK  ] Stopped Network Manager Wait Online.
+[  OK  ] Removed slice system-serial\x2dgetty.slice.
+[  OK  ] Stopped Login Service.
+[  OK  ] Stopped Permit User Sessions.
+[  OK  ] Stopped target Network.
+         Stopping WPA supplicant...
+         Stopping Raise network interfaces...
+         Stopping Network Manager...
+[  OK  ] Stopped LSB: set CPUFreq kernel parameters.
+         Stopping LSB: Load kernel modules needed to enable cpufreq scaling...
+[  OK  ] Stopped LSB: Load kernel modules needed to enable cpufreq scaling.
+[  OK  ] Stopped target Remote File Systems.
+[  OK  ] Stopped WPA supplicant.
+[  OK  ] Stopped Raise network interfaces.
+[  OK  ] Stopped Network Manager.
+         Stopping D-Bus System Message Bus...
+[  OK  ] Stopped D-Bus System Message Bus.
+[  OK  ] Stopped target Basic System.
+[  OK  ] Stopped target Paths.
+[  OK  ] Stopped target Slices.
+[  OK  ] Removed slice User and Session Slice.
+[  OK  ] Stopped target Sockets.
+[  OK  ] Closed Syslog Socket.
+[  OK  ] Closed D-Bus System Message Bus Socket.
+[  OK  ] Stopped target System Initialization.
+         Stopping Restore / save the current clock...
+[  OK  ] Stopped Apply Kernel Variables.
+         Stopping Entropy daemon using the HAVEGE algorithm...
+[  OK  ] Stopped Load Kernel Modules.
+         Stopping Update UTMP about System Boot/Shutdown...
+[  OK  ] Stopped target Swap.
+         Deactivating swap /dev/zram1...
+         Deactivating swap /dev/zram3...
+         Deactivating swap /dev/zram4...
+         Deactivating swap /dev/zram2...
+[  OK  ] Stopped target Encrypted Volumes.
+[  OK  ] Stopped Dispatch Password Requests to Console Directory Watch.
+[  OK  ] Stopped Forward Password Requests to Wall Directory Watch.
+[  OK  ] Stopped Entropy daemon using the HAVEGE algorithm.
+[  OK  ] Stopped Restore / save the current clock.
+[  OK  ] Deactivated swap /dev/zram1.
+[  OK  ] Deactivated swap /dev/zram3.
+[  OK  ] Deactivated swap /dev/zram4.
+[  OK  ] Deactivated swap /dev/zram2.
+         Stopping Load/Save Random Seed...
+[  OK  ] Stopped Update UTMP about System Boot/Shutdown.
+[  OK  ] Stopped Load/Save Random Seed.
+[  OK  ] Stopped Create Volatile Files and Directories.
+[  OK  ] Stopped target Local File Systems.
+         Unmounting /var/log.hdd...
+         Unmounting /tmp...
+         Unmounting /run/user/0...
+         Unmounting /var/log...
+[  OK  ] Unmounted /var/log.hdd.
+[  OK  ] Unmounted /tmp.
+[  OK  ] Unmounted /run/user/0.
+[  OK  ] Unmounted /var/log.
+[  OK  ] Reached target Unmount All Filesystems.
+[  OK  ] Stopped target Local File Systems (Pre).
+[  OK  ] Stopped Remount Root and Kernel File Systems.
+[  OK  ] Stopped Create Static Device Nodes in /dev.
+[  OK  ] Reached target Shutdown.
+[ 1588.819039] reboot: Power down
+INFO:    PSCI Affinity Map:
+INFO:      AffInst: Level 0, MPID 0x0, State ON
+INFO:      AffInst: Level 0, MPID 0x1, State ON
+INFO:      AffInst: Level 0, MPID 0x2, State ON
+INFO:      AffInst: Level 0, MPID 0x3, State ON
+ERROR:   PSCI system shutdown: still alive ...
