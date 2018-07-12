@@ -11,8 +11,8 @@ diff -Naur linux-4.14.54.org/arch/arm64/boot/dts/allwinner/Makefile linux-4.14.5
  dtb-$(CONFIG_ARCH_SUNXI) += sun50i-h5-nanopi-k1-plus.dtb
 diff -Naur linux-4.14.54.org/arch/arm64/boot/dts/allwinner/sun50i-h5-bananapi-m2-plus.dts linux-4.14.54-bpi-m2p-h5/arch/arm64/boot/dts/allwinner/sun50i-h5-bananapi-m2-plus.dts
 --- linux-4.14.54.org/arch/arm64/boot/dts/allwinner/sun50i-h5-bananapi-m2-plus.dts	1970-01-01 08:00:00.000000000 +0800
-+++ linux-4.14.54-bpi-m2p-h5/arch/arm64/boot/dts/allwinner/sun50i-h5-bananapi-m2-plus.dts	2018-07-11 09:36:06.000000000 +0800
-@@ -0,0 +1,312 @@
++++ linux-4.14.54-bpi-m2p-h5/arch/arm64/boot/dts/allwinner/sun50i-h5-bananapi-m2-plus.dts	2018-07-12 14:40:47.000000000 +0800
+@@ -0,0 +1,319 @@
 +/*
 + * Copyright (C) 2017 Icenowy Zheng <icenowy@aosc.xyz>
 + *
@@ -115,16 +115,23 @@ diff -Naur linux-4.14.54.org/arch/arm64/boot/dts/allwinner/sun50i-h5-bananapi-m2
 +		regulator-max-microvolt = <3300000>;
 +	};
 +
-+	reg_vdd_cpux: vdd-cpux {
-+		compatible = "regulator-fixed";
++	reg_sy8113b: gpio-regulator {
++		compatible = "regulator-gpio";
 +		regulator-name = "vdd-cpux";
-+		regulator-min-microvolt = <1200000>;
-+		regulator-max-microvolt = <1200000>;
-+		regulator-always-on;
++		regulator-type = "voltage";
 +		regulator-boot-on;
-+		gpio = <&r_pio 0 1 GPIO_ACTIVE_HIGH>; /* PL1 */
++		regulator-always-on;
++		regulator-min-microvolt = <1100000>;
++		regulator-max-microvolt = <1300000>;
++		regulator-ramp-delay = <50>; /* 4ms */
++
++		gpios = <&r_pio 0 1 GPIO_ACTIVE_HIGH>; /* PL1 */
 +		enable-active-high;
-+	};
++		gpios-states = <0x1>;
++		states = <1100000 0x0
++			  1300000 0x1>;
++	};	
++	
 +
 +	reg_usb0_vbus: usb0-vbus {
 +		compatible = "regulator-fixed";
@@ -156,7 +163,7 @@ diff -Naur linux-4.14.54.org/arch/arm64/boot/dts/allwinner/sun50i-h5-bananapi-m2
 +};
 +
 +&cpu0 {
-+	cpu-supply = <&reg_vdd_cpux>;
++	cpu-supply = <&reg_sy8113b>;
 +};
 +
 +&ehci0 {
