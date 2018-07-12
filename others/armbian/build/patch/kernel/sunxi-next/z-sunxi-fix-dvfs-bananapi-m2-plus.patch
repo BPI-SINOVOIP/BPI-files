@@ -1,0 +1,49 @@
+diff -Naur linux-4.14.55.org/arch/arm/boot/dts/sun8i-h3-bananapi-m2-plus.dts linux-4.14.55-bpi-m2p/arch/arm/boot/dts/sun8i-h3-bananapi-m2-plus.dts
+--- linux-4.14.55.org/arch/arm/boot/dts/sun8i-h3-bananapi-m2-plus.dts	2018-07-12 16:04:43.000000000 +0800
++++ linux-4.14.55-bpi-m2p/arch/arm/boot/dts/sun8i-h3-bananapi-m2-plus.dts	2018-07-12 17:17:38.878437275 +0800
+@@ -105,6 +105,23 @@
+ 		      gpio = <&pio 3 6 GPIO_ACTIVE_HIGH>;
+ 	};
+ 
++	reg_sy8113b: gpio-regulator {
++		compatible = "regulator-gpio";
++		regulator-name = "vdd-cpux";
++		regulator-type = "voltage";
++		regulator-boot-on;
++		regulator-always-on;
++		regulator-min-microvolt = <1100000>;
++		regulator-max-microvolt = <1300000>;
++		regulator-ramp-delay = <50>; /* 4ms */
++
++		gpios = <&r_pio 0 1 GPIO_ACTIVE_HIGH>; /* PL1 */
++		enable-active-high;
++		gpios-states = <0x1>;
++		states = <1100000 0x0
++			  1300000 0x1>;
++	};	
++	
+ 	wifi_pwrseq: wifi_pwrseq {
+ 		compatible = "mmc-pwrseq-simple";
+ 		pinctrl-names = "default";
+@@ -113,6 +130,10 @@
+ 	};
+ };
+ 
++&cpu0 {
++	cpu-supply = <&reg_sy8113b>;
++};
++
+ &ehci0 {
+ 	status = "okay";
+ };
+@@ -234,10 +255,6 @@
+ 	status = "okay";
+ };
+ 
+-&r_i2c {
+-	status = "okay";
+-};
+-
+ &r_pio {
+ 	pwr_led_bpi_m2p: led_pins@0 {
+ 		pins = "PL10";
