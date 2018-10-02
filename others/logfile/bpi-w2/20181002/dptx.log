@@ -1,0 +1,38 @@
+[  140.806724] [DPTX_ERR] plugged in                                            
+[  140.820129] [DPTX_EDID_DBG] [rtk_add_standard_mode] Standard Timing: Hdisplay
+(1680), Vdisplay(1050), vrefresh(60), 0x0                                       
+[  140.831395] [DPTX_EDID_DBG] [rtk_add_standard_mode] Standard Timing: Hdisplay
+(1600), Vdisplay(1200), vrefresh(60), 0x40                                      
+[  140.842785] [DPTX_EDID_DBG] [rtk_add_standard_mode] Standard Timing: Hdisplay
+(1440), Vdisplay(900), vrefresh(60), 0x0                                        
+[  140.853951] [DPTX_EDID_DBG] [rtk_add_standard_mode] Standard Timing: Hdisplay
+(1400), Vdisplay(1050), vrefresh(60), 0x40                                      
+[  140.865352] [DPTX_EDID_DBG] [rtk_add_standard_mode] Standard Timing: Hdisplay
+(1280), Vdisplay(1024), vrefresh(60), 0x80                                      
+[  140.876690] [DPTX_EDID_DBG] [rtk_add_standard_mode] Standard Timing: Hdisplay
+(1280), Vdisplay(960), vrefresh(60), 0x40                                       
+[  140.887906] [DPTX_EDID_DBG] [rtk_add_standard_mode] Standard Timing: Hdisplay
+(1152), Vdisplay(864), vrefresh(75), 0x4f                                       
+[  140.899134] [DPTX_EDID_DBG] [rtk_do_detailed_mode] Detailied Timing: Hdisplay
+(1680), Vdisplay(1050), Clock(146250), vrefresh(60), flags(0x0)                 
+[  140.912361] [DPTX_EDID_DBG] Detailed Timing Descriptor                       
+[  140.917844] [DPTX_EDID_ERR] no matching video format found                   
+[  140.923612] [DPTX_EDID_ERR] ELD: no CEA Extension found                      
+[  141.046558] [DPTX] pucData[0] = 0x2314                                       
+[  141.053034] [DPTX] pucData[2] = 0x2333                                       
+[  141.059544] [DPTX] pucData[2] = 0x2334                                       
+[  141.066087] [DPTX] pucData[2] = 0x2333                                       
+[  141.072548] [DPTX] pucData[2] = 0x2334                                       
+[  141.078953] [DPTX] pucData[2] = 0x2333                                       
+[  141.085465] [DPTX] pucData[2] = 0x2334                                       
+[  141.091864] [DPTX] pucData[2] = 0x2334                                       
+[  141.098312] [DPTX] pucData[2] = 0x2334                                       
+[  141.104823] [DPTX] pucData[2] = 0x2333                                       
+[  141.111221] [DPTX] pucData[2] = 0x2333                                       
+[  141.115203] [DPTX] 0x2334, 0x34, 0x23                                        
+[  141.118972] [DPTX] 0x0, 0x80                                                 
+[  141.125428] pattern1 : 0x1, 0x0, 0x80, 0x0, 0x0                              
+[  141.130087] [dptx] pattern1 success                                          
+[  141.134706] pattern2 : 0x7, 0x0, 0x81, 0x0, 0x0                              
+[  141.139366] [dptx] pattern2 success                                          
+[  141.143102] [dptx] pass link training
