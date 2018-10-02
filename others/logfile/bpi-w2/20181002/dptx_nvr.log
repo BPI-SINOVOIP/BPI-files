@@ -1,0 +1,43 @@
+root@OpenWrt:/# /usr/bin/ALSADaemon-GUI &                                       
+root@OpenWrt:/# NVRDaemon version: 289786e2                                     
+daemon_main 430: SIGSEGV 11 SIGILL 4 SIGABRT 6 SIGSEGV11 SIGBUS 7 SIGTERM 15 SIG
+KILL 9                                                                          
+[  208.158170] [RPC]open for RPC ioctl...                                       
+[  208.162041] [RPC]open for RPC ioctl...                                       
+[AVCPU] Set Debug level flag  0x81de7444 *flag  0x00dd4560 ucache  0xa0dd4560   
+[AVCPU] Set Debug level *ptrDebugFlag  0x00000000                               
+[  208.177712] [RPC]open for RPC ioctl...                                       
+Audio Analogy Out ON !SET [adbg:0xa0dd4560] = 00000000                          
+[  209.182006] E/DC: [dc_queue_vo_buffer 1300] pdc_info->RING_HEADER =          
+ (null)                                                                         
+[  209.187381] I/DC: DC rInfo: pdc_info->CLK_ADDR_LOW=ffffffc01801b540 pdc_info-
+>CLK_ADDR_HI=ffffffc01801b544                                                   
+[  209.194581] I/DC: CLK pts:-272768843944 ctx:-1                               
+[  209.194585] I/DC: drvBeAddr:2600000 s:65536 id:1 rw:(2600000 2600000) #rPtr:0
+RTKMediaIf version: bbd9ae70                                                    
+there is no /tmp/SetupClassVolatile.dat, Use default                            
+                                                                                
+[  210.812132] reset-rtk: ASSERT      0x0801a000 [0x9ffef7f7 -> 0x9fdef7f7] D 0x
+00200000, M 0x00200000                                                          
+[  210.942424] reset-rtk: DEASSERT    0x0801a000 [0x9fdef7f7 -> 0x9ffef7f7] D 0x
+00200000, M 0x00200000                                                          
+[  210.963696] reg = 0x330800                                                   
+[  210.966481] [DPTX] pucData[0] = 0x4629                                       
+[  210.972758] [DPTX] pucData[2] = 0x4667                                       
+[  210.979043] [DPTX] pucData[2] = 0x4667                                       
+[  210.985323] [DPTX] pucData[2] = 0x4667                                       
+[  210.991599] [DPTX] pucData[2] = 0x4667                                       
+[  210.997881] [DPTX] pucData[2] = 0x4667                                       
+[  211.004156] [DPTX] pucData[2] = 0x4667                                       
+[  211.010438] [DPTX] pucData[2] = 0x4667                                       
+[  211.016717] [DPTX] pucData[2] = 0x4667                                       
+[  211.022992] [DPTX] pucData[2] = 0x4667                                       
+[  211.029279] [DPTX] pucData[2] = 0x4667                                       
+[  211.033119] [DPTX] 0x4667, 0x67, 0x46                                        
+[  211.036881] [DPTX] 0x0, 0x80                                                 
+[  211.047957] pattern1 : 0x11, 0x0, 0x80, 0x0, 0x0                             
+[  211.052685] [dptx] pattern1 success                                          
+[  211.062166] pattern2 : 0x77, 0x0, 0x81, 0x0, 0x0                             
+[  211.066904] [dptx] pattern2 success                                          
+[  211.070474] [dptx] pass link training                                        
+rfree_0_svc: can't find mentry to free: phys_addr:3b0c000
