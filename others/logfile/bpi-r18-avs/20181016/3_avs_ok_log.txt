@@ -1,0 +1,62 @@
+
+########################################
+#       Alexa is currently idle!       #
+########################################
+
+2018-10-16 08:38:21.935 [ 10] 1 FocusManager:releaseChannel:channelName=Dialog
+2018-10-16 08:38:21.935 [ 14] 0 SpeechSynthesizer:onFocusChanged:newFocus=NONE
+2018-10-16 08:38:21.935 [ 14] 5 AudioActivityTracker:notifyOfActivityUpdates
+2018-10-16 08:38:21.935 [  f] 5 AudioActivityTracker:executeNotifyOfActivityUpdates
+2018-10-16 08:38:22.842 [  a] 0 HTTP2Stream:receivedRequestId:value=x-amzn-requestid\: 021556fffe5fe11a-00007c10-006a68c6-9daf8902c2dbb871-d2b9e677-45
+2018-10-16 08:38:22.843 [  a] 0 HTTP2Transport:cleanupFinishedStream:streamId=45,result=204
+2018-10-16 08:38:22.843 [  a] 0 HTTP2StreamPool:releaseStream:streamId=45,numAcquiredStreams=1
+2018-10-16 08:38:22.843 [  a] 0 CurlEasyHandleWrapper:reset:responseCode=HTTP_RESPONSE_SUCCESS_NO_CONTENT
+====================== VoiceEnergy: ; AmbientEnergy: 
+2018-10-16 08:41:44.423 [ 11] 0 AudioInputProcessor:setState:from=IDLE,to=RECOGNIZING
+2018-10-16 08:41:44.424 [  7] 0 DialogUXStateAggregator:setState:from=IDLE,to=LISTENING
+2018-10-16 08:41:44.424 [  c] 5 NotificationsCapabilityAgent:provideState:stateRequestToken=9
+2018-10-16 08:41:44.424 [  d] 0 ExternalMediaPlayer:executeProvideState:sendToken=true,stateRequestToken=9
+2018-10-16 08:41:44.424 [  6] 5 NotificationsCapabilityAgent:executeProvideState:sendToken=true,stateRequestToken=9
+2018-10-16 08:41:44.424 [  7] 5 TemplateRuntime:onDialogUXStateChanged:state=LISTENING
+############################
+#       Listening...       #
+############################
+
+2018-10-16 08:41:44.424 [  d] 9 ContextManager:updateStateLocked:action=updatedState,namespace=ExternalMediaPlayer,name=ExternalMediaPlayerState
+2018-10-16 08:41:44.424 [  c] 5 VisualActivityTracker:provideState
+2018-10-16 08:41:44.425 [  c] 5 AudioActivityTracker:provideState
+2018-10-16 08:41:44.425 [  e] 5 VisualActivityTracker:executeProvideState
+2018-10-16 08:41:44.425 [  d] 0 ExternalMediaPlayer:executeProvideState:sendToken=true,stateRequestToken=9
+2018-10-16 08:41:44.425 [  f] 5 AudioActivityTracker:executeProvideState
+2018-10-16 08:41:44.425 [  e] 9 ContextManager:updateStateLocked:action=updatedState,namespace=VisualActivityTracker,name=ActivityState
+2018-10-16 08:41:44.425 [  d] 9 ContextManager:updateStateLocked:action=updatedState,namespace=Alexa.PlaybackStateReporter,name=playbackState
+2018-10-16 08:41:44.425 [  6] 9 ContextManager:updateStateLocked:action=updatedState,namespace=Notifications,name=IndicatorState
+2018-10-16 08:41:44.425 [  f] 9 ContextManager:updateStateLocked:action=updatedState,namespace=AudioActivityTracker,name=ActivityState
+2018-10-16 08:41:44.426 [  c] 9 ContextManager:buildContextIgnored:namespace=VisualActivityTracker,name=ActivityState
+2018-10-16 08:41:44.426 [  c] 5 ContextManager:buildContextSuccessful
+2018-10-16 08:41:44.426 [ 11] 0 AudioInputProcessor:executeOnContextAvailable
+2018-10-16 08:41:44.426 [ 11] 1 FocusManager:acquireChannel:channelName=Dialog,interface=SpeechRecognizer
+2018-10-16 08:41:44.426 [ 14] 9 AudioInputProcessor:onFocusChanged:newFocus=FOREGROUND
+2018-10-16 08:41:44.426 [ 11] I DirectiveProcessor:setDialogRequestIdLocked:oldValue=ffb68212-8b7c-490f-9994-3a15682b95e8,newValue=06f1b3f2-0817-476c-b269-342445680e67
+2018-10-16 08:41:44.426 [ 11] 0 DirectiveProcessor:scrubDialogRequestIdLocked:dialogRequestId=ffb68212-8b7c-490f-9994-3a15682b95e8
+2018-10-16 08:41:44.426 [ 14] 5 AudioActivityTracker:notifyOfActivityUpdates
+2018-10-16 08:41:44.427 [  f] 5 AudioActivityTracker:executeNotifyOfActivityUpdates
+2018-10-16 08:41:44.427 [ 11] 0 EventBuilder:buildJsonEventString:messageId=e128b637-d43a-4e91-9444-5a4bfc5e2626,namespace=SpeechRecognizer,name=Recognize
+2018-10-16 08:41:44.427 [ 11] 0 AudioInputProcessor:executeOnFocusChanged:newFocus=FOREGROUND
+2018-10-16 08:41:44.427 [ 11] 9 HTTP2Transport:enqueueRequest
+2018-10-16 08:41:44.518 [  a] 0 HTTP2Transport:processNextOutgoingMessage
+2018-10-16 08:41:44.518 [  a] 0 HTTP2StreamPool:getStream:streamId=47,numAcquiredStreams=2
+2018-10-16 08:41:44.518 [  a] 9 HTTP2Transport:insertActiveStream:handle=0x11123d28
+2018-10-16 08:41:47.758 [ 15] I DirectiveSequencer:onDirective:directive={"namespace\:"SpeechRecognizer"\,name\:"StopCapture"\,messageId\:"7dceca1b-0115-472e-a2bc-1b4a216e1968"\,dialogRequestId\:"06f1b3f2-0817-476c-b269-342445680e67"}
+2018-10-16 08:41:47.759 [ 16] I DirectiveRouter:preHandleDirective:messageId=7dceca1b-0115-472e-a2bc-1b4a216e1968,action=calling
+2018-10-16 08:41:47.759 [ 16] 0 CapabilityAgent:addingMessageIdToMap:messageId=7dceca1b-0115-472e-a2bc-1b4a216e1968
+2018-10-16 08:41:47.759 [ 17] I DirectiveRouter:handleDirective:messageId=7dceca1b-0115-472e-a2bc-1b4a216e1968,action=calling
+2018-10-16 08:41:47.759 [ 11] 0 AudioInputProcessor:stopCapture:stopImmediately=true
+2018-10-16 08:41:47.759 [ 11] 0 AudioInputProcessor:setState:from=RECOGNIZING,to=BUSY
+2018-10-16 08:41:47.759 [ 11] 0 DirectiveProcessor:onHandlingCompeted:messageId=7dceca1b-0115-472e-a2bc-1b4a216e1968,directiveBeingPreHandled=(nullptr)
+2018-10-16 08:41:47.759 [ 11] 0 CapabilityAgent:removingMessageIdFromMap:messageId=7dceca1b-0115-472e-a2bc-1b4a216e1968
+2018-10-16 08:41:47.759 [  7] 0 DialogUXStateAggregator:setState:from=LISTENING,to=THINKING
+2018-10-16 08:41:47.759 [  7] 5 TemplateRuntime:onDialogUXStateChanged:state=THINKING
+###########################
+#       Thinking...       #
+###########################

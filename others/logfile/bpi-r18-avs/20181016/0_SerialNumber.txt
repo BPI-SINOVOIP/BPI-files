@@ -1,0 +1,10 @@
+root@TinaLinux:/# cat /sys/class/sunxi_info/sys_info
+sunxi_platform    : sun50iw1
+sunxi_secure      : normal
+sunxi_chipid      : XXXX04ce503442040000740000000000
+sunxi_chiptype    : 000000bc
+sunxi_batchno     : 0x1
+root@TinaLinux:/# cat /etc/avs/AlexaClientSDKConfig.json
+{
+   "deviceInfo":{
+     "deviceSerialNumber":"XXXX04ce503442040000740000000000",

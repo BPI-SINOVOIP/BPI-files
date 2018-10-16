@@ -1,0 +1,11 @@
+
+root@TinaLinux:/# wifi_connect_ap_test "XXX" "XXXXXXXX"
+
+*********************************
+***Start wifi connect ap test
+***ssid    :XXX
+***password:XXXXXXXX
+*********************************
+ctrl_interface != /etc/wifi/sockets
+WiFi on success!
+It has no wifi auto connect when wifi on!
