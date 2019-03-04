@@ -3,7 +3,9 @@ BOARD=$(bpi-hw)
 
 fbdev-bpi-w2() {
   if [ "x$BOARD" != "xbpi-w2" ] ; then
-    return 0
+    if [ "x$BOARD" != "xbpi-m4" ] ; then
+      return 0
+    fi
   fi
 
   mkdir -p /dev/graphics
