@@ -1,0 +1,117 @@
+
+第一步 升级空片 recovery bootloader 
+
+1.使用超級終端機按ctrl+q，上電，進recovery mode
+
+2.按h, 串口可以看到芯片处于接受模式会打印很多字符并等待
+
+这时用超级终端的Ymodoem-G 模式传 傳hwsetting (hwsetting.bin)
+
+3.按 d
+
+4. 傳同資料夾 的Recovery LK(Recovery.bin)
+
+5. 按 g
+
+
+
+第二步 再刷新正常的bootloader
+
+1.讲bootloader.bin 放入FAT32 U盘
+
+2.按住ESC 开机
+
+3.依次输入下面的指令
+usb start
+
+fatload usb 0:1 0x01500000 bootloader.bin
+
+chain 0x01500000
+
+==or net=====
+
+net dhcp_client
+net tftp 0x01500000 192.168.88.102 bootloader.bin
+net tftp 0x01500000 192.168.88.102 A01-RTD1395_hwsetting_BOOT_2DDR4_8Gb_s2133.bin
+net tftp 0x01500000 192.168.50.107 A01-RTD1395_hwsetting_BOOT_2DDR4_8Gb_s2133.bin
+chain 0x01500000
+
+tftp 0x01500000 A01-RTD1395_hwsetting_BOOT_2DDR4_8Gb_s2133.bin
+go 0x01500000
+
+earlycon=uart8250,mmio32,0x98007800 console=ttyS0,115200 loglevel=4 cma=32m@576m
+ noinitrd rootwait root=/dev/mmcblk0p1
+
+setenv bootargs earlycon=uart8250,mmio32,0x98007800 console=tty1 fbcon=map:0 console=ttyS0,115200 loglevel=8 cma=32m@576m noinitrd rootwait root=/dev/sda2 rw
+
+setenv bootargs earlycon=uart8250,mmio32,0x98007800 console=tty1 fbcon=map:0 console=ttyS0,115200 loglevel=8 cma=32m@576m noinitrd rootwait root=/dev/mmcblk0p2 rw
+
+setenv bootargs earlycon=uart8250,mmio32,0x98007800 console=tty1 fbcon=map:0 console=ttyS0,115200 loglevel=8 cma=32m@576m noinitrd rootwait root=/dev/mmcblk0p1 rw
+
+setenv bootargs earlycon=uart8250,mmio32,0x98007800 console=tty1 fbcon=map:0 console=ttyS0,115200 loglevel=8 cma=32m@576m noinitrd rootwait root=/dev/mmcblk1p1 rw
+
+bootargs=earlycon=uart8250,mmio32,0x98007800 console=ttyS0,115200 loglevel=4 cma
+=32m@576m noinitrd rootwait root=/dev/mmcblk0p1
+
+
+
+1395公板
+net dhcp_client
+net tftp 0x01500000 192.168.88.102 A01-RTD1395_hwsetting_BOOT_2DDR4_8Gb_s2133.bin
+chain 0x01500000
+
+
+4.等待运行完成，会看到finish 字样
+
+
+
+第三步 升级主程序install.img
+
+1.讲install.img放入FAT32 U盘
+
+2.按住ESC 开机
+
+3.依次输入下面的指令
+usb start
+ 
+fatload usb 0:1 0x02100000 rescue.emmc.dtb
+ 
+fatload usb 0:1 0x03000000 emmc.uImage
+ 
+fatload usb 0:1 0x02200000 rescue.root.emmc.cpio.gz_pad.img
+ 
+fatload usb 0:1 0x0f900000 bluecore.audio.enc.A01 
+ 
+boot k
+
+==or net=====
+
+net dhcp_client
+net tftp 0x02100000 192.168.88.102 rescue.emmc.dtb
+net tftp 0x03000000 192.168.88.102 emmc.uImage
+net tftp 0x02200000 192.168.88.102 rescue.root.emmc.cpio.gz_pad.img
+net tftp 0x0f900000 192.168.88.102 bluecore.audio.enc.A01 
+
+net tftp 0x02100000 192.168.50.107 rescue.emmc.dtb
+net tftp 0x03000000 192.168.50.107 emmc.uImage
+net tftp 0x02200000 192.168.50.107 rescue.root.emmc.cpio.gz_pad.img
+net tftp 0x0f900000 192.168.50.107 bluecore.audio.enc.A01 
+
+
+uboot:
+PC: 
+ifconfig enp14s0:1 192.168.100.2
+ifconfig eth0:1 192.168.100.2
+
+
+bpi-m4:
+
+tftp 0x02100000 rescue.emmc.dtb
+tftp 0x03000000 emmc.uImage
+tftp 0x02200000 rescue.root.emmc.cpio.gz_pad.img
+tftp 0x0f900000 bluecore.audio.enc.A01 
+boot k
+
+
+
+等待升级完成并自动重启
