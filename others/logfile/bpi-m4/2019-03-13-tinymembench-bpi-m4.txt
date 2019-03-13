@@ -1,0 +1,113 @@
+root@bpi-iot-ros-ai:~/tinymembench# ./tinymembench 
+tinymembench v0.4.9 (simple benchmark for memory throughput and latency)
+
+==========================================================================
+== Memory bandwidth tests                                               ==
+==                                                                      ==
+== Note 1: 1MB = 1000000 bytes                                          ==
+== Note 2: Results for 'copy' tests show how many bytes can be          ==
+==         copied per second (adding together read and writen           ==
+==         bytes would have provided twice higher numbers)              ==
+== Note 3: 2-pass copy means that we are using a small temporary buffer ==
+==         to first fetch data into it, and only then write it to the   ==
+==         destination (source -> L1 cache, L1 cache -> destination)    ==
+== Note 4: If sample standard deviation exceeds 0.1%, it is shown in    ==
+==         brackets                                                     ==
+==========================================================================
+
+ C copy backwards                                     :   1262.2 MB/s (3.8%)
+ C copy backwards (32 byte blocks)                    :   1272.2 MB/s
+ C copy backwards (64 byte blocks)                    :   1141.6 MB/s (0.4%)
+ C copy                                               :   1119.8 MB/s (0.6%)
+ C copy prefetched (32 bytes step)                    :   1144.2 MB/s (0.2%)
+ C copy prefetched (64 bytes step)                    :   1277.4 MB/s (0.2%)
+ C 2-pass copy                                        :   1402.9 MB/s
+ C 2-pass copy prefetched (32 bytes step)             :    984.7 MB/s
+ C 2-pass copy prefetched (64 bytes step)             :    972.7 MB/s
+ C fill                                               :   4968.7 MB/s (2.4%)
+ C fill (shuffle within 16 byte blocks)               :   4956.3 MB/s (2.2%)
+ C fill (shuffle within 32 byte blocks)               :   4953.4 MB/s
+ C fill (shuffle within 64 byte blocks)               :   4957.3 MB/s
+ ---
+ standard memcpy                                      :   1110.2 MB/s
+ standard memset                                      :   4963.2 MB/s (0.8%)
+ ---
+ NEON LDP/STP copy                                    :   1306.0 MB/s (0.2%)
+ NEON LDP/STP copy pldl2strm (32 bytes step)          :   1055.6 MB/s (0.7%)
+ NEON LDP/STP copy pldl2strm (64 bytes step)          :   1200.4 MB/s
+ NEON LDP/STP copy pldl1keep (32 bytes step)          :   1328.0 MB/s (0.6%)
+ NEON LDP/STP copy pldl1keep (64 bytes step)          :   1308.0 MB/s (2.6%)
+ NEON LD1/ST1 copy                                    :   1307.0 MB/s (0.2%)
+ NEON STP fill                                        :   4973.3 MB/s (0.7%)
+ NEON STNP fill                                       :   1376.0 MB/s (0.9%)
+ ARM LDP/STP copy                                     :   1307.2 MB/s
+ ARM STP fill                                         :   4969.6 MB/s
+ ARM STNP fill                                        :   1384.1 MB/s (1.1%)
+
+==========================================================================
+== Framebuffer read tests.                                              ==
+==                                                                      ==
+== Many ARM devices use a part of the system memory as the framebuffer, ==
+== typically mapped as uncached but with write-combining enabled.       ==
+== Writes to such framebuffers are quite fast, but reads are much       ==
+== slower and very sensitive to the alignment and the selection of      ==
+== CPU instructions which are used for accessing memory.                ==
+==                                                                      ==
+== Many x86 systems allocate the framebuffer in the GPU memory,         ==
+== accessible for the CPU via a relatively slow PCI-E bus. Moreover,    ==
+== PCI-E is asymmetric and handles reads a lot worse than writes.       ==
+==                                                                      ==
+== If uncached framebuffer reads are reasonably fast (at least 100 MB/s ==
+== or preferably >300 MB/s), then using the shadow framebuffer layer    ==
+== is not necessary in Xorg DDX drivers, resulting in a nice overall    ==
+== performance improvement. For example, the xf86-video-fbturbo DDX     ==
+== uses this trick.                                                     ==
+==========================================================================
+
+ NEON LDP/STP copy (from framebuffer)                 :    217.4 MB/s
+ NEON LDP/STP 2-pass copy (from framebuffer)          :    208.2 MB/s
+ NEON LD1/ST1 copy (from framebuffer)                 :     58.1 MB/s (0.6%)
+ NEON LD1/ST1 2-pass copy (from framebuffer)          :     57.4 MB/s
+ ARM LDP/STP copy (from framebuffer)                  :    115.4 MB/s
+ ARM LDP/STP 2-pass copy (from framebuffer)           :    112.9 MB/s
+
+==========================================================================
+== Memory latency test                                                  ==
+==                                                                      ==
+== Average time is measured for random memory accesses in the buffers   ==
+== of different sizes. The larger is the buffer, the more significant   ==
+== are relative contributions of TLB, L1/L2 cache misses and SDRAM      ==
+== accesses. For extremely large buffer sizes we are expecting to see   ==
+== page table walk with several requests to SDRAM for almost every      ==
+== memory access (though 64MiB is not nearly large enough to experience ==
+== this effect to its fullest).                                         ==
+==                                                                      ==
+== Note 1: All the numbers are representing extra time, which needs to  ==
+==         be added to L1 cache latency. The cycle timings for L1 cache ==
+==         latency can be usually found in the processor documentation. ==
+== Note 2: Dual random read means that we are simultaneously performing ==
+==         two independent memory accesses at a time. In the case if    ==
+==         the memory subsystem can't handle multiple outstanding       ==
+==         requests, dual random read has the same timings as two       ==
+==         single reads performed one after another.                    ==
+==========================================================================
+
+block size : single random read / dual random read
+      1024 :    0.0 ns          /     0.0 ns 
+      2048 :    0.0 ns          /     0.0 ns 
+      4096 :    0.0 ns          /     0.0 ns 
+      8192 :    0.0 ns          /     0.0 ns 
+     16384 :    0.0 ns          /     0.0 ns 
+     32768 :    0.0 ns          /     0.0 ns 
+     65536 :    4.6 ns          /     7.9 ns 
+    131072 :    7.1 ns          /    11.2 ns 
+    262144 :    8.4 ns          /    12.7 ns 
+    524288 :   10.4 ns          /    15.8 ns 
+   1048576 :   85.6 ns          /   132.0 ns 
+   2097152 :  125.9 ns          /   170.6 ns 
+   4194304 :  150.8 ns          /   189.5 ns 
+   8388608 :  163.8 ns          /   198.1 ns 
+  16777216 :  171.7 ns          /   203.1 ns 
+  33554432 :  177.2 ns          /   207.0 ns 
+  67108864 :  179.4 ns          /   208.2 ns 
+root@bpi-iot-ros-ai:~/tinymembench# 
