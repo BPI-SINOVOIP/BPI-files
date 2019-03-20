@@ -1,0 +1,412 @@
+clear.
+prepare usb_hwsetting buffer
+length: 3112 
+prepare usb_hwsetting buffer done
+run usb hwsetting icon:[0] 
+single device ddr enable Device[0] 
+target file path: Z:\mikey\BPI-4TB-C\rtk\20190320\install.img 
+ progress max length  : 12 
+ progress max length  : 13 
+ progress max length  : 14 
+ progress max length  : 15 
+ progress max length  : 16 
+ progress max length  : 17 
+ progress max length  : 18 
+ progress max length  : 19 
+ progress max length  : 20 
+ progress max length  : 21 
+ progress max length  : 22 
+ progress max length  : 23 
+ progress max length  : 24 
+ progress max length  : 25 
+ progress max length  : 26 
+ progress max length  : 27 
+ progress max length  : 28 
+ progress max length  : 29 
+ progress max length  : 30 
+ progress max length  : 31 
+ progress max length  : 32 
+ progress max length  : 33 
+ progress max length  : 34 
+ progress max length  : 35 
+ progress max length  : 36 
+ progress max length  : 37 
+ progress max length  : 38 
+ progress max length  : 39 
+ progress max length  : 40 
+ progress max length  : 41 
+ progress max length  : 42 
+start untar install.img
+ progress step  : 11 
+ Untar file name  : ALSADaemon 
+ progress step  : 12 
+ Untar file name  : config.txt 
+ progress step  : 13 
+ Untar file name  : customer.tar 
+ progress step  : 14 
+ Untar file name  : install_a 
+ progress step  : 15 
+ Untar file name  : mke2fs 
+ progress step  : 16 
+ Untar file name : package5/ 
+ progress step  : 17 
+ Untar file name  : package5/android.root.emmc.cpio.gz_pad.img 
+ progress step  : 18 
+ Untar file name  : package5/emmc.uImage 
+ progress step  : 19 
+ Untar file name  : package5/bluecore.audio.enc.A01 
+ progress step  : 20 
+ Untar file name  : package5/rescue.boot.img 
+ progress step  : 21 
+ Untar file name  : package5/logo_p.bin 
+ progress step  : 22 
+ Untar file name  : package5/vendor.bin 
+ progress step  : 23 
+ Untar file name  : package5/param_p.bin 
+ progress step  : 24 
+ Untar file name  : package5/system.bin 
+ progress step  : 25 
+ Untar file name  : package5/gold.emmc.uImage 
+ progress step  : 26 
+ Untar file name  : package5/verify_p.bin 
+ progress step  : 27 
+ Untar file name  : package5/rescue.root.emmc.cpio.gz_pad.img 
+ progress step  : 28 
+ Untar file name  : package5/data.bin 
+ progress step  : 29 
+ Untar file name  : package5/android.emmc.dtb 
+ progress step  : 30 
+ Untar file name  : package5/rescue.emmc.dtb 
+ progress step  : 31 
+ Untar file name  : package5/gold.bluecore.audio.enc.A01 
+ progress step  : 32 
+ Untar file name  : package5/bootfile.image 
+ progress step  : 33 
+ Untar file name  : package5/uboot_p.bin 
+ progress step  : 34 
+ Untar file name  : package5/cache.bin 
+ progress step  : 35 
+ Untar file name  : package5/gold.rescue.emmc.dtb 
+ progress step  : 36 
+ Untar file name  : package5/gold.rescue.root.emmc.cpio.gz_pad.img 
+ progress step  : 37 
+ Untar file name  : teeUtility.tar 
+ progress step  : 38 
+ Untar file name  : package5/alternate.gpt 
+ progress step  : 39 
+ Untar file name  : package5/primary.gpt 
+ progress step  : 40 
+ Untar file name  : layout.txt 
+ progress step  : 41 
+ Untar file name  : package5/fw_tbl.bin 
+prepare usb_hwsetting buffer
+length: 3112 
+prepare usb_hwsetting buffer done
+bootloader path :C:\iot\rtk\Hercules_usb_tool_ver.002.223752[trunk][64B]\UnTarTmp\package5\bootloader.tar.
+can not found bootloader!
+does not install bootloader.
+FlashLayoutPath : C:\iot\rtk\Hercules_usb_tool_ver.002.223752[trunk][64B]\UnTarTmp\layout.txt 
+ FW_KERNEL  - length: 21813760 
+FW_RESCUE_DT  - length: 43851 
+FW_KERNEL_DT  - length: 44209 
+FW_RESCUE_ROOTFS  - length: 12582912 
+FW_KERNEL_ROOTFS  - length: 4194304 
+FW_NAS_RESCUE_KERNEL  - : len is null
+FW_NAS_RESCUE_DT  - : len is null
+FW_NAS_RESCUE_ROOTFS  - : len is null
+FW_AKERNEL  - length: 4461576 
+FW_TEEKERNEL  - : len is null
+FW_BL31  - : len is null
+FW_P_UBOOT  - : len is null
+FW_DALOGO  - : len is null
+FW_DILOGO  - length: 8294400 
+FW_CILOGO1  - : len is null
+FW_FWTBL  - length: 1264 
+FW_CONFIG  - : len is null
+FW_PROFILE  - because emmc so pass
+FW_GOLD_KERNEL  - length: 19626496 
+FW_GOLD_RESCUE_DT  - length: 43851 
+FW_GOLD_ROOTFS  - length: 12582912 
+FW_GOLD_AKERNEL  - length: 4461576 
+FW_GOLD_IMAGE  - : len is null
+FW_BOOT_IMAGE  - : len is null
+FW_RESCUE_IMAGE  - : len is null
+ PART0 - length: 4194304 
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 50331648
+ per-setup address 8cf0200
+ PART2 -  per-setup length 33554432
+ per-setup address 8cf0200
+ PART3 - length: 50331648 
+ PART3 - length: 50331648 
+ PART3 - length: 50331648 
+ PART3 - length: 50331648 
+ PART3 - length: 50331648 
+ PART3 - length: 50331648 
+ PART3 - length: 12582912 
+can't find MBR target!!
+ GPT0 - length: 17408 
+ GPT1 - length: 16896 
+can't find bootpart1 file!ignore it.
+can't find bootpart2 file!ignore it.
+can't flag file!ignore it.
+progress step  : 100 
+prepare usb_hwsetting buffer
+length: 3112 
+prepare usb_hwsetting buffer done
+run usb hwsetting icon:[0] 
+single device ddr enable Device[0] 
+FW_KERNEL  icon[0] : start block : 161665 。
+FW_RESCUE_DT  icon[0] : start block : 140161 。
+FW_KERNEL_DT icon[0] : start block : 140673 。
+FW_RESCUE_ROOTFS  icon[0] - start block : 227201 。
+FW_KERNEL_ROOTFS  icon[0] : start block : 268161 。
+FW_NAS_RESCUE_KERNEL  icon[0] : start block : 0 。
+FW_NAS_RESCUE_DT  icon[0] : start block : 0 。
+FW_NAS_RESCUE_ROOTFS  icon[0] : start block : 0 。
+FW_AKERNEL  icon[0] : Starblock : 141185 。
+FW_TEEKERNEL  icon[0] : Starblock : 0 。
+FW_BL31  icon[0] : Starblock : 0 。
+FW_P_UBOOT  icon[0] : starblock : 0 。
+FW_DALOGO  icon[0] : start block : 0 。
+FW_DILOGO  icon[0] : start block : 5924737 。
+FW_CILOGO1  icon[0] : start block : 0 。
+FW_FWTBL  icon[0] : start block : 12544 。
+FW_FWTBL  icon[0] : start block : 12608 。
+FW_CONFIG  icon[0] : start block : 0 。
+FW_GOLD_KERNEL  icon[0] : start block : 33665 。
+W_FW_GOLD_KERNEL seekpoint: 18 。
+FW_GOLD_RESCUE_DT  icon[0] : start block : 12673 。
+FW_GOLD_ROOTFS  icon[0] : start block : 99201 。
+FW_GOLD_AKERNEL  icon[0] : start block : 13185 。
+FW_GOLD_IMAGE  icon[0] : start block : 0 。
+FW_BOOT_IMAGE  icon[0] : start block : 0 。
+FW_RESCUE_IMAGE  icon[0] : start block : 0 。
+ PART0 icon[0] : start block : 4482945 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 288641 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 386945 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 485249 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 583553 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 681857 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 780161 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 878465 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 976769 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 1075073 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 1173377 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 1271681 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 1369985 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 1468289 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 1566593 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 1664897 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 1763201 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 1861505 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 1959809 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 2058113 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 2156417 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 2254721 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 2353025 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 2451329 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 2549633 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 2647937 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 2746241 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 2844545 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 2942849 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 3041153 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 3139457 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 3237761 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 3336065 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 3434369 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 3532673 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 3630977 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 3729281 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 3827585 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 3925889 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 4024193 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 4122497 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 4220801 。
+length: 50331648 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 4319105 。
+length: 33554432 
+load_single_partition_buffer : 0
+ PART2 icon[0] : start block : 4417409 。
+ PART3 icon[0] : start block : 5302145 。
+ PART3 icon[0] : start block : 5400449 。
+ PART3 icon[0] : start block : 5498753 。
+ PART3 icon[0] : start block : 5597057 。
+ PART3 icon[0] : start block : 5695361 。
+ PART3 icon[0] : start block : 5793665 。
+ PART3 icon[0] : start block : 5891969 。
+ GPT0 icon[0] : block number : 0 。
+ GPT1 icon[0] : block number : 14942175 。
+thread number [0] 
+enter , write factory
+length: 11776 
+factory address device[0] - starpage : 4352 
+length: 12288 
+factory address device[0] - starpage : 8448 
+exit , write factory
+
