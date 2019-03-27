@@ -1,0 +1,7 @@
+
+dd if=100MB.img of=BOOTLOADER.bin bs=1k skip=2 count=1278
+dd if=100MB.img of=F_220000.bin bs=128K skip=17 count=4
+dd if=100MB.img of=T_620000.bin bs=1k count=1 skip=6272
+dd if=100MB.img of=T_628000.bin bs=1k count=1 skip=6304
+
+dd if=100MB.img of=A_28F0200.bin bs=512 count=8439 skip=83841

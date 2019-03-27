@@ -1,0 +1,2 @@
+
+dd if=/dev/mmcblk0 of=50MB.img bs=1M count=50
