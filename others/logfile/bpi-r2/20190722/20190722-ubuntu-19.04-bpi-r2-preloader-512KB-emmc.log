@@ -1,0 +1,915 @@
+root@bananapir2:/# echo 0 > /sys/block/mmcblk0boot0/force_ro
+root@bananapir2:/# bpi-bootsel BPI-R2-EMMC-boot0-DDR1600-20190722-0k.img.gz /dev/mmcblk0boot0 
+Warning: Try to write  to BOOTDISK /dev/mmcblk0boot0
+INFO: /dev/mmcblk0boot0 : SD/eMMC !!
+umount device: /dev/mmcblk0boot0
+
+##########################
+# Burning the bootloader #
+##########################
+
+sudo gunzip -c BPI-R2-EMMC-boot0-DDR1600-20190722-0k.img.gz | dd of=/dev/mmcblk0boot0 bs=1024 seek=0
+91+1 records in
+91+1 records out
+94052 bytes (94 kB, 92 KiB) copied, 0.10632 s, 885 kB/s
+OK!! You can remove the BOOTDISK /dev/mmcblk0boot0 now!!
+root@bananapir2:/# poweroff
+[  OK  ] Stopped target Host          Stopping Session c1 of user root.
+[  OK  ] Stopped target Timers.
+[  OK  ] Stopped Daily man-db regeneration.
+[  OK  ] Stopped Message of the Day.
+[  OK  ] Stopped Discard unused blocks once a week.
+[  OK  ] Closed Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[  OK  ] Stopped target Graphical Interface.
+[  OK  ] Stopped target Multi-User System.
+         Stopping Unattended Upgrades Shutdown...
+[  OK  ] Stopped Resets System Activity Data Collector.
+         Stopping LSB: Set sysfs variables from /etc/sysfs.conf...
+[  OK  ] Stopped target Login Prompts.
+         Stopping Serial Getty on ttyS0...
+         Stopping Getty on tty1...
+         Stopping Serial Getty on ttyS2...
+         Stopping OpenBSD Secure Shell server...
+         Stopping Dispatcher daemon for systemd-networkd...
+         Stopping Regular background program processing daemon...
+[  OK  ] Stopped Daily apt upgrade and clean activities.
+[  OK  ] Stopped Daily apt download activities.
+[  OK  ] Stopped Daily Cleanup of Temporary Directories.
+         Stopping LSB: Advanced IEEE 802.11 management daemon...
+[  OK  ] Stopped Daily rotation of log files.
+[  OK  ] Stopped target System Time Synchronized.
+         Stopping System Logging Service...
+[  OK  ] Stopped Regular background program processing daemon.
+[  OK  ] Stopped System Logging Service.
+[  OK  ] Stopped Dispatcher daemon for systemd-networkd.
+[  OK  ] Stopped Unattended Upgrades Shutdown.
+[  OK  ] Stopped OpenBSD Secure Shell server.
+[  OK  ] Stopped Authorization Manager.
+[  OK  ] Stopped Getty on tty1.
+[  OK  ] Stopped Serial Getty on ttyS0.
+[  OK  ] Stopped Serial Getty on ttyS2.
+[  OK  ] Stopped LSB: Advanced IEEE 802.11 management daemon.
+[  OK  ] Stopped Session c1 of user root.
+[  OK  ] Stopped LSB: Set sysfs variables from /etc/sysfs.conf.
+         Stopping LSB: set CPUFreq kernel parameters...
+         Stopping User Manager for UID 0...
+[  OK  ] Removed slice system-serial\x2dgetty.slice.
+[  OK  ] Stopped /etc/rc.local Compatibility.
+[  OK  ] Stopped target Network is Online.
+[  OK  ] Stopped Network Manager Wait Online.
+[  OK  ] Removed slice system-getty.slice.
+         Stopping Login Service...
+[  OK  ] Stopped User Manager for UID 0.
+         Stopping User Runtime Directory /run/user/0...
+[  OK  ] Stopped Login Service.
+[  OK  ] Unmounted /run/user/0.
+[  OK  ] Stopped User Runtime Directory /run/user/0.
+[  OK  ] Removed slice User Slice of UID 0.
+         Stopping Permit User Sessions...
+[  OK  ] Stopped LSB: set CPUFreq kernel parameters.
+[  OK  ] Stopped Permit User Sessions.
+[  OK  ] Stopped target Network.
+         Stopping Network Manager...
+         Stopping Network Name Resolution...
+         Stopping Raise network interfaces...
+         Stopping WPA supplicant...
+         Stopping LSB: Load kernel …d to enable cpufreq scaling...
+[  OK  ] Stopped Network Name Resolution.
+[  OK  ] Stopped WPA supplicant.
+[  OK  ] Stopped Network Manager.
+[  OK  ] Stopped Raise network interfaces.
+[  OK  ] Stopped LSB: Load kernel m…ded to enable cpufreq scaling.
+[  OK  ] Stopped target Remote File Systems.
+         Stopping D-Bus System Message Bus...
+         Stopping Network Service...
+[  OK  ] Stopped D-Bus System Message Bus.
+[  OK  ] Stopped target Basic System.
+[  OK  ] Stopped target Sockets.
+[  OK  ] Closed Syslog Socket.
+[  OK  ] Stopped target Paths.
+[  OK  ] Stopped resolvconf-pull-resolved.path.
+[  OK  ] Stopped target Slices.
+[  OK  ] Removed slice User and Session Slice.
+[  OK  ] Closed D-Bus System Message Bus Socket.
+[  OK  ] Stopped target System Initialization.
+         Stopping Network Time Synchronization...
+[  OK  ] Stopped target Local Encrypted Volumes.
+[  OK  ] Stopped Forward Password R…uests to Wall Directory Watch.
+[  OK  ] Stopped Dispatch Password …ts to Console Directory Watch.
+         Stopping Update UTMP about System Boot/Shutdown...
+         Stopping Restore / save the current clock...
+         Stopping Armbian memory supported logging...
+         Stopping Entropy daemon using the HAVEGE algorithm...
+[  OK  ] Stopped Network Time Synchronization.
+[  OK  ] Stopped Entropy daemon using the HAVEGE algorithm.
+[  OK  ] Stopped Network Service.
+[  OK  ] Stopped Restore / save the current clock.
+[  OK  ] Stopped Apply Kernel Variables.
+[  OK  ] Stopped Load Kernel Modules.
+[  OK  ] Stopped target Network (Pre).
+         Stopping Load/Save Random Seed...
+[  OK  ] Stopped Update UTMP about System Boot/Shutdown.
+[  OK  ] Stopped Load/Save Random Seed.
+[  OK  ] Stopped Create Volatile Files and Directories.
+[  OK  ] Unmounted /var/log.
+[  OK  ] Unmounted /var/log.hdd.
+[  OK  ] Stopped Armbian memory supported logging.
+         Stopping Armbian ZRAM config...
+[  OK  ] Stopped Armbian ZRAM config.
+[  OK  ] Stopped target Local File Systems.
+         Unmounting /tmp...
+[  OK  ] Unmounted /tmp.
+[  OK  ] Stopped target Local File Systems (Pre).
+[  OK  ] Stopped Create Static Device Nodes in /dev.
+[  OK  ] Stopped Create System Users.
+[  OK  ] Stopped Remount Root and Kernel File Systems.
+[  OK  ] Stopped target Swap.
+[  OK  ] Reached target Shutdown.
+         Deactivating swap /dev/zram1...
+[  OK  ] Deactivated swap /dev/zram1.
+[  OK  ] Reached target Unmount All Filesystems.
+[  OK  ] Reached target Final Step.
+[  OK  ] Started Power-Off.
+[  OK  ] Reached target Power-Off.
+[ 2029.306075] reboot: Power down
+
+[USBD] USB PRB0 LineState: 0
+
+[USBD] USB cable/ No Cable inserted!
+
+[PLFM] Keep stay in USB Mode
+Platform initialization is ok
+wait for frequency meter finish, CLK26CALI = 0x81
+mt_pll_post_init: mt_get_cpu_freq = 1040000Khz
+wait for frequency meter finish, CLK26CALI = 0x90
+mt_pll_post_init: mt_get_bus_freq = 273000Khz
+wait for frequency meter finish, CLK26CALI = 0x81
+mt_pll_post_init: mt_get_mem_freq = 133250Khz
+[PWRAP] pwrap_init_preloader
+[PWRAP] pwrap_init
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=0,rdata=2D52
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=1,rdata=2D52
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=2,rdata=2D52
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=3,rdata=800
+[PWRAP] _pwrap_init_sistrobe [Read Test] pass,index=4 rdata=5AA5
+[PWRAP] _pwrap_init_sistrobe [Read Test] pass,index=5 rdata=5AA5
+[PWRAP] _pwrap_init_sistrobe [Read Test] pass,index=6 rdata=5AA5
+[PWRAP] _pwrap_init_sistrobe [Read Test] pass,index=7 rdata=5AA5
+[PWRAP] _pwrap_init_sistrobe [Read Test] pass,index=8 rdata=5AA5
+[PWRAP] _pwrap_init_sistrobe [Read Test] pass,index=9 rdata=5AA5
+[PWRAP] _pwrap_init_sistrobe [Read Test] pass,index=10 rdata=5AA5
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=11,rdata=1001
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=12,rdata=B54B
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=13,rdata=B54B
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=14,rdata=B54B
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=15,rdata=B54B
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=16,rdata=B54B
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=17,rdata=B54B
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=18,rdata=B54B
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=19,rdata=2003
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=20,rdata=6A97
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=21,rdata=6A97
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=22,rdata=6A97
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=23,rdata=6A97
+[PWRAP] _pwrap_init_reg_clock
+[PMIC_WRAP]wrap_init pass,the return value=0.
+[pmic6323_init] Preloader Start..................
+[pmic6323_init] PMIC CHIP Code = 0x2023
+INT_MISC_CON: 1  TOP_RST_MISC: 1
+pl pmic powerkey Press
+[pmic6323_init] powerKey = 1
+[pmic6323_init] is USB in = 0xB004
+[pmic6323_init] Reg[0x11A]=0x1B
+pmic setup LED
+[pmic6323_init] Done...................
+mt7623 disable long press reset ->>>>>
+mt7623 disable long press reset <<<<<-
+mt7623 VPA supplied by 1.0V to MT7530 ->
+mt7623 VPA supplied by 1.0V to MT7530 <-
+mt7623 enables RG_VGP1_EN for LCM ->
+mt7623 enables RG_VGP1_EN for LCM <-
+MT7623 E2 setting =>
+MT7623 E2 setting <=
+[PLFM] Init I2C: OK(0)
+[PLFM] Init PWRAP: OK(0)
+[PLFM] Init PMIC: OK(0)
+[PLFM] chip[CA00]
+
+[BLDR] [Support SD/eMMC] Build Time: 20190722-114700
+==== Dump RGU Reg ========
+RGU MODE:     4D
+RGU LENGTH:   FFE0
+RGU STA:      0
+RGU INTERVAL: FFF
+RGU SWSYSRST: 0
+==== Dump RGU Reg End ====
+RGU: g_rgu_satus:0
+ mtk_wdt_mode_config  mode value=10, tmp:22000010
+PL P ON
+WDT does not trigger reboot
+RGU mtk_wdt_init:MTK_WDT_DEBUG_CTL(590200F3)
+kpd read addr: 0x0040: data:0x4001
+Enter mtk_kpd_gpio_set! 
+kpd debug column : 0, 0, 0, 0, 0, 0, 0, 0
+kpd debug row : 0, 0, 0, 0, 0, 0, 0, 0
+after set KP enable: KP_SEL = 0x0 !
+MTK_PMIC_RST_KEY is used for this project!
+[RTC] get_frequency_meter: input=0x0, ouput=5
+[RTC] get_frequency_meter: input=0x0, ouput=3968
+[RTC] get_frequency_meter: input=0x0, ouput=5
+[RTC] get_frequency_meter: input=0x0, ouput=0
+[RTC] get_frequency_meter: input=0x0, ouput=0
+[RTC] bbpu = 0x0, con = 0x427
+[RTC] powerkey1 = 0xA357, powerkey2 = 0x67D2
+Writeif_unlock
+[RTC] RTC_SPAR0=0x40 
+rtc_2sec_reboot_check cali=1536
+[RTC] irqsta = 0x0, pdn1 = 0x0, pdn2 = 0x201, spar0 = 0x40, spar1 = 0x800
+[RTC] new_spare0 = 0x0, new_spare1 = 0x1, new_spare2 = 0x1, new_spare3 = 0x1
+[RTC] bbpu = 0x0, con = 0x426, cali = 0x600
+pl pmic powerkey Press
+power key is pressed
+[PLFM] Power key boot!
+[RTC] rtc_bbpu_power_on done
+[EMI] mcp_dram_num:0,discrete_dram_num:1,enable_combo_dis:0
+[EMI] PCDDR3
+[Check]mt_get_mdl_number 0x0
+[EMI] eMMC/NAND ID = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+[EMI] MDL number = 0
+[EMI] emi_set eMMC/NAND ID = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+[EMI][Vcore]0x21E=0x48,0x220=0x48
+[EMI][Vmem]0x554=0x0
+wait for frequency meter finish, CLK26CALI = 0x81
+[EMI] PCDDR3 DRAM Clock = 1600012 KHz, MEMPLL MODE = 2 
+[EMI] PCDDR3 RXTDN Calibration:
+Start REXTDN SW calibration...
+drvp=0xB,drvn=0x9
+[EMI] pinmux = 4
+===============================================================================
+
+        dramc_write_leveling_swcal
+===============================================================================
+delay  byte0  byte1  byte2  byte3
+-----------------------------
+0    0    1    1    1    
+1    0    1    1    1    
+2    1    1    1    1    
+3    1    1    1    1    
+4    1    1    1    1    
+5    1    1    1    1    
+6    1    1    1    1    
+7    1    1    1    1    
+8    1    1    1    1    
+9    1    1    1    1    
+10    1    1    1    1    
+11    1    1    1    1    
+12    1    1    1    1    
+13    1    1    1    1    
+14    1    1    1    1    
+15    1    1    1    1    
+pass bytecount = 4
+byte_i    status    best delay
+0    2    2
+1    2    0
+2    2    0
+3    2    0
+========================================
+[write leveling]DQS: 0x2, DQM: 0x2
+[write leveling after remap]DQ byte0 reg: 0x200 val: 0x22220000
+[write leveling after remap]DQ byte1 reg: 0x204 val: 0x2222
+[write leveling after remap]DQ byte2 reg: 0x208 val: 0x0
+[write leveling after remap]DQ byte3 reg: 0x20C val: 0x0
+=============================================
+X-axis: DQS Gating Window Delay (Fine Scale)
+Y-axis: DQS Gating Window Delay (Coarse Scale)
+=============================================
+          0    8   16   24   32   40   48   56   64   72   80   88   96  104  112  120
+      --------------------------------------------------------------------------------
+0000:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0001:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0002:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0003:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0004:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0005:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0006:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0007:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0008:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0009:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+000A:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+000B:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+000C:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+000D:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+000E:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+000F:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0010:|    0    0    0    0    0    0    0    0    0    0    0    0    0    1    1    1
+0011:|    0    0    0    0    0    0    0    0    1    1    1    1    1    1    1    1
+0012:|    0    0    0    1    1    1    1    1    1    1    1    1    0    0    0    0
+0013:|    1    1    1    1    1    1    1    0    0    0    0    0    0    0    0    0
+0014:|    1    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0015:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0016:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0017:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0018:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0019:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001A:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001B:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001C:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001D:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001E:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001F:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+Rank 0 coarse tune value selection : 18, 18
+18
+56
+rank 0 coarse = 18
+rank 0 fine = 56
+00:|    0    0    0    0    0    0    0    0    1    1    1    0
+opt_dle value:13
+==================================================================
+		RX	DQS perbit delay software calibration 
+==================================================================
+1.0-31 bit dq delay value
+==================================================================
+bit|     0  1  2  3  4  5  6  7  8  9
+--------------------------------------
+0 |    0 0 0 0 0 0 0 0 0 0 
+10 |    0 0 0 0 0 0 0 0 0 0 
+20 |    0 0 0 0 0 0 0 0 0 0 
+30 |    0 0 
+--------------------------------------
+==================================================================
+2.dqs window
+x=pass dqs delay value (min~max)center 
+y=0-7bit DQ of every group
+input delay:DQS0 =49 DQS1 = 40 DQS2 =49 DQS3 = 44
+==================================================================
+bit	DQS0	 bit      DQS1     bit     DQS2     bit     DQS3
+0  (21~66)43  8  (8~57)32  16  (23~68)45  24  (17~63)40
+1  (19~64)41  9  (9~59)34  17  (23~67)45  25  (17~63)40
+2  (19~67)43  10  (11~61)36  18  (27~69)48  26  (21~65)43
+3  (19~68)43  11  (13~61)37  19  (21~65)43  27  (20~63)41
+4  (22~71)46  12  (17~62)39  20  (24~69)46  28  (21~68)44
+5  (21~70)45  13  (16~64)40  21  (25~73)49  29  (20~66)43
+6  (25~68)46  14  (15~60)37  22  (26~70)48  30  (15~61)38
+7  (27~72)49  15  (16~58)37  23  (29~70)49  31  (21~64)42
+==================================================================
+3.dq delay value last
+==================================================================
+bit|    0  1  2  3  4  5  6  7  8   9
+--------------------------------------
+0 |    6 8 6 6 3 4 3 0 8 6 
+10 |    4 3 1 0 3 3 4 4 1 6 
+20 |    3 0 1 0 4 4 1 3 0 1 
+30 |    6 2 
+==================================================================
+*DQIDLY1 = 0x6060806
+*DQIDLY2 = 0x30403
+*DQIDLY3 = 0x3040608
+*DQIDLY4 = 0x3030001
+*DQIDLY5 = 0x6010404
+*DQIDLY6 = 0x10003
+*DQIDLY7 = 0x3010404
+*DQIDLY8 = 0x2060100
+*DRAMC_R0DELDLY = 0x2C312831
+
+[MEM]CONA:F3A2,conf1:F07486A3
+DM4BitMux = 1 
+[Warning] DQSO 0 in TX per-bit = 3 > DQSO 0 in WL = 2  
+DQSO 1 in TX per-bit = 0 <= DQSO 1 in WL = 0  
+[Warning] DQSO 2 in TX per-bit = 9 > DQSO 2 in WL = 0  
+[Warning] DQSO 3 in TX per-bit = 8 > DQSO 3 in WL = 0  
+Tx DQM dly  = 0x1242
+Tx DQM dly bit4 = 0x0
+DRAMC_DQODLY1=2323444h
+DRAMC_DQODLY2=35453222h
+DRAMC_DQODLY3=1312122h
+DRAMC_DQODLY4=21104044h
+Tx DQ dly bit4 = 0x0
+Tx DQS dly = 0x8903
+Tx DQS dly bit4 = 0x0
+TX Byte0: DQ - 13, DQS - 18. win_sum= 30
+TX Byte1: DQ - 20, DQS - 12. win_sum= 31
+TX Byte2: DQ - 8, DQS - 22. win_sum= 29
+TX Byte3: DQ - 7, DQS - 22. win_sum= 28
+DRAMC calibration takes 650662933 CPU cycles
+
+[EMI] DRAMC calibration passed
+
+[MEM] complex R/W mem test pass
+0:dram_rank_size:80000000
+[Dram_Buffer] dram size:-2147483648 
+[Dram_Buffer] structure size: 1725560 
+[Dram_Buffer] MAX_TEE_DRAM_SIZE: 0 
+Boot from eMMC!!
+[PLFM] Init Boot Device: OK(0)
+
+[PART] blksz: 512B
+[PART] [0x0000000000000000-0x000000000003FFFF] "PRELOADER" (512 blocks) 
+[PART] [0x0000000000000000-0x000000000003FFFF] "MBR" (512 blocks) 
+[PART] [0x0000000000040000-0x00000000000BFFFF] "UBOOT" (1024 blocks) 
+[PART] [0x00000000000C0000-0x00000000000FFFFF] "CONFIG" (512 blocks) 
+[PART] [0x0000000000100000-0x000000000013FFFF] "FACTORY" (512 blocks) 
+[PART] [0x0000000000140000-0x000000000213FFFF] "BOOTIMG" (65536 blocks) 
+[PART] [0x0000000002140000-0x000000000413FFFF] "RECOVERY" (65536 blocks) 
+[PART] [0x0000000004140000-0x000000004413FFFF] "ROOTFS" (2097152 blocks) 
+[PART] [0x0000000044140000-0x000001FFC413FFFF] "USER" (-4194304 blocks) 
+[platform_vusb_on] PASS
+[TOOL] PMIC not dectect usb cable!
+[TOOL] <UART> listen  ended, receive size:0!
+[TOOL] <UART> wait sync time 150ms->5ms
+[TOOL] <UART> receieved data: ()
+
+Device APC domain init setup:
+
+ bootloader load uboot ,the address of uboot is 81E00000 
+[PART]partition name UBOOT 
+[PART]partition start block 0x200 
+[PART]partition size 0x80000 
+[PART]partition blks 0x400 
+[PART]partition flags 0x0 
+[PART]partition name 0x8 
+[bean] part->startblk(0x200) bdev->blksz(0x200) part->part_id(8) hdr(0xFFB50000)
+[BlkDev.c 101 ]partition block size 0x200 ,blks:0xE90000
+[BlkDev.c 101 ]partition block erase size 0x200 
+
+[PART] load "UBOOT" from 0x0000000000050000 (dev) to 0x81E00000 (mem) [SUCCESS]
+[PART] load speed: 12487KB/s, 524288 bytes, 41ms
+[BT_SD_PG] device info 0x8590 0x8A00 0xCB01 0x102
+0:dram_rank_size:80000000
+[PLFM] md_type[0] = 255 
+[PLFM] md_type[1] = 255 
+
+[PLFM] boot reason: 0
+[PLFM] boot mode: 0
+[PLFM] META COM0: 0
+[PLFM] <0xFFB7CC10>: 0x0
+[PLFM] boot time: 2029ms
+[PLFM] DDR reserve mode: enable = 0, success = 0
+
+[BLDR] jump to 0x81E00000
+[BLDR] <0x81E00000>=0xEA0000B8
+[BLDR] <0x81E00004>=0xE59FF014
+
+
+U-Boot 2019.01-armbian (Jul 19 2019 - 15:37:22 +0800)
+
+CPU:   MediaTek MT7623 E3
+DRAM:  2 GiB
+MMC:   mmc@11230000: 0, mmc@11240000: 1
+Loading Environment from EXT4... ** File not found /boot/boot.env **
+
+** Unable to read "/boot/boot.env" from mmc0:1 **
+In:    serial
+Out:   serial
+Err:   serial
+Net:   Net Initialization Skipped
+No ethernet found.
+Hit any key to stop autoboot:  3  2  1  0 
+MMC: no card present
+MMC: no card present
+Running boot/boot.scr from: mmc 1:1 using boot/boot.scr
+## Executing script at 85f80000
+Wrong image format for "source" command
+switch to partitions #0, OK
+mmc0(part 0) is current device
+1092 bytes read in 8 ms (132.8 KiB/s)
+Running boot/boot.scr from: mmc 0:1 using boot/boot.scr
+## Executing script at 85f80000
+Boot script loaded from device 0
+127 bytes read in 6 ms (20.5 KiB/s)
+27786 bytes read in 11 ms (2.4 MiB/s)
+8072711 bytes read in 409 ms (18.8 MiB/s)
+8471040 bytes read in 429 ms (18.8 MiB/s)
+Booting boot/zImage  boot/uInitrd boot/dtb/mt7623n-bananapi-bpi-r2.dtb from: mmc 0:1 using bootargs=console=ttyS2,115200n1 root=UUID=8199d9db-e1bf-46cf-a00b-49abb95c2316 rw rootfstype=ext4 rootwait audit=0 loglevel=1
+Kernel image @ 0x82000000 [ 0x000000 - 0x814200 ]
+## Loading init Ramdisk from Legacy Image at 86080000 ...
+   Image Name:   uInitrd
+   Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+   Data Size:    8072647 Bytes = 7.7 MiB
+   Load Address: 00000000
+   Entry Point:  00000000
+   Verifying Checksum ... OK
+## Flattened Device Tree blob at 86000000
+   Booting using the fdt blob at 0x86000000
+   Loading Ramdisk to 8f84d000, end 8ffffdc7 ... OK
+   Loading Device Tree to 8f843000, end 8f84cc89 ... OK
+
+Starting kernel ...
+
+Loading, please wait...
+Starting version 240
+Begin: Loading essential drivers ... done.
+Begin: Running /scripts/init-premount ... done.
+Begin: Mounting root file system ... Begin: Running /scripts/local-top ... done.
+Begin: Running /scripts/local-premount ... Scanning for Btrfs filesystems
+done.
+Begin: Will now check root file system ... fsck from util-linux 2.33.1
+[/sbin/fsck.ext4 (1) -- /dev/mmcblk0p1] fsck.ext4 -a -C0 /dev/mmcblk0p1 
+/dev/mmcblk0p1: clean, 35549/423168 files, 235749/1869536 blocks
+done.
+done.
+Begin: Running /scripts/local-bottom ... done.
+Begin: Running /scripts/init-bottom ... done.
+
+Welcome to Ubuntu 19.04!
+
+[  OK  ] Listening on initctl Compatibility Named Pipe.
+[  OK  ] Listening on Journal Socket.
+[  OK  ] Started Dispatch Password …ts to Console Directory Watch.
+[  OK  ] Listening on udev Kernel Socket.
+[  OK  ] Reached target System Time Synchronized.
+[  OK  ] Reached target Swap.
+         Starting Create list of re…odes for the current kernel...
+[  OK  ] Listening on Network Service Netlink Socket.
+[  OK  ] Listening on udev Control Socket.
+         Starting udev Coldplug all Devices...
+[  OK  ] Listening on Syslog Socket.
+[  OK  ] Reached target Remote File Systems.
+[  OK  ] Started ntp-systemd-netif.path.
+         Starting Nameserver information manager...
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+[  OK  ] Listening on Journal Socket (/dev/log).
+         Starting Journal Service...
+         Starting Set the console keyboard layout...
+[  OK  ] Created slice User and Session Slice.
+         Starting Load Kernel Modules...
+         Starting Restore / save the current clock...
+[  OK  ] Started Forward Password R…uests to Wall Directory Watch.
+[  OK  ] Listening on fsck to fsckd communication Socket.
+         Starting Remount Root and Kernel File Systems...
+         Mounting POSIX Message Queue File System...
+[  OK  ] Reached target Slices.
+         Mounting Kernel Debug File System...
+[  OK  ] Reached target Local Encrypted Volumes.
+[  OK  ] Started Create list of req… nodes for the current kernel.
+[  OK  ] Started Load Kernel Modules.
+[  OK  ] Started Restore / save the current clock.
+[  OK  ] Started Remount Root and Kernel File Systems.
+[  OK  ] Mounted POSIX Message Queue File System.
+[  OK  ] Mounted Kernel Debug File System.
+[  OK  ] Started Set the console keyboard layout.
+[  OK  ] Started Nameserver information manager.
+[  OK  ] Reached target Network (Pre).
+         Starting Load/Save Random Seed...
+         Starting Create System Users...
+         Starting Apply Kernel Variables...
+         Mounting FUSE Control File System...
+         Mounting Kernel Configuration File System...
+[  OK  ] Started Journal Service.
+[  OK  ] Started Load/Save Random Seed.
+[  OK  ] Started Create System Users.
+[  OK  ] Started Apply Kernel Variables.
+[  OK  ] Mounted FUSE Control File System.
+[  OK  ] Mounted Kernel Configuration File System.
+         Starting Create Static Device Nodes in /dev...
+         Starting Flush Journal to Persistent Storage...
+[  OK  ] Started Create Static Device Nodes in /dev.
+[  OK  ] Reached target Local File Systems (Pre).
+         Mounting /tmp...
+         Starting udev Kernel Device Manager...
+[  OK  ] Started udev Coldplug all Devices.
+[  OK  ] Mounted /tmp.
+[  OK  ] Reached target Local File Systems.
+         Starting Set console font and keymap...
+         Starting Armbian ZRAM config...
+         Starting Helper to synchronize boot up for ifupdown...
+[  OK  ] Started udev Kernel Device Manager.
+[  OK  ] Started Flush Journal to Persistent Storage.
+[  OK  ] Started Set console font and keymap.
+[  OK  ] Started Helper to synchronize boot up for ifupdown.
+         Starting Raise network interfaces...
+         Starting Create Volatile Files and Directories...
+         Starting Network Service...
+[  OK  ] Started Create Volatile Files and Directories.
+[  OK  ] Started Entropy daemon using the HAVEGE algorithm.
+         Starting Network Time Synchronization...
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+[  OK  ] Found device /dev/ttyS0.
+[  OK  ] Found device /dev/ttyS2.
+[  OK  ] Started Network Service.
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Started Armbian ZRAM config.
+[  OK  ] Started Raise network interfaces.
+         Starting Armbian memory supported logging...
+[  OK  ] Listening on Load/Save RF …itch Status /dev/rfkill Watch.
+         Starting Network Name Resolution...
+         Starting Wait for Network to be Configured...
+[  OK  ] Started Network Name Resolution.
+[  OK  ] Reached target Host and Network Name Lookups.
+[  OK  ] Started Armbian memory supported logging.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Started Message of the Day.
+         Starting Armbian hardware optimization...
+[  OK  ] Started Discard unused blocks once a week.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Started resolvconf-pull-resolved.path.
+[  OK  ] Reached target Paths.
+[  OK  ] Started Daily man-db regeneration.
+         Starting Armbian hardware monitoring...
+[  OK  ] Started Daily rotation of log files.
+[  OK  ] Started Daily apt download activities.
+[  OK  ] Started Daily apt upgrade and clean activities.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Reached target Timers.
+[  OK  ] Started Armbian hardware optimization.
+[  OK  ] Started Armbian hardware monitoring.
+[  OK  ] Reached target Basic System.
+         Starting Dispatcher daemon for systemd-networkd...
+         Starting Login Service...
+         Starting Resets System Activity Data Collector...
+[  OK  ] Started ntp-systemd-netif.service.
+         Starting System Logging Service...
+[  OK  ] Started Save initial kernel messages after boot.
+         Starting resolvconf-pull-resolved.service...
+[  OK  ] Started D-Bus System Message Bus.
+[  OK  ] Started Regular background program processing daemon.
+         Starting WPA supplicant...
+         Starting Network Manager...
+         Starting LSB: Load kernel …d to enable cpufreq scaling...
+[  OK  ] Started Resets System Activity Data Collector.
+[  OK  ] Started Login Service.
+[  OK  ] Started resolvconf-pull-resolved.service.
+[  OK  ] Started System Logging Service.
+[  OK  ] Started WPA supplicant.
+[  OK  ] Started LSB: Load kernel m…ded to enable cpufreq scaling.
+         Starting LSB: set CPUFreq kernel parameters...
+[  OK  ] Started LSB: set CPUFreq kernel parameters.
+         Starting LSB: Set sysfs variables from /etc/sysfs.conf...
+[  OK  ] Started Network Manager.
+[  OK  ] Reached target Network.
+[  OK  ] Started Unattended Upgrades Shutdown.
+         Starting OpenBSD Secure Shell server...
+         Starting Permit User Sessions...
+         Starting Network Manager Wait Online...
+[  OK  ] Started Permit User Sessions.
+         Starting Set console scheme...
+         Starting Hostname Service...
+[  OK  ] Started LSB: Set sysfs variables from /etc/sysfs.conf.
+[  OK  ] Started Set console scheme.
+[  OK  ] Started OpenBSD Secure Shell server.
+[  OK  ] Created slice system-getty.slice.
+[  OK  ] Started Dispatcher daemon for systemd-networkd.
+[  OK  ] Started Hostname Service.
+         Starting Network Manager Script Dispatcher Service...
+[  OK  ] Started Network Manager Script Dispatcher Service.
+         Starting Authorization Manager...
+[  OK  ] Started Network Manager Wait Online.
+[  OK  ] Started Authorization Manager.
+[*     ] A start job is running for Wait for… to be Configured (16s / no limit)
+[**    ] A start job is running for Wait for… to be Configured (17s / no limit)
+[***   ] A start job is running for Wait for… to be Configured (17s / no limit)
+[ ***  ] A start job is running for Wait for… to be Configured (18s / no limit)
+[  *** ] A start job is running for Wait for… to be Configured (18s / no limit)
+[   ***] A start job is running for Wait for… to be Configured (19s / no limit)
+[    **] A start job is running for Wait for… to be Configured (19s / no limit)
+[     *] A start job is running for Wait for… to be Configured (20s / no limit)
+[    **] A start job is running for Wait for… to be Configured (20s / no limit)
+[   ***] A start job is running for Wait for… to be Configured (21s / no limit)
+[  *** ] A start job is running for Wait for… to be Configured (21s / no limit)
+[ ***  ] A start job is running for Wait for… to be Configured (22s / no limit)
+[***   ] A start job is running for Wait for… to be Configured (22s / no limit)
+[**    ] A start job is running for Wait for… to be Configured (23s / no limit)
+[*     ] A start job is running for Wait for… to be Configured (23s / no limit)
+[**    ] A start job is running for Wait for… to be Configured (24s / no limit)
+[***   ] A start job is running for Wait for… to be Configured (24s / no limit)
+[ ***  ] A start job is running for Wait for… to be Configured (25s / no limit)
+[  *** ] A start job is running for Wait for… to be Configured (25s / no limit)
+[   ***] A start job is running for Wait for… to be Configured (26s / no limit)
+[    **] A start job is running for Wait for… to be Configured (26s / no limit)
+[     *] A start job is running for Wait for… to be Configured (27s / no limit)
+[    **] A start job is running for Wait for… to be Configured (27s / no limit)
+[   ***] A start job is running for Wait for… to be Configured (28s / no limit)
+[  *** ] A start job is running for Wait for… to be Configured (28s / no limit)
+[ ***  ] A start job is running for Wait for… to be Configured (29s / no limit)
+[***   ] A start job is running for Wait for… to be Configured (29s / no limit)
+[**    ] A start job is running for Wait for… to be Configured (30s / no limit)
+[*     ] A start job is running for Wait for… to be Configured (30s / no limit)
+[**    ] A start job is running for Wait for… to be Configured (31s / no limit)
+[***   ] A start job is running for Wait for… to be Configured (31s / no limit)
+[ ***  ] A start job is running for Wait for… to be Configured (32s / no limit)
+[  *** ] A start job is running for Wait for… to be Configured (32s / no limit)
+[   ***] A start job is running for Wait for… to be Configured (33s / no limit)
+[    **] A start job is running for Wait for… to be Configured (33s / no limit)
+[     *] A start job is running for Wait for… to be Configured (34s / no limit)
+[    **] A start job is running for Wait for… to be Configured (34s / no limit)
+[   ***] A start job is running for Wait for… to be Configured (35s / no limit)
+[  *** ] A start job is running for Wait for… to be Configured (35s / no limit)
+[ ***  ] A start job is running for Wait for… to be Configured (36s / no limit)
+[***   ] A start job is running for Wait for… to be Configured (36s / no limit)
+[**    ] A start job is running for Wait for… to be Configured (37s / no limit)
+[*     ] A start job is running for Wait for… to be Configured (37s / no limit)
+[**    ] A start job is running for Wait for… to be Configured (38s / no limit)
+[***   ] A start job is running for Wait for… to be Configured (38s / no limit)
+[ ***  ] A start job is running for Wait for… to be Configured (39s / no limit)
+[  *** ] A start job is running for Wait for… to be Configured (39s / no limit)
+[   ***] A start job is running for Wait for… to be Configured (40s / no limit)
+[    **] A start job is running for Wait for… to be Configured (40s / no limit)
+[     *] A start job is running for Wait for… to be Configured (41s / no limit)
+[    **] A start job is running for Wait for… to be Configured (41s / no limit)
+[   ***] A start job is running for Wait for… to be Configured (42s / no limit)
+[  *** ] A start job is running for Wait for… to be Configured (42s / no limit)
+[ ***  ] A start job is running for Wait for… to be Configured (43s / no limit)
+[***   ] A start job is running for Wait for… to be Configured (43s / no limit)
+[**    ] A start job is running for Wait for… to be Configured (44s / no limit)
+[*     ] A start job is running for Wait for… to be Configured (44s / no limit)
+[**    ] A start job is running for Wait for… to be Configured (45s / no limit)
+[***   ] A start job is running for Wait for… to be Configured (45s / no limit)
+[ ***  ] A start job is running for Wait for… to be Configured (46s / no limit)
+[  *** ] A start job is running for Wait for… to be Configured (46s / no limit)
+[   ***] A start job is running for Wait for… to be Configured (47s / no limit)
+[    **] A start job is running for Wait for… to be Configured (47s / no limit)
+[     *] A start job is running for Wait for… to be Configured (48s / no limit)
+[    **] A start job is running for Wait for… to be Configured (48s / no limit)
+[   ***] A start job is running for Wait for… to be Configured (49s / no limit)
+[  *** ] A start job is running for Wait for… to be Configured (49s / no limit)
+[ ***  ] A start job is running for Wait for… to be Configured (50s / no limit)
+[***   ] A start job is running for Wait for… to be Configured (50s / no limit)
+[**    ] A start job is running for Wait for… to be Configured (51s / no limit)
+[*     ] A start job is running for Wait for… to be Configured (51s / no limit)
+[**    ] A start job is running for Wait for… to be Configured (52s / no limit)
+[***   ] A start job is running for Wait for… to be Configured (52s / no limit)
+[ ***  ] A start job is running for Wait for… to be Configured (53s / no limit)
+[  *** ] A start job is running for Wait for… to be Configured (53s / no limit)
+[   ***] A start job is running for Wait for… to be Configured (54s / no limit)
+[    **] A start job is running for Wait for… to be Configured (54s / no limit)
+[     *] A start job is running for Wait for… to be Configured (55s / no limit)
+[    **] A start job is running for Wait for… to be Configured (55s / no limit)
+[   ***] A start job is running for Wait for… to be Configured (56s / no limit)
+[  *** ] A start job is running for Wait for… to be Configured (56s / no limit)
+[ ***  ] A start job is running for Wait for… to be Configured (57s / no limit)
+[***   ] A start job is running for Wait for… to be Configured (57s / no limit)
+[**    ] A start job is running for Wait for… to be Configured (58s / no limit)
+[*     ] A start job is running for Wait for… to be Configured (58s / no limit)
+[**    ] A start job is running for Wait for… to be Configured (59s / no limit)
+[***   ] A start job is running for Wait for… to be Configured (59s / no limit)
+[ ***  ] A start job is running for Wait for…to be Configured (1min / no limit)
+[  *** ] A start job is running for Wait for…to be Configured (1min / no limit)
+[   ***] A start job is running for Wait for…be Configured (1min 1s / no limit)
+[    **] A start job is running for Wait for…be Configured (1min 1s / no limit)
+[     *] A start job is running for Wait for…be Configured (1min 2s / no limit)
+[    **] A start job is running for Wait for…be Configured (1min 2s / no limit)
+[   ***] A start job is running for Wait for…be Configured (1min 3s / no limit)
+[  *** ] A start job is running for Wait for…be Configured (1min 3s / no limit)
+[ ***  ] A start job is running for Wait for…be Configured (1min 4s / no limit)
+[***   ] A start job is running for Wait for…be Configured (1min 4s / no limit)
+[**    ] A start job is running for Wait for…be Configured (1min 5s / no limit)
+[*     ] A start job is running for Wait for…be Configured (1min 5s / no limit)
+[**    ] A start job is running for Wait for…be Configured (1min 6s / no limit)
+[***   ] A start job is running for Wait for…be Configured (1min 6s / no limit)
+[ ***  ] A start job is running for Wait for…be Configured (1min 7s / no limit)
+[  *** ] A start job is running for Wait for…be Configured (1min 7s / no limit)
+[   ***] A start job is running for Wait for…be Configured (1min 8s / no limit)
+[    **] A start job is running for Wait for…be Configured (1min 8s / no limit)
+[     *] A start job is running for Wait for…be Configured (1min 9s / no limit)
+[    **] A start job is running for Wait for…be Configured (1min 9s / no limit)
+[   ***] A start job is running for Wait for…e Configured (1min 10s / no limit)
+[  *** ] A start job is running for Wait for…e Configured (1min 10s / no limit)
+[ ***  ] A start job is running for Wait for…e Configured (1min 11s / no limit)
+[***   ] A start job is running for Wait for…e Configured (1min 11s / no limit)
+[**    ] A start job is running for Wait for…e Configured (1min 12s / no limit)
+[*     ] A start job is running for Wait for…e Configured (1min 12s / no limit)
+[**    ] A start job is running for Wait for…e Configured (1min 13s / no limit)
+[***   ] A start job is running for Wait for…e Configured (1min 13s / no limit)
+[ ***  ] A start job is running for Wait for…e Configured (1min 14s / no limit)
+[  *** ] A start job is running for Wait for…e Configured (1min 14s / no limit)
+[   ***] A start job is running for Wait for…e Configured (1min 15s / no limit)
+[    **] A start job is running for Wait for…e Configured (1min 15s / no limit)
+[     *] A start job is running for Wait for…e Configured (1min 16s / no limit)
+[    **] A start job is running for Wait for…e Configured (1min 16s / no limit)
+[   ***] A start job is running for Wait for…e Configured (1min 17s / no limit)
+[  *** ] A start job is running for Wait for…e Configured (1min 17s / no limit)
+[ ***  ] A start job is running for Wait for…e Configured (1min 18s / no limit)
+[***   ] A start job is running for Wait for…e Configured (1min 18s / no limit)
+[**    ] A start job is running for Wait for…e Configured (1min 19s / no limit)
+[*     ] A start job is running for Wait for…e Configured (1min 19s / no limit)
+[**    ] A start job is running for Wait for…e Configured (1min 20s / no limit)
+[***   ] A start job is running for Wait for…e Configured (1min 20s / no limit)
+[ ***  ] A start job is running for Wait for…e Configured (1min 21s / no limit)
+[  *** ] A start job is running for Wait for…e Configured (1min 21s / no limit)
+[   ***] A start job is running for Wait for…e Configured (1min 22s / no limit)
+[    **] A start job is running for Wait for…e Configured (1min 22s / no limit)
+[     *] A start job is running for Wait for…e Configured (1min 23s / no limit)
+[    **] A start job is running for Wait for…e Configured (1min 23s / no limit)
+[   ***] A start job is running for Wait for…e Configured (1min 24s / no limit)
+[  *** ] A start job is running for Wait for…e Configured (1min 24s / no limit)
+[ ***  ] A start job is running for Wait for…e Configured (1min 25s / no limit)
+[***   ] A start job is running for Wait for…e Configured (1min 25s / no limit)
+[**    ] A start job is running for Wait for…e Configured (1min 26s / no limit)
+[*     ] A start job is running for Wait for…e Configured (1min 26s / no limit)
+[**    ] A start job is running for Wait for…e Configured (1min 27s / no limit)
+[***   ] A start job is running for Wait for…e Configured (1min 27s / no limit)
+[ ***  ] A start job is running for Wait for…e Configured (1min 28s / no limit)
+[  *** ] A start job is running for Wait for…e Configured (1min 28s / no limit)
+[   ***] A start job is running for Wait for…e Configured (1min 29s / no limit)
+[    **] A start job is running for Wait for…e Configured (1min 29s / no limit)
+[     *] A start job is running for Wait for…e Configured (1min 30s / no limit)
+[    **] A start job is running for Wait for…e Configured (1min 30s / no limit)
+[   ***] A start job is running for Wait for…e Configured (1min 31s / no limit)
+[  *** ] A start job is running for Wait for…e Configured (1min 31s / no limit)
+[ ***  ] A start job is running for Wait for…e Configured (1min 32s / no limit)
+[***   ] A start job is running for Wait for…e Configured (1min 32s / no limit)
+[**    ] A start job is running for Wait for…e Configured (1min 33s / no limit)
+[*     ] A start job is running for Wait for…e Configured (1min 33s / no limit)
+[**    ] A start job is running for Wait for…e Configured (1min 34s / no limit)
+[***   ] A start job is running for Wait for…e Configured (1min 34s / no limit)
+[ ***  ] A start job is running for Wait for…e Configured (1min 35s / no limit)
+[  *** ] A start job is running for Wait for…e Configured (1min 35s / no limit)
+[   ***] A start job is running for Wait for…e Configured (1min 36s / no limit)
+[    **] A start job is running for Wait for…e Configured (1min 36s / no limit)
+[     *] A start job is running for Wait for…e Configured (1min 37s / no limit)
+[    **] A start job is running for Wait for…e Configured (1min 37s / no limit)
+[   ***] A start job is running for Wait for…e Configured (1min 38s / no limit)
+[  *** ] A start job is running for Wait for…e Configured (1min 38s / no limit)
+[ ***  ] A start job is running for Wait for…e Configured (1min 39s / no limit)
+[***   ] A start job is running for Wait for…e Configured (1min 39s / no limit)
+[**    ] A start job is running for Wait for…e Configured (1min 40s / no limit)
+[*     ] A start job is running for Wait for…e Configured (1min 40s / no limit)
+[**    ] A start job is running for Wait for…e Configured (1min 41s / no limit)
+[***   ] A start job is running for Wait for…e Configured (1min 41s / no limit)
+[ ***  ] A start job is running for Wait for…e Configured (1min 42s / no limit)
+[  *** ] A start job is running for Wait for…e Configured (1min 42s / no limit)
+[   ***] A start job is running for Wait for…e Configured (1min 43s / no limit)
+[    **] A start job is running for Wait for…e Configured (1min 43s / no limit)
+[     *] A start job is running for Wait for…e Configured (1min 44s / no limit)
+[    **] A start job is running for Wait for…e Configured (1min 44s / no limit)
+[   ***] A start job is running for Wait for…e Configured (1min 45s / no limit)
+[  *** ] A start job is running for Wait for…e Configured (1min 45s / no limit)
+[ ***  ] A start job is running for Wait for…e Configured (1min 46s / no limit)
+[***   ] A start job is running for Wait for…e Configured (1min 46s / no limit)
+[**    ] A start job is running for Wait for…e Configured (1min 47s / no limit)
+[*     ] A start job is running for Wait for…e Configured (1min 47s / no limit)
+[**    ] A start job is running for Wait for…e Configured (1min 48s / no limit)
+[***   ] A start job is running for Wait for…e Configured (1min 48s / no limit)
+[ ***  ] A start job is running for Wait for…e Configured (1min 49s / no limit)
+[  *** ] A start job is running for Wait for…e Configured (1min 49s / no limit)
+[   ***] A start job is running for Wait for…e Configured (1min 50s / no limit)
+[    **] A start job is running for Wait for…e Configured (1min 50s / no limit)
+[     *] A start job is running for Wait for…e Configured (1min 51s / no limit)
+[    **] A start job is running for Wait for…e Configured (1min 51s / no limit)
+[   ***] A start job is running for Wait for…e Configured (1min 52s / no limit)
+[  *** ] A start job is running for Wait for…e Configured (1min 52s / no limit)
+[ ***  ] A start job is running for Wait for…e Configured (1min 53s / no limit)
+[***   ] A start job is running for Wait for…e Configured (1min 53s / no limit)
+[**    ] A start job is running for Wait for…e Configured (1min 54s / no limit)
+[*     ] A start job is running for Wait for…e Configured (1min 54s / no limit)
+[**    ] A start job is running for Wait for…e Configured (1min 55s / no limit)
+[***   ] A start job is running for Wait for…e Configured (1min 55s / no limit)
+[ ***  ] A start job is running for Wait for…e Configured (1min 56s / no limit)
+[  *** ] A start job is running for Wait for…e Configured (1min 56s / no limit)
+[   ***] A start job is running for Wait for…e Configured (1min 57s / no limit)
+[    **] A start job is running for Wait for…e Configured (1min 57s / no limit)
+[     *] A start job is running for Wait for…e Configured (1min 58s / no limit)
+[    **] A start job is running for Wait for…e Configured (1min 58s / no limit)
+[   ***] A start job is running for Wait for…e Configured (1min 59s / no limit)
+[  *** ] A start job is running for Wait for…e Configured (1min 59s / no limit)
+[ ***  ] A start job is running for Wait for…to be Configured (2min / no limit)
+[***   ] A start job is running for Wait for…to be Configured (2min / no limit)
+[**    ] A start job is running for Wait for…be Configured (2min 1s / no limit)
+[*     ] A start job is running for Wait for…be Configured (2min 1s / no limit)
+[**    ] A start job is running for Wait for…be Configured (2min 2s / no limit)
+[***   ] A start job is running for Wait for…be Configured (2min 2s / no limit)
+[ ***  ] A start job is running for Wait for…be Configured (2min 3s / no limit)
+[  *** ] A start job is running for Wait for…be Configured (2min 3s / no limit)
+[   ***] A start job is running for Wait for…be Configured (2min 4s / no limit)
+[    **] A start job is running for Wait for…be Configured (2min 4s / no limit)
+[     *] A start job is running for Wait for…be Configured (2min 5s / no limit)
+[    **] A start job is running for Wait for…be Configured (2min 5s / no limit)
+[   ***] A start job is running for Wait for…be Configured (2min 6s / no limit)
+[FAILED] Failed to start Wait for Network to be Configured.
+See 'systemctl status systemd-networkd-wait-online.service' for details.
+[  OK  ] Reached target Network is Online.
+         Starting LSB: Advanced IEEE 802.11 management daemon...
+         Starting /etc/rc.local Compatibility...
+[  OK  ] Started LSB: Advanced IEEE 802.11 management daemon.
+[  OK  ] Started /etc/rc.local Compatibility.
+[  OK  ] Started Serial Getty on ttyS2.
+[  OK  ] Started Getty on tty1.
+[  OK  ] Started Serial Getty on ttyS0.
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Reached target Multi-User System.
+[  OK  ] Reached target Graphical Interface.
+         Starting Update UTMP about System Runlevel Changes...
+[  OK  ] Started Update UTMP about System Runlevel Changes.
+
+Ubuntu Disco with Armbian Linux ttyS2 
+
+bananapir2 login: root
+Password: 
+Last login: Mon Jul 22 08:01:17 UTC 2019 on ttyS2
+ ____  ____  _   ____  ____  
+| __ )|  _ \(_) |  _ \|___ \ 
+|  _ \| |_) | | | |_) | __) |
+| |_) |  __/| | |  _ < / __/ 
+|____/|_|   |_| |_| \_\_____|
+                             
+Welcome to Ubuntu Disco with Armbian Linux 4.19.59-mt7623
+System load:   0.08 0.03 0.01  	Up time:       14 min		
+Memory usage:  5 % of 2010MB 	IP:            192.168.88.101
+CPU temp:      41°C           	
+Usage of /:    12% of 7.1G   	
+
+[ General system configuration (beta): armbian-config ]
+
+
+root@bananapir2:~# 
