@@ -1,0 +1,544 @@
+#!/bin/bash
+
+# Copyright (C) 2014-2015 Red Hat Inc.
+# SPDX-License-Identifier:  GPL-2.0+
+
+# Automate Media Creation for Fedora ARM 
+# Current version
+VERSION=2.13
+
+# usage message
+usage() {
+    echo "
+Usage: $(basename ${0}) <options>
+
+	--addconsole    - Add system console to extlinux.conf
+	--addkey=       - /path/to/ssh-public-key
+	--image=IMAGE	- xz compressed image file name
+	--media=DEVICE	- media device file (/dev/[sdX|mmcblkX])
+	--norootpass	- Remove the root password
+	--resizefs	- Resize root filesystem to fill media device
+	--supported	- List of supported hardware
+	--target=TARGET	- target board
+	--relabel       - SELinux relabel root filesystem
+	--args		- kernel commandline addition
+	--version	- Display version and exit
+	-y		- Assumes yes, will not wait for confirmation
+
+Example: $(basename ${0}) --image=Fedora-Rawhide.xz --target=Bananapi --media=/dev/mmcblk0
+
+"
+}
+
+# Set some global variables for the command directory, target board directory,
+# and valid targets.
+DIR=$(dirname $0)
+if [ -d "/usr/share/arm-image-installer/boards.d" ]; then
+	BOARDDIR="/usr/share/arm-image-installer/boards.d"
+	DOC_DIR="/usr/share/doc/arm-image-installer/"
+else
+	DIR=$(dirname $0)
+	BOARDDIR="${DIR}/boards.d"
+	DOC_DIR="${DIR}/"
+fi
+
+# check the args
+while [ $# -gt 0 ]; do
+	case $1 in
+		--debug)
+			set -x
+			;;
+		-h|--help)
+			usage
+			exit 0
+			;;
+		--target*)
+			if echo $1 | grep '=' >/dev/null ; then
+				TARGET=$(echo $1 | sed 's/^--target=//')
+			else
+				TARGET=$2
+				shift
+			fi
+			;;
+		--image*)
+			if echo $1 | grep '=' >/dev/null ; then
+				IMAGE=$(echo $1 | sed 's/^--image=//')
+			else
+				IMAGE=$2
+				shift
+			fi
+			;;
+		--media*)
+			if echo $1 | grep '=' >/dev/null ; then
+				MEDIA=$(echo $1 | sed 's/^--media=//')
+			else
+				MEDIA=$2
+				shift
+			fi
+			;;
+		--addkey*)
+			if echo $1 | grep '=' >/dev/null ; then
+				SSH_KEY=$(echo $1 | sed 's/^--addkey=//')
+			else
+				SSH_KEY=$2
+				shift
+			fi
+			;;
+		--selinux*)
+			if echo $1 | grep '=' >/dev/null ; then
+				SELINUX=$(echo $1 | sed 's/^--selinux=//')
+			else
+				SELINUX=$2
+				shift
+			fi
+			;;
+		--args*)
+                        if echo $1 | grep '=' >/dev/null ; then
+                                OPT_ARGS=$(echo $1 | sed 's/^--args=//')
+                        else
+                                OPT_ARGS=$2
+                                shift
+                        fi
+                        ;;
+		--norootpass)
+			NOROOTPASS=1
+			;;
+		--resizefs)
+			RESIZEFS=1
+			;;
+		--addconsole)
+			CONSOLE=1
+			;;
+		--blacklistvc4)
+			FIX_RPI=1	
+			;;
+		--supported)
+			cat $DOC_DIR/SUPPORTED-BOARDS
+			exit 0
+			;;
+		--relabel)
+			RELABEL=1
+			;;
+		--version)
+			echo "$(basename ${0})-"$VERSION""
+			exit 0
+			;;
+		-y)
+			NOASK=1
+			;;
+		*)
+			echo "$(basename ${0}): Error - ${1}"
+			usage
+			exit 1
+			;;
+	esac
+	shift
+done
+
+contains() {
+	string="$1"
+	substring="$2"
+	if test "${string#*$substring}" != "$string"; then
+		return 0    # $substring is in $string
+	else
+		return 1    # $substring is not in $string
+	fi
+}
+
+# ensure sudo user
+if [ "$(whoami)" != "root" ]; then
+	echo "Error: This script requires 'sudo' privileges in order to write to disk & mount media."
+	exit 1
+fi
+
+# check to make sure populated
+if [ "$MEDIA" = "" ]; then
+	usage
+	exit 1
+fi
+
+if [ "$MEDIA" = "/dev/sda" ]; then
+	echo ""
+	echo " ***********************************************************"
+        echo " ** WARNING: You have requested the image be written to sda."
+	echo " ** /dev/sda is usually the root filesystem of the host. "
+	echo " ***********************************************************"
+	echo " ** Do you wish to continue? (type 'yes' to continue)"
+	echo " ***********************************************************"
+         # wait for agreement
+        read -p " = Continue? " AGREE
+        if [ "$(echo ${AGREE} | tr [:lower:] [:upper:])" != "YES" ]; then
+                echo "User exit, no image written."
+                exit 0
+        fi
+fi
+
+# change cubietruck target to uppercase
+if [ "$TARGET" = "cubietruck" ]; then
+	TARGET="Cubietruck"
+fi
+
+# check for boards
+if [ "$TARGET" != "" -a ! -e "${BOARDDIR}/${TARGET}" ]; then
+	echo "Error: You must choose a supported board or none at all." 
+	usage
+	exit 1
+fi
+
+# image exists
+if [ ! -f "$IMAGE" ] && [ "$IMAGE" != "" ]; then
+	echo "Error: $IMAGE not found! Please choose an existing image."
+	exit 1
+fi
+
+# device exists
+if [ ! -e "$MEDIA" ]; then
+	echo "Error: $MEDIA not found! Please choose an existing device."
+	exit 1
+fi
+
+clear
+# Last chance to back out
+echo ""
+echo "====================================================="
+# Image if included
+if [ "$IMAGE" != "" ]; then
+	echo "= Selected Image:                                 "
+	echo "= $IMAGE"
+fi
+echo "= Selected Media : $MEDIA"
+# target hardware platform
+if [ "$TARGET" != "" ]; then 
+	echo "= U-Boot Target : $TARGET"
+fi
+# SE Linux On/Off
+if [ "$SELINUX" != "" ]; then
+	echo "= SELINUX = $SELINUX"
+fi
+if [ "$RELABEL" != "" ]; then
+	echo "= SELinux relabel will be completed on first boot."
+fi
+# Remove root password
+if [ "$NOROOTPASS" != "" ]; then
+	echo "= Root Password will be removed."
+fi
+# Resize root filesystem to fill media device
+if [ "$RESIZEFS" != "" ]; then
+	echo "= Root partition will be resized"
+fi
+# Console to be added
+if [ "$CONSOLE" != "" ]; then
+	echo "= Console for $TARGET will be added."
+fi
+# User ssh key
+if [ "$SSH_KEY" != "" ]; then
+	echo "= SSH Public Key $SSH_KEY will be added."
+fi
+echo "====================================================="
+echo " "
+echo "*****************************************************"
+echo "*****************************************************"
+echo "******** WARNING! ALL DATA WILL BE DESTROYED ********"
+echo "*****************************************************"
+echo "*****************************************************"
+if [ "$NOASK" != 1 ]; then 
+	echo " "
+	echo " Type 'YES' to proceed, anything else to exit now "
+	echo " "
+	# wait for agreement
+	read -p "= Proceed? " PROCEED
+	if [ "$(echo ${PROCEED} | tr [:lower:] [:upper:])" != "YES" ]; then
+		echo "User exit, no image written."
+		exit 0
+	fi
+fi
+# umount before starting
+umount $MEDIA* &> /dev/null
+if [ "$(fdisk -l $MEDIA | grep LVM)" != "" ]   ; then
+	vgchange -a n $(pvs 2> /dev/null | grep $MEDIA | awk '{print $2}') &> /dev/null
+fi
+
+# Write the disk image to media
+if [ "$IMAGE" != "" ]; then
+	echo "= Writing: "
+	echo "= $IMAGE "
+	echo "= To: $MEDIA ...."
+	xzcat $IMAGE | dd of=$MEDIA bs=4M status=progress; sync; sleep 3
+	echo "= Writing image complete!"
+		partprobe "$MEDIA"
+fi
+# check to see how many partitions on the image
+partprobe "$MEDIA"
+
+get_lvm_name () {
+	if [ "$(fdisk -l $MEDIA | grep LVM)" != "" ]   ; then
+		LVM_NAME=$(pvs 2> /dev/null | grep $MEDIA | awk '{print $2}')
+	fi
+}
+
+if [ -e "$MEDIA"p5 ]; then
+	export FIRMPART="${MEDIA}p1"
+	BOOTPART="${MEDIA}p2"
+	ROOTPART="${MEDIA}p5"
+	PARTNUM=5
+elif [ -e "$MEDIA"p4 ]; then
+	export FIRMPART="${MEDIA}p1"
+	BOOTPART="${MEDIA}p2"
+	ROOTPART="${MEDIA}p4"
+	PARTNUM=4
+elif [ -e "$MEDIA"p3 ]; then
+	export FIRMPART="${MEDIA}p1"
+	BOOTPART="${MEDIA}p2"
+	ROOTPART="${MEDIA}p3"
+	PARTNUM=3
+elif [ -e "$MEDIA"5 ]; then
+	export FIRMPART="${MEDIA}1"
+	BOOTPART="${MEDIA}2"
+	ROOTPART="${MEDIA}5"
+	PARTNUM=5
+elif [ -e "$MEDIA"4 ]; then
+	export FIRMPART="${MEDIA}1"
+	BOOTPART="${MEDIA}2"
+	ROOTPART="${MEDIA}4"
+	PARTNUM=4
+else
+	export FIRMPART="${MEDIA}1"
+	BOOTPART="${MEDIA}2"
+	ROOTPART="${MEDIA}3"
+	PARTNUM=3
+fi
+
+# resize root filesystem before mounting
+if [ "$RESIZEFS" != "" ]; then
+	echo "= Resizing $MEDIA ...."
+	sync
+	count=0
+	if [ "$PARTNUM" = "4" ] || [ "$PARTNUM" = "5" ]; then
+		echo ", +" | sfdisk -N "4" "$MEDIA"
+		while [ $? != '0' ]; do
+			sleep 5
+			echo ", +" | sfdisk -N "4" "$MEDIA"
+			((count++))
+			if [ $count -gt 5 ]; then
+				echo "= Partition Resize Failed."
+				continue
+			fi
+		done
+		partprobe "$MEDIA"
+		if [ "$PARTNUM" = "5" ]; then
+			echo ", +" | sfdisk -N "$PARTNUM" "$MEDIA"
+                	while [ $? != '0' ]; do
+                        	sleep 5
+                        	echo ", +" | sfdisk -N "$PARTNUM" "$MEDIA"
+                        	((count++))
+                        	if [ $count -gt 5 ]; then
+                               		echo "= Partition Resize Failed."
+                                	continue
+                        	fi
+                	done
+		fi
+		partprobe "$MEDIA"
+	fi
+
+	if [ "$PARTNUM" = "3" ]; then
+		get_lvm_name
+		if [ "x$LVM_NAME" = "xfedora" ]; then
+		#VGs with the name 'fedora' are problematic to be used
+		#on Fedora systems. We rename them to 'image'.
+			LVM_UUID=$(pvs -o +vguuid | grep $MEDIA | awk '{print $7}')
+			vgrename $LVM_UUID image
+			LVM_NAME=image
+			LVM_RENAMED=yes
+		fi
+
+		vgchange -a n $LVM_NAME &> /dev/null
+
+		echo ", +" | sfdisk -N "$PARTNUM" "$MEDIA"
+		while [ $? != '0' ]; do
+                        sleep 5
+                        echo ", +" | sfdisk -N "$PARTNUM" "$MEDIA"
+                        ((count++))
+                        if [ $count -gt 5 ]; then
+                                echo "= Partition Resize Failed."
+                                continue
+                        fi
+                done
+		sleep 5
+		partprobe "$MEDIA"
+		if [ "$LVM_NAME" != "" ]; then
+			vgchange -a y $LVM_NAME &> /dev/null
+			pvresize "$ROOTPART"
+			lvextend -l +100%FREE /dev/$LVM_NAME/root
+			ROOTPART="/dev/$LVM_NAME/root"
+		fi
+	fi
+	
+	if [ "$(echo $IMAGE | grep -i 'armhfp')" = "" ]; then
+		FS_TYPE=$(blkid "$ROOTPART" | cut -d'"' -f 4)
+	else
+		FS_TYPE=$(blkid "$ROOTPART" | cut -d'"' -f 6)
+	fi
+
+	if [ "$FS_TYPE" = "xfs" ] && [ "$LVM_NAME" != "" ]; then
+		mkdir /tmp/root &> /dev/null
+		mount "$ROOTPART" /tmp/root &> /dev/null
+		xfs_growfs /tmp/root
+		umount "$ROOTPART"
+	elif [ "$FS_TYPE" = "ext4" ]; then 
+		fsck.ext4 -fy "$ROOTPART"
+		resize2fs "$ROOTPART"
+	fi
+
+	if [ "x$LVM_RENAMED" = "xyes" ]; then
+		vgrename $LVM_NAME fedora
+		LVM_NAME=fedora
+		ROOTPART="/dev/$LVM_NAME/root"
+	fi
+fi
+
+# make temp mount points
+mkdir /tmp/{boot,root} &> /dev/null
+mount "$BOOTPART" /tmp/boot &> /dev/null
+if [ $? -ne 0 ]; then
+	echo "Error: mount $BOOTPART /tmp/boot failed"
+	exit 1
+fi
+
+if [ "$RESIZEFS" = "" ]; then
+	get_lvm_name
+	vgchange -a y $LVM_NAME &> /dev/null
+fi
+
+if [ "$LVM_NAME" != "" ]; then
+	mount "/dev/$LVM_NAME/root" /tmp/root
+else
+	mount "$ROOTPART" /tmp/root
+	if [ $? -ne 0 ]; then
+		echo "Error: mount $ROOTPART /tmp/root failed"
+		exit 1
+	fi
+fi
+
+if [ "$(echo $IMAGE | grep -i iot)" != "" ]; then
+	IOT_IMAGE="1"
+	OSTREE_ROOT_HOME="/tmp/root/ostree/deploy/fedora-iot/var/roothome"
+	OSTREE_PREFIX="/tmp/root/ostree/deploy/fedora-iot/deploy/*/"
+fi
+
+# determine uboot and write to disk
+if [ "$TARGET" != "" ]; then
+	if [ "$IOT_IMAGE" = "1" ]; then
+		# dd doesnt support wildcards, echo to expand
+        	PREFIX=$(echo $OSTREE_PREFIX)
+	else
+		PREFIX=/tmp/root
+	fi
+	if [ "$TARGET" = "rpi2" ] || [ "$TARGET" = "rpi3" ] || [ "$TARGET" = "olpc_xo175" ]; then
+		. "${BOARDDIR}/${TARGET}"
+	elif [ -d "${PREFIX}/usr/share/uboot/${TARGET}" ]; then
+		. "${BOARDDIR}/${TARGET}"
+	else
+		echo "= No U-Boot files found for $TARGET."
+	fi
+else
+	echo "= No U-boot will be written."
+	TARGET="Mystery Board"
+fi
+
+# turn off selinux
+if [ "$SELINUX" != "" ]; then
+	if [ "$(echo ${SELINUX} | tr [:lower:] [:upper:])" = "OFF" ]; then
+		echo "= Turning SELinux off ..."
+		sed -i 's/SELINUX=enforcing/SELINUX=permissive/' /tmp/root/etc/selinux/config
+		# turn on selinux
+	elif [ "$(echo ${SELINUX} | tr [:lower:] [:upper:])" = "ON" ]; then
+		echo "= Turning SELinux on ..."
+		sed -i 's/SELINUX=permissive/SELINUX=enforcing/' /tmp/root/etc/selinux/config
+	fi
+fi
+# Remove root password
+if [ "$NOROOTPASS" = "1" ]; then
+	echo "= Removing the root password."
+	sed -i 's/root:x:/root::/' /tmp/root/etc/passwd
+fi
+# Add ssh key to the image
+if [ "$SSH_KEY" != "" ]; then
+	if [ -f $SSH_KEY ]; then
+		echo "= Adding SSH key to authorized keys."
+		if [ "$IOT_IMAGE" = "1" ]; then
+			mkdir $OSTREE_ROOT_HOME/.ssh/ &> /dev/null
+			cat $SSH_KEY >> $OSTREE_ROOT_HOME/.ssh/authorized_keys
+			chmod -R u=rwX,o=,g= $OSTREE_ROOT_HOME/.ssh/
+		else
+			mkdir /tmp/root/root/.ssh/ &> /dev/null
+			cat $SSH_KEY >> /tmp/root/root/.ssh/authorized_keys
+			chmod -R u=rwX,o=,g= /tmp/root/root/.ssh/
+		fi
+	else
+		echo "= SSH key $SSH_KEY : Not Found!"
+		echo "= WARNING: No SSH Key Added."
+	fi
+	
+fi
+	
+# Add console
+if [ "$CONSOLE" = "1" ]; then
+	if [ "$SYSCON" = "" ]; then 
+                SYSCON="ttyS0,115200" 
+                echo "= No console listed for $TARGET, adding default $SYSCON ." 
+        fi 
+       	if [ -f /tmp/boot/extlinux/extlinux.conf ]; then
+		echo "= Adding console $SYSCON to extlinux.conf ..."
+	       	sed -i "s|append|& console=$SYSCON console=tty0 |" /tmp/boot/extlinux/extlinux.conf
+	fi
+	if [ "$TARGET" = "rpi2" ] || [ "$TARGET" = "rpi3" ]; then
+		mkdir /tmp/fw &> /dev/null
+		mount "$FIRMPART" /tmp/fw &> /dev/null
+		sed -i "s|# enable_uart=1|enable_uart=1|" /tmp/fw/config.txt
+	fi
+fi
+
+# fix up rpi2/3
+if [ "$FIX_RPI" != "" ]; then
+	echo "= Blacklisting the VC4 Driver for the Raspberry Pi 2/3"
+	echo blacklist vc4 > /tmp/root/etc/modprobe.d/blacklist-vc4.conf
+	sed -i 's/append/& rd.driver.blacklist=vc4/' /tmp/boot/extlinux/extlinux.conf
+fi
+
+# check if host system has selinux disabled, if it does autorelabel is required
+if [ "$(getenforce)" = "Disabled" ]; then
+                echo "= NOTE: System Relabel required on first boot."
+                RELABEL="1"
+fi
+
+# touch /.autorelabel
+if [ "$RELABEL" != "" ]; then
+	echo "= Touch /.autorelabel on rootfs."
+	touch /tmp/root/.autorelabel
+fi
+# add option kernel parameters
+if [ "$OPT_ARGS" != "" ] ; then
+	echo "= Adding optional kernel parameters for $TARGET : "
+	echo "= $OPT_ARGS"
+	sed -i "s|append|& $OPT_ARGS|" /tmp/boot/extlinux/extlinux.conf
+fi
+
+sync 
+
+umount /tmp/root $BOOTPART $FIRMPART &> /dev/null
+if [ "$LVM_NAME" != "" ]; then
+	vgchange -a n $LVM_NAME &> /dev/null
+fi
+rmdir  /tmp/root /tmp/boot /tmp/fw &> /dev/null
+
+if [ "$URL" != "" ]; then
+	echo
+	echo "= NOTE"
+	echo "= Additional instructions for $TARGET can be found at:"
+	echo "= $URL "
+	echo 
+fi
+
+echo ""
+echo "= Installation Complete! Insert into the "$TARGET" and boot."
+exit 0
