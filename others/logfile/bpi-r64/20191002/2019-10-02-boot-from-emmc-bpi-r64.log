@@ -1,0 +1,815 @@
+F0: 102B 0000
+F6: 3800 00A0
+F3: 0000 0000
+V0: 0000 0000 [0001]
+00: 0000 0000
+BP: 0000 0041 [0000]
+G0: 0190 0000
+T0: 0000 0335 [000F]
+Jump to BL
+
+UNIVPLL_CON0 = 0xFE000000!!!
+mt_pll_init: Set pll frequency for 25M crystal
+RAM_CONSOLE preloader last status: 0x0 0x0 0x0 0x0 0x0 0x0 
+[PMIC_WRAP]wrap_init pass,the return value=0.
+[pmic_init] Preloader Start..................
+[pmic_init] MT6380 CHIP Code, reg_val = 0, 1:E2  0:E3
+[pmic_init] Done...................
+Chip part number:7622A
+MT7622 Version: 1.2.7, (iPA) 
+SSC OFF
+mt_pll_post_init: mt_get_cpu_freq = 1350000Khz
+mt_pll_post_init: mt_get_mem_freq = 1600000Khz
+mt_pll_post_init: mt_get_bus_freq = 1119920Khz
+[PLFM] Init I2C: OK(0)
+
+[BLDR] Build Time: 20190927-141930
+==== Dump RGU Reg ========
+RGU MODE:     4D
+RGU LENGTH:   FFE0
+RGU STA:      0
+RGU INTERVAL: FFF
+RGU SWSYSRST: 8000
+==== Dump RGU Reg End ====
+RGU: g_rgu_satus:0
+ mtk_wdt_mode_config  mode value=10, tmp:22000010
+PL P ON
+WDT does not trigger reboot
+WDT NONRST=0x20000000
+WDT IRQ_EN=0x340003
+RGU mtk_wdt_init:MTK_WDT_DEBUG_CTL(590200F3)
+[EMI] MDL number = 2
+[EMI] DRAMC calibration start
+
+[EMI] DRAMC calibration end
+
+[EMI]rank0 size: 0x40000000
+[MEM] complex R/W mem test pass
+RAM_CONSOLE wdt status (0x0)=0x0
+[mmc_init]: msdc0 start mmc_init_host() in PL...
+[msdc_init]: msdc0 Host controller intialization start 
+[SD0] Pins mode(1), none(0), down(1), up(2), keep(3)
+[SD0] Pins mode(2), none(0), down(1), up(2), keep(3)
+[info][msdc_set_startbit 1127] read data start bit at rising edge
+[info][msdc_config_clksrc] input clock is 400000kHz
+[SD0] Bus Width: 1
+[info][msdc_config_clksrc] input clock is 400000kHz
+[info][msdc_set_startbit 1127] read data start bit at rising edge
+[SD0] SET_CLK(260kHz): SCLK(259kHz) MODE(0) DDR(0) DIV(385) DS(0) RS(0)
+[msdc_init]: msdc0 Host controller intialization done
+[mmc_init]: msdc0 start mmc_init_card() in PL...
+[mmc_init_card]: start
+[info][msdc_config_clksrc] input clock is 400000kHz
+[info][msdc_set_startbit 1127] read data start bit at rising edge
+[SD0] SET_CLK(260kHz): SCLK(259kHz) MODE(0) DDR(0) DIV(385) DS(0) RS(0)
+[SD0] Bus Width: 8
+[SD0] Switch to High-Speed mode!
+[info][msdc_config_clksrc] input clock is 400000kHz
+[info][msdc_set_startbit 1127] read data start bit at rising edge
+[SD0] SET_CLK(260kHz): SCLK(259kHz) MODE(2) DDR(1) DIV(192) DS(0) RS(0)
+[SD0] Bus Width: 8
+[SD0] Size: 7456 MB, Max.Speed: 52000 kHz, blklen(512), nblks(15269888), ro(0)
+[mmc_init_mem_card 3140][SD0] Initialized, eMMC50
+before host->cur_bus_clk(259740)
+[info][msdc_config_clksrc] input clock is 400000kHz
+[info][msdc_set_startbit 1127] read data start bit at rising edge
+[SD0] SET_CLK(52000kHz): SCLK(50000kHz) MODE(2) DDR(1) DIV(1) DS(0) RS(0)
+host->cur_bus_clk(50000000)
+[mmc_init_card]: finish successfully
+[PLFM] Init Boot Device: OK(0)
+[GPT_PL](BPI)Parsing Primary GPT now...
+[GPT_PL]check header, err(signature 0x00000054594C5242!=0x5452415020494645)
+[GPT_PL]Success to find valid GPT.
+
+[PART] blksz: 512B
+[PART] [0x0000000000020000-0x000000000007FFFF] "preloader" (768 blocks) 
+[PART] [0x0000000000080000-0x00000000000BFFFF] "tee1" (512 blocks) 
+[PART] [0x00000000000C0000-0x000000000013FFFF] "lk" (1024 blocks) 
+
+Device APC domain init setup:
+
+Domain Setup (0x0)
+Domain Setup (0x0)
+Device APC domain after setup:
+Domain Setup (0x0)
+Domain Setup (0x0)
+[get_part] part->nr_sects=768, part->info->name=preloader
+[get_part] part->nr_sects=512, part->info->name=tee1
+[get_part] part->nr_sects=1024, part->info->name=lk
+[PART] Image with part header
+[PART] name : U-Boot
+[PART] addr : 41E00000h mode : -1
+[PART] size : 369124
+[PART] magic: 58881688h
+
+[PART] load "lk" from 0x00000000000C0200 (dev) to 0x41E00000 (mem) [SUCCESS]
+[PART] load speed: 11264KB/s, 369124 bytes, 32ms
+load lk (ret=0)
+[get_part] part->nr_sects=768, part->info->name=preloader
+[get_part] part->nr_sects=512, part->info->name=tee1
+[PART] Image with part header
+[PART] name : atf
+[PART] addr : FFFFFFFFh mode : -1
+[PART] size : 62032
+[PART] magic: 58881688h
+
+[PART] load "tee1" from 0x0000000000080200 (dev) to 0x43000DC0 (mem) [SUCCESS]
+[PART] load speed: 6730KB/s, 62032 bytes, 9ms
+load tee1 (ret=0)
+[BLDR] bldr load tee part ret=0x0, addr=0x43001000
+[get_part] part->nr_sects=768, part->info->name=preloader
+[get_part] part->nr_sects=512, part->info->name=tee1
+[get_part] part->nr_sects=1024, part->info->name=lk
+[BLDR] boot part. not found
+[BLDR] part_load_images ret=0x0
+[BLDR] Others, jump to ATF
+
+[BLDR] jump to 0x41E00000
+[BLDR] <0x41E00000>=0xEA00000F
+[BLDR] <0x41E00004>=0xE59FF014
+
+
+U-Boot  (Oct 02 2019 - 15:01:05)
+
+static declaration g_total_rank_size = 0x3F000000
+DRAM:  1008 MiB
+NAND:  Recognize SNAND: ID [ef aa 21 ], Device Name [Winbond 1Gb], Page Size [2048]B Spare Size [64]B Total Size [128]MB
+[mtk_snand] probe successfully!
+[BBT] BMT.v2 is found at 0x3ff
+128 MiB
+dev_num = 1
+raise: Signal # 8 caught
+raise: Signal # 8 caught
+***size=4096, offset=1310720, blk_start=0, blk_cnt=0
+*** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+dev_num = 1
+raise: Signal # 8 caught
+raise: Signal # 8 caught
+***size=4096, offset=1310720, blk_start=0, blk_cnt=0
+*** Warning - bad CRC, using default environment
+
+Net:   mtk_eth
+Uip activated
+  *** U-Boot SD CARD ***  Press UP/DOWN to move or Press 1~9,a~c to choose, ENTER to select     1. System Load Linux to SDRAM via TFTP.     2. System Load Linux Kernel then write to Flash via TFTP.     3. Boot Linux from SD.     4. System Load U-Boot then write to Flash via TFTP.     5. System Load U-Boot then write to Flash via Serial.     6. System Load ATF then write to Flash via TFTP.     7. System Load Preloader then write to Flash via TFTP.     8. System Load ROM header then write to Flash via TFTP.     9. BPI:System Load Preloader then write to eMMC via TFTP.     a. BPI:System Load Preloader then write to eMMC via fatload.     b. System Load flashimage then write to Flash via TFTP.     c. System Load partition table then write to Flash via TFTP.     U-Boot console  Hit any key to stop autoboot:  3  2  1  0 [SD1] mmc_dev_bread TIMEOUT
+ret2 = 1
+[SD1] mmc_dev_bread TIMEOUT
+ret2 = 1
+[SD1] mmc_dev_bread TIMEOUT
+[SD1] mmc_dev_bread TIMEOUT
+## Unknown partition table
+No MMC card found
+** Bad device size - mmc 1 **
+Boot from eMMC
+ret2 = 1
+ret2 = 1
+
+Partition Map for MMC device 0  --   Partition Type: DOS
+
+Part	Start Sector	Num Sectors	UUID		Type
+  1	204800    	524288    	09e08654-01	0c
+  2	729088    	14211072  	09e08654-02	83
+mmc0 is available
+reading bananapi/bpi-r64/linux-4.19/uEnv.txt
+1076 bytes read in 5 ms (210 KiB/s)
+Loaded environment from uEnv.txt
+Banana Pi bpi-r64 chip: mt7622 Service: linux-4.19
+reading bananapi/bpi-r64/linux-4.19/dtb/mt7622-bananapi-bpi-r64.dtb
+23394 bytes read in 7 ms (3.2 MiB/s)
+reading bananapi/bpi-r64/linux-4.19/uImage
+12500539 bytes read in 828 ms (14.4 MiB/s)
+reading bananapi/berryboot.img
+** Unable to read file bananapi/berryboot.img **
+bootm flag=0, states=70f
+## Loading kernel from FIT Image at 44000000 ...
+   Using 'conf@1' configuration
+   Trying 'kernel@1' kernel subimage
+     Description:  Kernel Image
+     Type:         Kernel Image
+     Compression:  uncompressed
+     Data Start:   0x440000d8
+     Data Size:    12498952 Bytes = 11.9 MiB
+     Architecture: ARM
+     OS:           Linux
+     Load Address: 0x40080000
+     Entry Point:  0x40080000
+   Verifying Hash Integrity ... OK
+## Flattened Device Tree blob at 47000000
+   Booting using the fdt blob at 0x47000000
+   Loading Kernel Image ... OK
+   Loading Device Tree to 6bff7000, end 6bfffb61 ... OK
+
+Starting kernel ...
+
+[ATF][     5.489676]save kernel info
+[ATF][     5.492612]Kernel_EL2
+[ATF][     5.495282]Kernel is 64Bit
+[ATF][     5.498370]pc=0x40080000, r0=0x6bff7000, r1=0x0
+INFO:    BL3-1: Preparing for EL3 exit to normal world, Kernel
+INFO:    BL3-1: Next image address = 0x40080000
+INFO:    BL3-1: Next image spsr = 0x3c9
+[ATF][     5.516068]el3_exit
+[    0.000000] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+[    0.000000] Linux version 4.19.49-BPI-R64-Kernel (root@bpi-iot-ros-ai-x64) (gcc version 7.4.0 (Ubuntu/Linaro 7.4.0-1ubuntu1~18.04.1)) #1 SMP Wed Oct 2 09:46:53 CST 2019
+[    0.000000] Machine model: Bananapi BPI-R64
+[    0.000000] On node 0 totalpages: 262096
+[    0.000000]   DMA32 zone: 4096 pages used for memmap
+[    0.000000]   DMA32 zone: 0 pages reserved
+[    0.000000]   DMA32 zone: 262096 pages, LIFO batch:63
+[    0.000000] psci: probing for conduit method from DT.
+[    0.000000] psci: PSCIv0.2 detected in firmware.
+[    0.000000] psci: Using standard PSCI v0.2 function IDs
+[    0.000000] psci: Trusted OS migration not required
+[    0.000000] random: get_random_bytes called from start_kernel+0x84/0x40c with crng_init=0
+[    0.000000] percpu: Embedded 22 pages/cpu s52632 r8192 d29288 u90112
+[    0.000000] pcpu-alloc: s52632 r8192 d29288 u90112 alloc=22*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 
+[    0.000000] Detected VIPT I-cache on CPU0
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 258000
+[    0.000000] Kernel command line: board=bpi-r64 console=ttyS0,115200n1 earlyprintk root=/dev/mmcblk1p2 rootfstype=ext4 rw rootwait service=linux-4.19 debug=8 initcall_debug=0 androidboot.hardware=mt7622 swiotlb=512 cgroup_enable=memory cgroup_memory=1
+[    0.000000] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes)
+[    0.000000] Memory: 1017264K/1048384K available (8638K kernel code, 622K rwdata, 2480K rodata, 448K init, 424K bss, 31120K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	CONFIG_RCU_FANOUT set to non-default value of 32.
+[    0.000000] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    0.000000] GIC: GICv2 detected, but range too small and irqchip.gicv2_force_probe not set
+[    0.000000] arch_timer: cp15 timer(s) running at 12.50MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x2e2049cda, max_idle_ns: 440795202628 ns
+[    0.000003] sched_clock: 56 bits at 12MHz, resolution 80ns, wraps every 4398046511080ns
+[    0.000206] Calibrating delay loop (skipped), value calculated using timer frequency.. 25.00 BogoMIPS (lpj=125000)
+[    0.000214] pid_max: default: 32768 minimum: 301
+[    0.000269] Security Framework initialized
+[    0.000306] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.000316] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes)
+[    0.001239] ASID allocator initialised with 65536 entries
+[    0.001291] rcu: Hierarchical SRCU implementation.
+[    0.001689] smp: Bringing up secondary CPUs ...
+[    0.002003] Detected VIPT I-cache on CPU1
+[    0.002041] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+[    0.002102] smp: Brought up 1 node, 2 CPUs
+[    0.002110] SMP: Total of 2 processors activated.
+[    0.002116] CPU features: detected: 32-bit EL0 Support
+[    0.002236] CPU: All CPU(s) started at EL2
+[    0.002246] alternatives: patching kernel code
+[    0.002733] devtmpfs: initialized
+[    0.005913] Registered cp15_barrier emulation handler
+[    0.005927] Registered setend emulation handler
+[    0.006018] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.006030] futex hash table entries: 512 (order: 3, 32768 bytes)
+[    0.006187] xor: measuring software checksum speed
+[    0.099991]    8regs     :  2442.000 MB/sec
+[    0.200019]    8regs_prefetch:  2189.200 MB/sec
+[    0.300047]    32regs    :  3304.800 MB/sec
+[    0.400076]    32regs_prefetch:  2772.000 MB/sec
+[    0.400080] xor: using function: 32regs (3304.800 MB/sec)
+[    0.400089] pinctrl core: initialized pinctrl subsystem
+[    0.400559] NET: Registered protocol family 16
+[    0.400872] audit: initializing netlink subsys (disabled)
+[    0.400963] audit: type=2000 audit(0.400:1): state=initialized audit_enabled=0 res=1
+[    0.401327] vdso: 2 pages (1 code @ (____ptrval____), 1 data @ (____ptrval____))
+[    0.401334] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    0.401483] DMA: preallocated 256 KiB pool for atomic allocations
+[    0.413989] GPIO line 471 (tpm_reset) hogged as output/high
+[    0.414008] GPIO line 499 (asm_sel) hogged as output/high
+[    0.420369] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.420639] cryptd: max_cpu_qlen set to 1000
+[    0.590203] raid6: int64x1  gen()   466 MB/s
+[    0.760318] raid6: int64x1  xor()   415 MB/s
+[    0.930385] raid6: int64x2  gen()   735 MB/s
+[    1.100419] raid6: int64x2  xor()   568 MB/s
+[    1.270512] raid6: int64x4  gen()  1104 MB/s
+[    1.440550] raid6: int64x4  xor()   768 MB/s
+[    1.610618] raid6: int64x8  gen()   880 MB/s
+[    1.780702] raid6: int64x8  xor()   699 MB/s
+[    1.950763] raid6: neonx1   gen()   839 MB/s
+[    2.120837] raid6: neonx1   xor()   909 MB/s
+[    2.290899] raid6: neonx2   gen()  1267 MB/s
+[    2.460946] raid6: neonx2   xor()  1285 MB/s
+[    2.631039] raid6: neonx4   gen()  1732 MB/s
+[    2.801082] raid6: neonx4   xor()  1598 MB/s
+[    2.971160] raid6: neonx8   gen()  1680 MB/s
+[    3.141221] raid6: neonx8   xor()  1610 MB/s
+[    3.141226] raid6: using algorithm neonx4 gen() 1732 MB/s
+[    3.141229] raid6: .... xor() 1598 MB/s, rmw enabled
+[    3.141233] raid6: using neon recovery algorithm
+[    3.141915] SCSI subsystem initialized
+[    3.142051] libata version 3.00 loaded.
+[    3.142163] usbcore: registered new interface driver usbfs
+[    3.142190] usbcore: registered new interface driver hub
+[    3.142213] usbcore: registered new device driver usb
+[    3.142685] Bluetooth: Core ver 2.22
+[    3.142704] NET: Registered protocol family 31
+[    3.142708] Bluetooth: HCI device and connection manager initialized
+[    3.142716] Bluetooth: HCI socket layer initialized
+[    3.142722] Bluetooth: L2CAP socket layer initialized
+[    3.142739] Bluetooth: SCO socket layer initialized
+[    3.143050] clocksource: Switched to clocksource arch_sys_counter
+[    3.143131] VFS: Disk quotas dquot_6.6.0
+[    3.143163] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    3.143932] NET: Registered protocol family 2
+[    3.144280] tcp_listen_portaddr_hash hash table entries: 512 (order: 1, 8192 bytes)
+[    3.144298] TCP established hash table entries: 8192 (order: 4, 65536 bytes)
+[    3.144354] TCP bind hash table entries: 8192 (order: 5, 131072 bytes)
+[    3.144453] TCP: Hash tables configured (established 8192 bind 8192)
+[    3.144537] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    3.144559] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    3.144658] NET: Registered protocol family 1
+[    3.144878] RPC: Registered named UNIX socket transport module.
+[    3.144882] RPC: Registered udp transport module.
+[    3.144886] RPC: Registered tcp transport module.
+[    3.144889] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    3.144897] PCI: CLS 0 bytes, default 64
+[    3.145438] kvm [1]: 8-bit VMID
+[    3.145677] kvm [1]: Hyp mode initialized successfully
+[    3.148612] No memory allocated for crashlog
+[    3.148689] workingset: timestamp_bits=45 max_order=18 bucket_order=0
+[    3.152245] zbud: loaded
+[    3.153282] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    3.153740] NFS: Registering the id_resolver key type
+[    3.153758] Key type id_resolver registered
+[    3.153763] Key type id_legacy registered
+[    3.153772] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    3.153776] Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+[    3.154304] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    3.157989] NET: Registered protocol family 38
+[    3.158075] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 250)
+[    3.158137] io scheduler noop registered (default)
+[    3.158505] mtk-tphy 1a0c4000.usb-phy: failed to get ref_clk(id-1)
+[    3.161670] mt-pmic-pwrap 10001000.pwrap: unexpected interrupt int=0x1
+[    3.175645] Serial: 8250/16550 driver, 3 ports, IRQ sharing disabled
+[    3.176243] console [ttyS0] disabled
+[    3.196649] 11002000.serial: ttyS0 at MMIO 0x11002000 (irq = 116, base_baud = 1562500) is a ST16650V2
+[    3.964490] console [ttyS0] enabled
+[    3.988761] 11004000.serial: ttyS1 at MMIO 0x11004000 (irq = 117, base_baud = 1562500) is a ST16650V2
+[    3.998697] 1100c000.serial: ttyS2 at MMIO 0x1100c000 (irq = 123, base_baud = 17499995) is a MediaTek BTIF
+[    4.008727] serial serial0: tty port ttyS2 registered
+[    4.014096] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    4.022682] loop: module loaded
+[    4.026871] mtk-spi 1100a000.spi: spi is trying to get spare-clk
+[    4.033418] mtk-spi 11016000.spi: spi is trying to get spare-clk
+[    4.040082] libphy: Fixed MDIO Bus: probed
+[    4.044740] sean debug physpeed = 2500
+[    4.071302] libphy: mdio: probed
+[    4.074651] mtk_soc_eth 1b100000.ethernet: generated random MAC address de:71:d8:17:7f:67
+[    4.083370] mtk_soc_eth 1b100000.ethernet: path gmac1_sgmii in set_mux_gdm1_to_gmac1_esw updated = 1
+[    4.092787] mtk_soc_eth 1b100000.ethernet: mux mux_gmac2_gmac0_to_gephy isn't present on the SoC
+[    4.101861] mtk_soc_eth 1b100000.ethernet: mux mux_u3_gmac2_to_qphy isn't present on the SoC
+[    4.110571] mtk_soc_eth 1b100000.ethernet: path gmac1_sgmii in set_mux_gmac1_gmac2_to_sgmii_rgmii updated = 1
+[    4.120799] mtk_soc_eth 1b100000.ethernet: mux mux_gmac12_to_gephy_sgmii isn't present on the SoC
+[    4.129990] mtk_soc_eth 1b100000.ethernet: connected mac 0 to PHY at fixed-0:00 [uid=00000000, driver=Generic PHY]
+[    4.140938] mtk_soc_eth 1b100000.ethernet eth0: mediatek frame engine at 0xffffff8008fc0000, irq 131
+[    4.150376] mtk_soc_eth 1b100000.ethernet: generated random MAC address 16:f2:be:ff:cc:5e
+[    4.158999] mtk_soc_eth 1b100000.ethernet: path gmac2_rgmii in set_mux_gdm1_to_gmac1_esw updated = 0
+[    4.168433] mtk_soc_eth 1b100000.ethernet: mux mux_gmac2_gmac0_to_gephy isn't present on the SoC
+[    4.177502] mtk_soc_eth 1b100000.ethernet: mux mux_u3_gmac2_to_qphy isn't present on the SoC
+[    4.186210] mtk_soc_eth 1b100000.ethernet: path gmac2_rgmii in set_mux_gmac1_gmac2_to_sgmii_rgmii updated = 0
+[    4.196438] mtk_soc_eth 1b100000.ethernet: mux mux_gmac12_to_gephy_sgmii isn't present on the SoC
+[    4.205620] mtk_soc_eth 1b100000.ethernet: connected mac 1 to PHY at fixed-0:01 [uid=00000000, driver=Generic PHY]
+[    4.216517] mtk_soc_eth 1b100000.ethernet eth1: mediatek frame engine at 0xffffff8008fc0000, irq 131
+[    4.225942] netif_napi_add() called with weight 256 on device 
+[    4.232210] xhci-mtk 1a0c0000.usb: Linked as a consumer to regulator.3
+[    4.238986] xhci-mtk 1a0c0000.usb: Linked as a consumer to regulator.2
+[    4.245918] xhci-mtk 1a0c0000.usb: Dropping the link to regulator.2
+[    4.252404] xhci-mtk 1a0c0000.usb: Dropping the link to regulator.3
+[    4.258962] usbcore: registered new interface driver uas
+[    4.264474] usbcore: registered new interface driver usb-storage
+[    4.270678] usbcore: registered new interface driver ums-alauda
+[    4.276799] usbcore: registered new interface driver ums-cypress
+[    4.283003] usbcore: registered new interface driver ums-datafab
+[    4.289213] usbcore: registered new interface driver ums_eneub6250
+[    4.295600] usbcore: registered new interface driver ums-freecom
+[    4.301804] usbcore: registered new interface driver ums-isd200
+[    4.307926] usbcore: registered new interface driver ums-jumpshot
+[    4.314228] usbcore: registered new interface driver ums-karma
+[    4.320260] usbcore: registered new interface driver ums-realtek
+[    4.326469] usbcore: registered new interface driver ums-sddr09
+[    4.332583] usbcore: registered new interface driver ums-sddr55
+[    4.338705] usbcore: registered new interface driver ums-usbat
+[    4.344770] usbcore: registered new interface driver usbserial_generic
+[    4.351512] usbserial: USB Serial support registered for generic
+[    4.357722] usbcore: registered new interface driver aircable
+[    4.363661] usbserial: USB Serial support registered for aircable
+[    4.369954] usbcore: registered new interface driver ark3116
+[    4.375803] usbserial: USB Serial support registered for ark3116
+[    4.382007] usbcore: registered new interface driver belkin_sa
+[    4.388039] usbserial: USB Serial support registered for Belkin / Peracom / GoHubs USB Serial Adapter
+[    4.397564] usbcore: registered new interface driver ch341
+[    4.403236] usbserial: USB Serial support registered for ch341-uart
+[    4.409708] usbcore: registered new interface driver cp210x
+[    4.415468] usbserial: USB Serial support registered for cp210x
+[    4.421582] usbcore: registered new interface driver cyberjack
+[    4.427615] usbserial: USB Serial support registered for Reiner SCT Cyberjack USB card reader
+[    4.436427] usbcore: registered new interface driver cypress_m8
+[    4.442540] usbserial: USB Serial support registered for DeLorme Earthmate USB
+[    4.450002] usbserial: USB Serial support registered for HID->COM RS232 Adapter
+[    4.457555] usbserial: USB Serial support registered for Nokia CA-42 V2 Adapter
+[    4.465109] usbcore: registered new interface driver digi_acceleport
+[    4.471670] usbserial: USB Serial support registered for Digi 2 port USB adapter
+[    4.479315] usbserial: USB Serial support registered for Digi 4 port USB adapter
+[    4.486959] usbcore: registered new interface driver io_edgeport
+[    4.493169] usbserial: USB Serial support registered for Edgeport 2 port adapter
+[    4.500804] usbserial: USB Serial support registered for Edgeport 4 port adapter
+[    4.508446] usbserial: USB Serial support registered for Edgeport 8 port adapter
+[    4.516088] usbserial: USB Serial support registered for EPiC device
+[    4.522654] usbcore: registered new interface driver io_ti
+[    4.528326] usbserial: USB Serial support registered for Edgeport TI 1 port adapter
+[    4.536237] usbserial: USB Serial support registered for Edgeport TI 2 port adapter
+[    4.544149] usbcore: registered new interface driver empeg
+[    4.549813] usbserial: USB Serial support registered for empeg
+[    4.555844] usbcore: registered new interface driver f81232
+[    4.561601] usbserial: USB Serial support registered for f81232
+[    4.567726] usbcore: registered new interface driver ftdi_sio
+[    4.573666] usbserial: USB Serial support registered for FTDI USB Serial Device
+[    4.581214] usbcore: registered new interface driver garmin_gps
+[    4.587333] usbserial: USB Serial support registered for Garmin GPS usb/tty
+[    4.594528] usbcore: registered new interface driver ipaq
+[    4.600104] usbserial: USB Serial support registered for PocketPC PDA
+[    4.606764] usbcore: registered new interface driver ipw
+[    4.612250] usbserial: USB Serial support registered for IPWireless converter
+[    4.619626] usbcore: registered new interface driver ir_usb
+[    4.625386] usbserial: USB Serial support registered for IR Dongle
+[    4.631772] usbcore: registered new interface driver iuu_phoenix
+[    4.637981] usbserial: USB Serial support registered for iuu_phoenix
+[    4.644550] usbcore: registered new interface driver keyspan
+[    4.650396] usbserial: USB Serial support registered for Keyspan - (without firmware)
+[    4.658487] usbserial: USB Serial support registered for Keyspan 1 port adapter
+[    4.666040] usbserial: USB Serial support registered for Keyspan 2 port adapter
+[    4.673591] usbserial: USB Serial support registered for Keyspan 4 port adapter
+[    4.681141] usbcore: registered new interface driver keyspan_pda
+[    4.687349] usbserial: USB Serial support registered for Keyspan PDA
+[    4.693923] usbserial: USB Serial support registered for Keyspan PDA - (prerenumeration)
+[    4.702277] usbserial: USB Serial support registered for Xircom / Entrega PGS - (prerenumeration)
+[    4.711445] usbcore: registered new interface driver kl5kusb105
+[    4.717566] usbserial: USB Serial support registered for KL5KUSB105D / PalmConnect
+[    4.725391] usbcore: registered new interface driver kobil_sct
+[    4.731415] usbserial: USB Serial support registered for KOBIL USB smart card terminal
+[    4.739596] usbcore: registered new interface driver mct_u232
+[    4.745539] usbserial: USB Serial support registered for MCT U232
+[    4.751833] usbcore: registered new interface driver metro_usb
+[    4.757863] usbserial: USB Serial support registered for Metrologic USB to Serial
+[    4.765596] usbcore: registered new interface driver mos7720
+[    4.771441] usbserial: USB Serial support registered for Moschip 2 port adapter
+[    4.778995] usbcore: registered new interface driver mos7840
+[    4.784847] usbserial: USB Serial support registered for Moschip 7840/7820 USB Serial Driver
+[    4.793569] usbcore: registered new interface driver mxuport
+[    4.799413] usbserial: USB Serial support registered for MOXA UPort
+[    4.805893] usbcore: registered new interface driver navman
+[    4.811648] usbserial: USB Serial support registered for navman
+[    4.817769] usbcore: registered new interface driver omninet
+[    4.823622] usbserial: USB Serial support registered for ZyXEL - omni.net lcd plus usb
+[    4.831800] usbcore: registered new interface driver opticon
+[    4.837650] usbserial: USB Serial support registered for opticon
+[    4.843861] usbcore: registered new interface driver option
+[    4.849617] usbserial: USB Serial support registered for GSM modem (1-port)
+[    4.856814] usbcore: registered new interface driver oti6858
+[    4.862661] usbserial: USB Serial support registered for oti6858
+[    4.868872] usbcore: registered new interface driver pl2303
+[    4.874636] usbserial: USB Serial support registered for pl2303
+[    4.880751] usbcore: registered new interface driver qcaux
+[    4.886422] usbserial: USB Serial support registered for qcaux
+[    4.892448] usbcore: registered new interface driver qcserial
+[    4.898390] usbserial: USB Serial support registered for Qualcomm USB modem
+[    4.905585] usbcore: registered new interface driver quatech2
+[    4.911522] usbserial: USB Serial support registered for Quatech 2nd gen USB to Serial Driver
+[    4.920330] usbcore: registered new interface driver safe_serial
+[    4.926540] usbserial: USB Serial support registered for safe_serial
+[    4.933110] usbcore: registered new interface driver sierra
+[    4.938865] usbserial: USB Serial support registered for Sierra USB modem
+[    4.945884] usbcore: registered new interface driver usb_serial_simple
+[    4.952625] usbserial: USB Serial support registered for carelink
+[    4.958928] usbserial: USB Serial support registered for zio
+[    4.964779] usbserial: USB Serial support registered for funsoft
+[    4.970982] usbserial: USB Serial support registered for flashloader
+[    4.977549] usbserial: USB Serial support registered for google
+[    4.983668] usbserial: USB Serial support registered for libtransistor
+[    4.990408] usbserial: USB Serial support registered for vivopay
+[    4.996620] usbserial: USB Serial support registered for moto_modem
+[    5.003098] usbserial: USB Serial support registered for motorola_tetra
+[    5.009928] usbserial: USB Serial support registered for novatel_gps
+[    5.016496] usbserial: USB Serial support registered for hp4x
+[    5.022431] usbserial: USB Serial support registered for suunto
+[    5.028551] usbserial: USB Serial support registered for siemens_mpi
+[    5.035123] usbcore: registered new interface driver spcp8x5
+[    5.040968] usbserial: USB Serial support registered for SPCP8x5
+[    5.047178] usbcore: registered new interface driver ssu100
+[    5.052933] usbserial: USB Serial support registered for Quatech SSU-100 USB to Serial Driver
+[    5.061742] usbcore: registered new interface driver symbolserial
+[    5.068042] usbserial: USB Serial support registered for symbol
+[    5.074163] usbcore: registered new interface driver ti_usb_3410_5052
+[    5.080818] usbserial: USB Serial support registered for TI USB 3410 1 port adapter
+[    5.088733] usbserial: USB Serial support registered for TI USB 5052 2 port adapter
+[    5.096648] usbcore: registered new interface driver visor
+[    5.102315] usbserial: USB Serial support registered for Handspring Visor / Palm OS
+[    5.110227] usbserial: USB Serial support registered for Sony Clie 5.0
+[    5.116973] usbserial: USB Serial support registered for Sony Clie 3.5
+[    5.123727] usbcore: registered new interface driver wishbone_serial
+[    5.130289] usbserial: USB Serial support registered for wishbone_serial
+[    5.137217] usbcore: registered new interface driver whiteheat
+[    5.143248] usbserial: USB Serial support registered for Connect Tech - WhiteHEAT - (prerenumeration)
+[    5.152767] usbserial: USB Serial support registered for Connect Tech - WhiteHEAT
+[    5.160502] usbcore: registered new interface driver xsens_mt
+[    5.166446] usbserial: USB Serial support registered for xsens_mt
+[    5.173015] rtc_mt7622 10212800.rtc: rtc core: registered 10212800.rtc as rtc0
+[    5.180558] i2c /dev entries driver
+[    5.185314] mtk-wdt 10212000.watchdog: Watchdog enabled (timeout=31 sec, nowayout=0)
+[    5.193403] Bluetooth: HCI UART driver ver 2.3
+[    5.197982] Bluetooth: HCI UART protocol H4 registered
+[    5.203302] Bluetooth: HCI UART protocol BCSP registered
+[    5.208818] Bluetooth: HCI UART protocol Broadcom registered
+[    5.214674] Bluetooth: HCI UART protocol QCA registered
+[    5.220277] cpu cpu0: Linked as a consumer to regulator.4
+[    5.220456] bluetooth hci0: Direct firmware load for mediatek/mt7622pr2h.bin failed with error -2
+[    5.225912] cpu cpu0: Linked as a consumer to regulator.7
+[    5.235011] bluetooth hci0: Falling back to syfs fallback for: mediatek/mt7622pr2h.bin
+[    5.241159] sdhci: Secure Digital Host Controller Interface driver
+[    5.255099] sdhci: Copyright(c) Pierre Ossman
+[    5.259997] mtk-msdc 11240000.mmc: Got CD GPIO
+[    5.264636] mtk-msdc 11240000.mmc: invalid resource
+[    5.269695] mtk-msdc 11240000.mmc: Linked as a consumer to regulator.2
+[    5.302404] mtk-msdc 11230000.mmc: invalid resource
+[    5.307475] mtk-msdc 11230000.mmc: Linked as a consumer to regulator.2
+[    5.314240] mtk-msdc 11230000.mmc: Linked as a consumer to regulator.1
+[    5.345733] Synopsys Designware Multimedia Card Interface Driver
+[    5.352102] sdhci-pltfm: SDHCI platform and OF driver helper
+[    5.359876] NET: Registered protocol family 10
+[    5.365786] Segment Routing with IPv6
+[    5.369617] NET: Registered protocol family 17
+[    5.374314] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[    5.387839] 8021q: 802.1Q VLAN Support v1.8
+[    5.392239] Key type dns_resolver registered
+[    5.397280] registered taskstats version 1
+[    5.401608] zswap: loaded using pool lzo/zbud
+[    5.407165] Btrfs loaded, crc32c=crc32c-generic
+[    5.412254] Key type encrypted registered
+[    5.461507] mtk-msdc 11230000.mmc: phase: [map:7ffffff] [maxlen:27] [final:9]
+[    5.469647] mmc1: new HS200 MMC card at address 0001
+[    5.475891] mmcblk1: mmc1:0001 008G30 7.28 GiB 
+[    5.481450] mmcblk1boot0: mmc1:0001 008G30 partition 1 4.00 MiB
+[    5.488453] mmcblk1boot1: mmc1:0001 008G30 partition 2 4.00 MiB
+[    5.494668] mmcblk1rpmb: mmc1:0001 008G30 partition 3 4.00 MiB, chardev (249:0)
+[    5.503355]  mmcblk1: p1 p2
+[    5.524800] mtk-pcie 1a140000.pcie: Port0 link down
+[    5.629894] mtk-pcie 1a140000.pcie: Port1 link down
+[    5.635065] mtk-pcie 1a140000.pcie: PCI host bridge to bus 0000:00
+[    5.641437] pci_bus 0000:00: root bus resource [??? 0x00000000 flags 0x0]
+[    5.648446] pci_bus 0000:00: root bus resource [mem 0x20000000-0x2fffffff]
+[    5.655541] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    5.661193] pci_bus 0000:00: scanning bus
+[    5.666570] pci_bus 0000:00: fixups for bus
+[    5.670879] pci_bus 0000:00: bus scan returning with max=00
+[    5.676776] mtk_hsdma 1b007000.dma-controller: Using 3 as missing dma-requests property
+[    5.685192] mtk_hsdma 1b007000.dma-controller: MediaTek HSDMA driver registered
+[    6.253101] mt753x gsw@0: LAN/WAN VLAN setting=wllll
+[    6.258699] mt753x gsw@0: Switch is MediaTek MT7531BE rev 0
+[    8.975839] xhci-mtk 1a0c0000.usb: Linked as a consumer to regulator.3
+[    8.982597] xhci-mtk 1a0c0000.usb: Linked as a consumer to regulator.2
+[    8.989480] xhci-mtk 1a0c0000.usb: xHCI Host Controller
+[    8.994889] xhci-mtk 1a0c0000.usb: new USB bus registered, assigned bus number 1
+[    9.004227] xhci-mtk 1a0c0000.usb: hcc params 0x01403198 hci version 0x96 quirks 0x0000000000210010
+[    9.013591] xhci-mtk 1a0c0000.usb: irq 127, io mem 0x1a0c0000
+[    9.019999] hub 1-0:1.0: USB hub found
+[    9.023888] hub 1-0:1.0: 2 ports detected
+[    9.028233] xhci-mtk 1a0c0000.usb: xHCI Host Controller
+[    9.033634] xhci-mtk 1a0c0000.usb: new USB bus registered, assigned bus number 2
+[    9.041262] xhci-mtk 1a0c0000.usb: Host supports USB 3.0  SuperSpeed
+[    9.047861] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    9.056499] hub 2-0:1.0: USB hub found
+[    9.060377] hub 2-0:1.0: 1 port detected
+[    9.065066] rtc_mt7622 10212800.rtc: setting system clock to 2019-10-02 09:24:48 UTC (1570008288)
+[    9.075102] md: Waiting for all devices to be available before autodetect
+[    9.082098] md: If you don't use raid, use raid=noautodetect
+[    9.088298] md: Autodetecting RAID arrays.
+[    9.092516] md: autorun ...
+[    9.095406] md: ... autorun DONE.
+[    9.107741] EXT4-fs (mmcblk1p2): mounted filesystem without journal. Opts: (null)
+[    9.115508] VFS: Mounted root (ext4 filesystem) on device 179:2.
+[    9.128998] devtmpfs: mounted
+[    9.132247] Freeing unused kernel memory: 448K
+[    9.173102] Run /sbin/init as init process
+[    9.178817] random: fast init done
+[    9.475557] systemd[1]: systemd 237 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+[    9.497846] systemd[1]: Detected architecture arm64.
+
+Welcome to Ubuntu 18.04.3 LTS!
+
+[    9.544005] systemd[1]: Set hostname to <bpi-iot-ros-ai>.
+[    9.849485] random: systemd: uninitialized urandom read (16 bytes read)
+[    9.856401] systemd[1]: Reached target User and Group Name Lookups.
+[  OK  ] Reached target User and Group Name Lookups.
+[    9.893153] random: systemd: uninitialized urandom read (16 bytes read)
+[    9.900070] systemd[1]: Started ntp-systemd-netif.path.
+[  OK  ] Started ntp-systemd-netif.path.
+[    9.933129] random: systemd: uninitialized urandom read (16 bytes read)
+[    9.941285] systemd[1]: Created slice User and Session Slice.
+[  OK  ] Created slice User and Session Slice.
+[    9.973313] systemd[1]: Started Dispatch Password Requests to Console Directory Watch.
+[  OK  ] Started Dispatch Password Requests to Console Directory Watch.
+[   10.013132] systemd[1]: Reached target System Time Synchronized.
+[  OK  ] Reached target System Time Synchronized.
+[   10.053218] systemd[1]: Started Forward Password Requests to Wall Directory Watch.
+[  OK  ] Started Forward Password Requests to Wall Directory Watch.
+[   10.093117] systemd[1]: Reached target Local Encrypted Volumes.
+[  OK  ] Reached target Local Encrypted Volumes.
+[  OK  ] Reached target Remote File Systems.
+[  OK  ] Created slice System Slice.
+[  OK  ] Listening on Journal Socket.
+[  OK  ] Listening on udev Kernel Socket.
+[  OK  ] Listening on /dev/initctl Compatibility Named Pipe.
+         Mounting Kernel Debug File System...
+[  OK  ] Listening on Journal Audit Socket.
+         Starting Load Kernel Modules...
+         Starting Set the console keyboard layout...
+         Starting Create list of required st…ce nodes for the current kernel...
+[  OK  ] Listening on fsck to fsckd communication Socket.
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+         Starting Remount Root and Kernel File Systems...
+[   10.518622] EXT4-fs (mmcblk1p2): re-mounted. Opts: (null)
+[  OK  ] Reached target Slices.
+[  OK  ] Listening on udev Control Socket.
+[  OK  ] Listening on Syslog Socket.
+[  OK  ] Listening on Journal Socket (/dev/log).
+         Starting Journal Service...
+         Mounting Huge Pages File System...
+         Starting Nameserver information manager...
+[  OK  ] Set up automount Arbitrary Executab…rmats File System Automount Point.
+         Mounting POSIX Message Queue File System...
+         Starting udev Coldplug all Devices...
+         Starting Restore / save the current clock...
+[  OK  ] Started Journal Service.
+[  OK  ] Mounted Kernel Debug File System.
+[  OK  ] Started Load Kernel Modules.
+[  OK  ] Started Set the console keyboard layout.
+[  OK  ] Started Create list of required sta…vice nodes for the current kernel.
+[  OK  ] Started Remount Root and Kernel File Systems.
+[  OK  ] Mounted Huge Pages File System.
+[  OK  ] Mounted POSIX Message Queue File System.
+[  OK  ] Started Restore / save the current clock.
+[  OK  ] Started Nameserver information manager.
+[  OK  ] Started udev Coldplug all Devices.
+[  OK  ] Reached target Network (Pre).
+         Starting Load/Save Random Seed...
+         Activating swap /var/swap...
+         Starting Create Static Device Nodes in /dev...
+[   11.321424] Adding 131068k swap on /var/swap.  Priority:-2 extents:2 across:180220k SSFS
+         Mounting Kernel Configuration File System...
+         Starting Apply Kernel Variables...
+         Starting Flush Journal to Persistent Storage...
+[  OK  ] Activated swap /var/swap.
+[  OK  ] Started Load/Save Random Seed.
+[  OK  ] Started Create Static Device Nodes in /dev.
+[  OK  ] Mounted Kernel Configuration File System.
+[  OK  ] Started Apply Kernel Variables.
+[  OK  ] Reached target Local File Systems (Pre).
+         Starting udev Kernel Device Manager...
+[  OK  ] Reached target Swap.
+         Mounting /tmp...
+[  OK  ] Mounted /tmp.
+[  OK  ] Started udev Kernel Device Manager.
+[  OK  ] Reached target Local File Systems.
+         Starting Enable support for additional executable binary formats...
+         Starting Armbian enhanced Log2Ram...
+         Starting Set console font and keymap...
+         Starting Raise network interfaces...
+[  OK  ] Started Flush Journal to Persistent Storage.
+[  OK  ] Started Set console font and keymap.
+         Mounting Arbitrary Executable File Formats File System...
+         Starting Create Volatile Files and Directories...
+[  OK  ] Mounted Arbitrary Executable File Formats File System.
+[  OK  ] Started Create Volatile Files and Directories.
+         Starting Network Time Synchronization...
+         Starting Update UTMP about System Boot/Shutdown...
+         Starting Network Name Resolution...
+[   12.251994] Bluetooth: hci0: Failed to load firmware file (-11)
+[  OK  ] Started Entropy daemon using the HAVEGE algorithm.
+[  OK  ] Started Enable support for additional executable binary formats.
+[  OK  ] Found device /dev/ttyS0.
+[  OK  ] Started Armbian enhanced Log2Ram.
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+[  OK  ] Started Network Name Resolution.
+[  OK  ] Reached target Host and Network Name Lookups.
+[  OK  ] Started Network Time Synchronization.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Started resolvconf-pull-resolved.path.
+[  OK  ] Reached target Paths.
+[  OK  ] Listening on lircd.socket.
+         Starting Docker Socket for the API.
+[  OK  ] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Started Discard unused blocks once a week.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Started Message of the Day.
+[  OK  ] Started Daily apt download activities.
+[  OK  ] Started Daily apt upgrade and clean activities.
+[  OK  ] Reached target Timers.
+[  OK  ] Started Raise network interfaces.
+[  OK  ] Listening on Docker Socket for the API.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+         Starting Bluetooth service...
+         Starting System Logging Service...
+         Starting lircd(8) initialization helper tool...
+         Starting resolvconf-pull-resolved.service...
+         Starting Dispatcher daemon for systemd-networkd...
+         Starting Login Service...
+         Starting Resets System Activity Data Collector...
+         Starting LSB: Load kernel modules needed to enable cpufreq scaling...
+         Starting LSB: Banana Pi init script...
+[  OK  ] Started Handle events from IR remotes decoded by lircd(8).
+[  OK  ] Started D-Bus System Message Bus.
+[  OK  ] Started Login Service.
+         Starting WPA supplicant...
+         Starting Network Manager...
+[  OK  ] Started Convert IR remotes button p…ses to mouse movements and clicks.
+[  OK  ] Started Regular background program processing daemon.
+         Starting Accounts Service...
+         Starting Avahi mDNS/DNS-SD Stack...
+[  OK  ] Started ntp-systemd-netif.service.
+         Starting Modem Manager...
+[  OK  ] Started System Logging Service.
+[  OK  ] Started resolvconf-pull-resolved.service.
+[  OK  ] Started Resets System Activity Data Collector.
+[  OK  ] Found device /sys/subsystem/net/devices/eth0.
+[  OK  ] Started Bluetooth service.
+[  OK  ] Started WPA supplicant.
+[  OK  ] Started lircd(8) initialization helper tool.
+[  OK  ] Started Avahi mDNS/DNS-SD Stack.
+         Starting Authorization Manager...
+         Starting Hostname Service...
+[  OK  ] Reached target Bluetooth.
+[  OK  ] Started ifup for eth0.
+[  OK  ] Started LSB: Load kernel modules needed to enable cpufreq scaling.
+         Starting LSB: set CPUFreq kernel parameters...
+[  OK  ] Started Authorization Manager.
+[  OK  ] Started Accounts Service.
+[  OK  ] Started Hostname Service.
+[  OK  ] Started Modem Manager.
+[  OK  ] Started LSB: set CPUFreq kernel parameters.
+[  OK  ] Started Network Manager.
+         Starting Network Manager Script Dispatcher Service...
+[  OK  ] Reached target Network.
+         Starting containerd container runtime...
+[  OK  ] Started Flexible IR remote input/output application support.
+[  OK  ] Started Forward LIRC button presses as uinput events.
+         Starting Permit User Sessions...
+         Starting OpenBSD Secure Shell server...
+[  OK  ] Started Unattended Upgrades Shutdown.
+         Starting Network Manager Wait Online...
+         Starting LSB: Set sysfs variables from /etc/sysfs.conf...
+[  OK  ] Started Dispatcher daemon for systemd-networkd.
+[  OK  ] Started LSB: Banana Pi init script.
+[  OK  ] Started containerd container runtime.
+[  OK  ] Started Permit User Sessions.
+[  OK  ] Started Network Manager Script Dispatcher Service.
+[  OK  ] Created slice system-getty.slice.
+[  OK  ] Started OpenBSD Secure Shell server.
+         Stopping Network Name Resolution...
+[  OK  ] Started LSB: Set sysfs variables from /etc/sysfs.conf.
+[  OK  ] Stopped Network Name Resolution.
+         Starting Network Name Resolution...
+[  OK  ] Started Network Name Resolution.
+         Starting resolvconf-pull-resolved.service...
+[  OK  ] Started resolvconf-pull-resolved.service.
+[*     ] A start job is running for Network …nager Wait Online (11s / no limit)[**    ] A start job is running for Network …nager Wait Online (12s / no limit)[***   ] A start job is running for Network …nager Wait Online (12s / no limit)[ ***  ] A start job is running for Network …nager Wait Online (13s / no limit)[  *** ] A start job is running for Network …nager Wait Online (14s / no limit)[   ***] A start job is running for Network …nager Wait Online (14s / no limit)[    **] A start job is running for Network …nager Wait Online (15s / no limit)[     *] A start job is running for Network …nager Wait Online (15s / no limit)[    **] A start job is running for Network …nager Wait Online (16s / no limit)[   ***] A start job is running for Network …nager Wait Online (17s / no limit)[  *** ] A start job is running for Network …nager Wait Online (17s / no limit)[ ***  ] A start job is running for Network …nager Wait Online (18s / no limit)[***   ] A start job is running for Network …nager Wait Online (18s / no limit)[**    ] A start job is running for Network …nager Wait Online (19s / no limit)[*     ] A start job is running for Network …nager Wait Online (20s / no limit)[**    ] A start job is running for Network …nager Wait Online (20s / no limit)[***   ] A start job is running for Network …nager Wait Online (21s / no limit)[ ***  ] A start job is running for Network …nager Wait Online (21s / no limit)[  *** ] A start job is running for Network …nager Wait Online (22s / no limit)[   ***] A start job is running for Network …nager Wait Online (23s / no limit)[    **] A start job is running for Network …nager Wait Online (23s / no limit)[     *] A start job is running for Network …nager Wait Online (24s / no limit)[    **] A start job is running for Network …nager Wait Online (25s / no limit)[   ***] A start job is running for Network …nager Wait Online (25s / no limit)[  *** ] A start job is running for Network …nager Wait Online (26s / no limit)[ ***  ] A start job is running for Network …nager Wait Online (26s / no limit)[***   ] A start job is running for Network …nager Wait Online (27s / no limit)[**    ] A start job is running for Network …nager Wait Online (28s / no limit)[*     ] A start job is running for Network …nager Wait Online (28s / no limit)[**    ] A start job is running for Network …nager Wait Online (29s / no limit)[***   ] A start job is running for Network …nager Wait Online (30s / no limit)[ ***  ] A start job is running for Network …nager Wait Online (30s / no limit)[  *** ] A start job is running for Network …nager Wait Online (31s / no limit)[   ***] A start job is running for Network …nager Wait Online (31s / no limit)[    **] A start job is running for Network …nager Wait Online (32s / no limit)[     *] A start job is running for Network …nager Wait Online (33s / no limit)[    **] A start job is running for Network …nager Wait Online (33s / no limit)[   ***] A start job is running for Network …nager Wait Online (34s / no limit)[  *** ] A start job is running for Network …nager Wait Online (34s / no limit)[ ***  ] A start job is running for Network …nager Wait Online (35s / no limit)[FAILED] Failed to start Network Manager Wait Online.
+See 'systemctl status NetworkManager-wait-online.service' for details.
+[  OK  ] Reached target Network is Online.
+         Starting Ubuntu FAN network setup...
+         Starting /etc/rc.local Compatibility...
+         Starting LSB: disk temperature monitoring daemon...
+[  OK  ] Started Ubuntu FAN network setup.
+[  OK  ] Started LSB: disk temperature monitoring daemon.
+[   45.557706] [rc.local  OK  [833]: ] My IP address is 192.168.88.108Started /etc/rc.local Compatibility.
+
+[  OK  ] Started Serial Getty on ttyS0.
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Reached target Multi-User System.
+[  OK  ] Reached target Graphical Interface.
+         Starting Update UTMP about System Runlevel Changes...
+[  OK  ] Started Update UTMP about System Runlevel Changes.
+
+Ubuntu 18.04.3 LTS bpi-iot-ros-ai ttyS0
+
+bpi-iot-ros-ai login: root
+Password: 
+Last login: Wed Oct  2 13:00:11 CST 2019 on ttyS0
+
+ * Kata Containers are now fully integrated in Charmed Kubernetes 1.16!
+   Yes, charms take the Krazy out of K8s Kata Kluster Konstruction.
+
+     https://ubuntu.com/kubernetes/docs/release-notes
+root@bpi-iot-ros-ai:~# fdisk -l
+Disk /dev/mmcblk1: 7.3 GiB, 7818182656 bytes, 15269888 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x09e08654
+
+Device         Boot  Start      End  Sectors  Size Id Type
+/dev/mmcblk1p1      204800   729087   524288  256M  c W95 FAT32 (LBA)
+/dev/mmcblk1p2      729088 14940159 14211072  6.8G 83 Linux
+root@bpi-iot-ros-ai:~# 

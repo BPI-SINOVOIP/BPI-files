@@ -1,0 +1,180 @@
+F0: 102B 0000
+F6: 3800 00A0
+F3: 0000 0000
+V0: 0000 0000 [0001]
+00: 0000 0000
+BP: 0000 0041 [0000]
+G0: 0190 0000
+T0: 0000 0335 [000F]
+Jump to BL
+
+UNIVPLL_CON0 = 0xFE000000!!!
+mt_pll_init: Set pll frequency for 25M crystal
+RAM_CONSOLE preloader last status: 0x0 0x0 0x0 0x0 0x0 0x0 
+[PMIC_WRAP]wrap_init pass,the return value=0.
+[pmic_init] Preloader Start..................
+[pmic_init] MT6380 CHIP Code, reg_val = 0, 1:E2  0:E3
+[pmic_init] Done...................
+Chip part number:7622A
+MT7622 Version: 1.2.7, (iPA) 
+SSC OFF
+mt_pll_post_init: mt_get_cpu_freq = 1350000Khz
+mt_pll_post_init: mt_get_mem_freq = 1600000Khz
+mt_pll_post_init: mt_get_bus_freq = 1119920Khz
+[PLFM] Init I2C: OK(0)
+
+[BLDR] Build Time: 20190927-141930
+==== Dump RGU Reg ========
+RGU MODE:     14
+RGU LENGTH:   FFE0
+RGU STA:      40000000
+RGU INTERVAL: FFF
+RGU SWSYSRST: 8000
+==== Dump RGU Reg End ====
+RGU: g_rgu_satus:2
+ mtk_wdt_mode_config  mode value=10, tmp:22000010
+PL RGU RST: ??
+SW reset with bypass power key flag
+Find bypass powerkey flag
+WDT NONRST=0x20000000
+WDT IRQ_EN=0x340003
+RGU mtk_wdt_init:MTK_WDT_DEBUG_CTL(590200F3)
+[EMI] MDL number = 2
+[EMI] DRAMC calibration start
+
+[EMI] DRAMC calibration end
+
+[EMI]rank0 size: 0x40000000
+[MEM] complex R/W mem test pass
+RAM_CONSOLE wdt status (0x2)=0x2
+[mmc_init]: msdc0 start mmc_init_host() in PL...
+[msdc_init]: msdc0 Host controller intialization start 
+[SD0] Pins mode(1), none(0), down(1), up(2), keep(3)
+[SD0] Pins mode(2), none(0), down(1), up(2), keep(3)
+[info][msdc_set_startbit 1127] read data start bit at rising edge
+[info][msdc_config_clksrc] input clock is 400000kHz
+[SD0] Bus Width: 1
+[info][msdc_config_clksrc] input clock is 400000kHz
+[info][msdc_set_startbit 1127] read data start bit at rising edge
+[SD0] SET_CLK(260kHz): SCLK(259kHz) MODE(0) DDR(0) DIV(385) DS(0) RS(0)
+[msdc_init]: msdc0 Host controller intialization done
+[mmc_init]: msdc0 start mmc_init_card() in PL...
+[mmc_init_card]: start
+[info][msdc_config_clksrc] input clock is 400000kHz
+[info][msdc_set_startbit 1127] read data start bit at rising edge
+[SD0] SET_CLK(260kHz): SCLK(259kHz) MODE(0) DDR(0) DIV(385) DS(0) RS(0)
+[SD0] Bus Width: 8
+[SD0] Switch to High-Speed mode!
+[info][msdc_config_clksrc] input clock is 400000kHz
+[info][msdc_set_startbit 1127] read data start bit at rising edge
+[SD0] SET_CLK(260kHz): SCLK(259kHz) MODE(2) DDR(1) DIV(192) DS(0) RS(0)
+[SD0] Bus Width: 8
+[SD0] Size: 7456 MB, Max.Speed: 52000 kHz, blklen(512), nblks(15269888), ro(0)
+[mmc_init_mem_card 3140][SD0] Initialized, eMMC50
+before host->cur_bus_clk(259740)
+[info][msdc_config_clksrc] input clock is 400000kHz
+[info][msdc_set_startbit 1127] read data start bit at rising edge
+[SD0] SET_CLK(52000kHz): SCLK(50000kHz) MODE(2) DDR(1) DIV(1) DS(0) RS(0)
+host->cur_bus_clk(50000000)
+[mmc_init_card]: finish successfully
+[PLFM] Init Boot Device: OK(0)
+[GPT_PL](BPI)Parsing Primary GPT now...
+[GPT_PL]check header, err(signature 0x00000054594C5242!=0x5452415020494645)
+[GPT_PL]Success to find valid GPT.
+
+[PART] blksz: 512B
+[PART] [0x0000000000020000-0x000000000007FFFF] "preloader" (768 blocks) 
+[PART] [0x0000000000080000-0x00000000000BFFFF] "tee1" (512 blocks) 
+[PART] [0x00000000000C0000-0x000000000013FFFF] "lk" (1024 blocks) 
+
+Device APC domain init setup:
+
+Domain Setup (0x0)
+Domain Setup (0x0)
+Device APC domain after setup:
+Domain Setup (0x0)
+Domain Setup (0x0)
+[get_part] part->nr_sects=768, part->info->name=preloader
+[get_part] part->nr_sects=512, part->info->name=tee1
+[get_part] part->nr_sects=1024, part->info->name=lk
+[PART] Image with part header
+[PART] name : U-Boot
+[PART] addr : 41E00000h mode : -1
+[PART] size : 369124
+[PART] magic: 58881688h
+
+[PART] load "lk" from 0x00000000000C0200 (dev) to 0x41E00000 (mem) [SUCCESS]
+[PART] load speed: 11627KB/s, 369124 bytes, 31ms
+load lk (ret=0)
+[get_part] part->nr_sects=768, part->info->name=preloader
+[get_part] part->nr_sects=512, part->info->name=tee1
+[PART] Image with part header
+[PART] name : atf
+[PART] addr : FFFFFFFFh mode : -1
+[PART] size : 62032
+[PART] magic: 58881688h
+
+[PART] load "tee1" from 0x0000000000080200 (dev) to 0x43000DC0 (mem) [SUCCESS]
+[PART] load speed: 6057KB/s, 62032 bytes, 10ms
+load tee1 (ret=0)
+[BLDR] bldr load tee part ret=0x0, addr=0x43001000
+[get_part] part->nr_sects=768, part->info->name=preloader
+[get_part] part->nr_sects=512, part->info->name=tee1
+[get_part] part->nr_sects=1024, part->info->name=lk
+[BLDR] boot part. not found
+[BLDR] part_load_images ret=0x0
+[BLDR] Others, jump to ATF
+
+[BLDR] jump to 0x41E00000
+[BLDR] <0x41E00000>=0xEA00000F
+[BLDR] <0x41E00004>=0xE59FF014
+
+
+U-Boot  (Oct 02 2019 - 15:01:05)
+
+static declaration g_total_rank_size = 0x3F000000
+DRAM:  1008 MiB
+NAND:  Recognize SNAND: ID [ef aa 21 ], Device Name [Winbond 1Gb], Page Size [2048]B Spare Size [64]B Total Size [128]MB
+[mtk_snand] probe successfully!
+[BBT] BMT.v2 is found at 0x3ff
+128 MiB
+dev_num = 1
+***size=4096, offset=1310720, blk_start=2560, blk_cnt=8
+*** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+dev_num = 1
+***size=4096, offset=1310720, blk_start=2560, blk_cnt=8
+*** Warning - bad CRC, using default environment
+
+Net:   mtk_eth
+Uip activated
+  *** U-Boot SD CARD ***  Press UP/DOWN to move or Press 1~9,a~c to choose, ENTER to select     1. System Load Linux to SDRAM via TFTP.     2. System Load Linux Kernel then write to Flash via TFTP.     3. Boot Linux from SD.     4. System Load U-Boot then write to Flash via TFTP.     5. System Load U-Boot then write to Flash via Serial.     6. System Load ATF then write to Flash via TFTP.     7. System Load Preloader then write to Flash via TFTP.     8. System Load ROM header then write to Flash via TFTP.     9. BPI:System Load Preloader then write to eMMC via TFTP.     a. BPI:System Load Preloader then write to eMMC via fatload.     b. System Load flashimage then write to Flash via TFTP.     c. System Load partition table then write to Flash via TFTP.     U-Boot console  Hit any key to stop autoboot:  3   *** U-Boot SD CARD ***  Press UP/DOWN to move or Press 1~9,a~c to choose, ENTER to select     1. System Load Linux to SDRAM via TFTP.     2. System Load Linux Kernel then write to Flash via TFTP.     3. Boot Linux from SD.     4. System Load U-Boot then write to Flash via TFTP.     5. System Load U-Boot then write to Flash via Serial.     6. System Load ATF then write to Flash via TFTP.     7. System Load Preloader then write to Flash via TFTP.     8. System Load ROM header then write to Flash via TFTP.     9. BPI:System Load Preloader then write to eMMC via TFTP.     a. BPI:System Load Preloader then write to eMMC via fatload.     b. System Load flashimage then write to Flash via TFTP.     c. System Load partition table then write to Flash via TFTP.     U-Boot console  *** U-Boot SD CARD ***  Press UP/DOWN to move or Press 1~9,a~c to choose, ENTER to select     1. System Load Linux to SDRAM via TFTP.     2. System Load Linux Kernel then write to Flash via TFTP.     3. Boot Linux from SD.     4. System Load U-Boot then write to Flash via TFTP.     5. System Load U-Boot then write to Flash via Serial.     6. System Load ATF then write to Flash via TFTP.     7. System Load Preloader then write to Flash via TFTP.     8. System Load ROM header then write to Flash via TFTP.     9. BPI:System Load Preloader then write to eMMC via TFTP.     a. BPI:System Load Preloader then write to eMMC via fatload.     b. System Load flashimage then write to Flash via TFTP.     c. System Load partition table then write to Flash via TFTP.     U-Boot console  *** U-Boot SD CARD ***  Press UP/DOWN to move or Press 1~9,a~c to choose, ENTER to select     1. System Load Linux to SDRAM via TFTP.     2. System Load Linux Kernel then write to Flash via TFTP.     3. Boot Linux from SD.     4. System Load U-Boot then write to Flash via TFTP.     5. System Load U-Boot then write to Flash via Serial.     6. System Load ATF then write to Flash via TFTP.     7. System Load Preloader then write to Flash via TFTP.     8. System Load ROM header then write to Flash via TFTP.     9. BPI:System Load Preloader then write to eMMC via TFTP.     a. BPI:System Load Preloader then write to eMMC via fatload.     b. System Load flashimage then write to Flash via TFTP.     c. System Load partition table then write to Flash via TFTP.     U-Boot console  *** U-Boot SD CARD ***  Press UP/DOWN to move or Press 1~9,a~c to choose, ENTER to select     1. System Load Linux to SDRAM via TFTP.     2. System Load Linux Kernel then write to Flash via TFTP.     3. Boot Linux from SD.     4. System Load U-Boot then write to Flash via TFTP.     5. System Load U-Boot then write to Flash via Serial.     6. System Load ATF then write to Flash via TFTP.     7. System Load Preloader then write to Flash via TFTP.     8. System Load ROM header then write to Flash via TFTP.     9. BPI:System Load Preloader then write to eMMC via TFTP.     a. BPI:System Load Preloader then write to eMMC via fatload.     b. System Load flashimage then write to Flash via TFTP.     c. System Load partition table then write to Flash via TFTP.     U-Boot console  *** U-Boot SD CARD ***  Press UP/DOWN to move or Press 1~9,a~c to choose, ENTER to select     1. System Load Linux to SDRAM via TFTP.     2. System Load Linux Kernel then write to Flash via TFTP.     3. Boot Linux from SD.     4. System Load U-Boot then write to Flash via TFTP.     5. System Load U-Boot then write to Flash via Serial.     6. System Load ATF then write to Flash via TFTP.     7. System Load Preloader then write to Flash via TFTP.     8. System Load ROM header then write to Flash via TFTP.     9. BPI:System Load Preloader then write to eMMC via TFTP.     a. BPI:System Load Preloader then write to eMMC via fatload.     b. System Load flashimage then write to Flash via TFTP.     c. System Load partition table then write to Flash via TFTP.     U-Boot console  *** U-Boot SD CARD ***  Press UP/DOWN to move or Press 1~9,a~c to choose, ENTER to select     1. System Load Linux to SDRAM via TFTP.     2. System Load Linux Kernel then write to Flash via TFTP.     3. Boot Linux from SD.     4. System Load U-Boot then write to Flash via TFTP.     5. System Load U-Boot then write to Flash via Serial.     6. System Load ATF then write to Flash via TFTP.     7. System Load Preloader then write to Flash via TFTP.     8. System Load ROM header then write to Flash via TFTP.     9. BPI:System Load Preloader then write to eMMC via TFTP.     a. BPI:System Load Preloader then write to eMMC via fatload.     b. System Load flashimage then write to Flash via TFTP.     c. System Load partition table then write to Flash via TFTP.     U-Boot console  *** U-Boot SD CARD ***  Press UP/DOWN to move or Press 1~9,a~c to choose, ENTER to select     1. System Load Linux to SDRAM via TFTP.     2. System Load Linux Kernel then write to Flash via TFTP.     3. Boot Linux from SD.     4. System Load U-Boot then write to Flash via TFTP.     5. System Load U-Boot then write to Flash via Serial.     6. System Load ATF then write to Flash via TFTP.     7. System Load Preloader then write to Flash via TFTP.     8. System Load ROM header then write to Flash via TFTP.     9. BPI:System Load Preloader then write to eMMC via TFTP.     a. BPI:System Load Preloader then write to eMMC via fatload.     b. System Load flashimage then write to Flash via TFTP.     c. System Load partition table then write to Flash via TFTP.     U-Boot consoleret2 = 1
+ret2 = 1
+
+Partition Map for MMC device 1  --   Partition Type: DOS
+
+Part	Start Sector	Num Sectors	UUID		Type
+  1	204800    	524288    	64a6a3fd-01	0c
+  2	729088    	14211072  	64a6a3fd-02	83
+mmc1 is available
+reading bananapi/bpi-r64/linux-4.19/preloader_evb7622_64_foremmc.bin
+FAT: Misaligned buffer address (4007ff28)
+143360 bytes read in 51 ms (2.7 MiB/s)
+ret2 = 1
+ret2 = 1
+
+Partition Map for MMC device 0  --   Partition Type: DOS
+
+Part	Start Sector	Num Sectors	UUID		Type
+  1	204800    	524288    	09e08654-01	0c
+  2	729088    	14211072  	09e08654-02	83
+mmc0 is available
+mmc0 is current device
+mmc0 operation
+dev_num = 0
+
+MMC write: dev # 0, block # 0, count 512 ... 512 blocks write: OK
+BPI-IoT> 
