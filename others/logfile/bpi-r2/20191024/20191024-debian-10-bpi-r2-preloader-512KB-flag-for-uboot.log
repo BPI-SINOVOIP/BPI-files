@@ -1,0 +1,1300 @@
+[USBD] USB PRB0 LineState: 0
+
+[USBD] USB cable/ No Cable inserted!
+
+[PLFM] Keep stay in USB Mode
+Platform initialization is ok
+wait for frequency meter finish, CLK26CALI = 0x81
+mt_pll_post_init: mt_get_cpu_freq = 1040000Khz
+wait for frequency meter finish, CLK26CALI = 0x90
+mt_pll_post_init: mt_get_bus_freq = 273000Khz
+wait for frequency meter finish, CLK26CALI = 0x81
+mt_pll_post_init: mt_get_mem_freq = 133250Khz
+[PWRAP] pwrap_init_preloader
+[PWRAP] pwrap_init
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=0,rdata=2D52
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=1,rdata=2D52
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=2,rdata=2D52
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=3,rdata=800
+[PWRAP] _pwrap_init_sistrobe [Read Test] pass,index=4 rdata=5AA5
+[PWRAP] _pwrap_init_sistrobe [Read Test] pass,index=5 rdata=5AA5
+[PWRAP] _pwrap_init_sistrobe [Read Test] pass,index=6 rdata=5AA5
+[PWRAP] _pwrap_init_sistrobe [Read Test] pass,index=7 rdata=5AA5
+[PWRAP] _pwrap_init_sistrobe [Read Test] pass,index=8 rdata=5AA5
+[PWRAP] _pwrap_init_sistrobe [Read Test] pass,index=9 rdata=5AA5
+[PWRAP] _pwrap_init_sistrobe [Read Test] pass,index=10 rdata=5AA5
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=11,rdata=1001
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=12,rdata=B54B
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=13,rdata=B54B
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=14,rdata=B54B
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=15,rdata=B54B
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=16,rdata=B54B
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=17,rdata=B54B
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=18,rdata=B54B
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=19,rdata=2003
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=20,rdata=6A97
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=21,rdata=6A97
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=22,rdata=6A97
+[PWRAP] _pwrap_init_sistrobe [Read Test] fail,index=23,rdata=6A97
+[PWRAP] _pwrap_init_reg_clock
+[PMIC_WRAP]wrap_init pass,the return value=0.
+[pmic6323_init] Preloader Start..................
+[pmic6323_init] PMIC CHIP Code = 0x2023
+INT_MISC_CON: 0  TOP_RST_MISC: 0
+pl pmic powerkey Press
+[pmic6323_init] powerKey = 1
+[pmic6323_init] is USB in = 0xB004
+[pmic6323_init] Reg[0x11A]=0x1B
+pmic setup LED
+[pmic6323_init] Done...................
+mt7623 disable long press reset ->>>>>
+mt7623 disable long press reset <<<<<-
+mt7623 VPA supplied by 1.0V to MT7530 ->
+mt7623 VPA supplied by 1.0V to MT7530 <-
+mt7623 enables RG_VGP1_EN for LCM ->
+mt7623 enables RG_VGP1_EN for LCM <-
+MT7623 E2 setting =>
+MT7623 E2 setting <=
+[PLFM] Init I2C: OK(0)
+[PLFM] Init PWRAP: OK(0)
+[PLFM] Init PMIC: OK(0)
+[PLFM] chip[CA00]
+
+[BLDR] [Support SD/eMMC] Build Time: 20191024-155141
+==== Dump RGU Reg ========
+RGU MODE:     4D
+RGU LENGTH:   FFE0
+RGU STA:      0
+RGU INTERVAL: FFF
+RGU SWSYSRST: 0
+==== Dump RGU Reg End ====
+RGU: g_rgu_satus:0
+ mtk_wdt_mode_config  mode value=10, tmp:22000010
+PL P ON
+WDT does not trigger reboot
+RGU mtk_wdt_init:MTK_WDT_DEBUG_CTL(590200F3)
+kpd read addr: 0x0040: data:0x4001
+Enter mtk_kpd_gpio_set! 
+kpd debug column : 0, 0, 0, 0, 0, 0, 0, 0
+kpd debug row : 0, 0, 0, 0, 0, 0, 0, 0
+after set KP enable: KP_SEL = 0x0 !
+MTK_PMIC_RST_KEY is used for this project!
+[RTC] get_frequency_meter: input=0x0, ouput=5
+[RTC] get_frequency_meter: input=0x0, ouput=3967
+[RTC] get_frequency_meter: input=0x0, ouput=5
+[RTC] get_frequency_meter: input=0x0, ouput=0
+[RTC] get_frequency_meter: input=0x0, ouput=0
+[RTC] bbpu = 0x1, con = 0x8427
+rtc_first_boot_init
+[RTC] get_frequency_meter: input=0x0, ouput=5
+[RTC] get_frequency_meter: input=0x0, ouput=3967
+[RTC] get_frequency_meter: input=0x0, ouput=5
+[RTC] get_frequency_meter: input=0x0, ouput=0
+[RTC] get_frequency_meter: input=0x0, ouput=0
+rtc_2sec_stat_clear
+rtc_2sec_reboot_check cali=1536
+[RTC] irqsta = 0x0, pdn1 = 0x0, pdn2 = 0x201, spar0 = 0xC0, spar1 = 0x800
+[RTC] new_spare0 = 0x0, new_spare1 = 0x1, new_spare2 = 0x1, new_spare3 = 0x1
+[RTC] bbpu = 0x1, con = 0x426, cali = 0x600
+pl pmic powerkey Press
+power key is pressed
+[PLFM] Power key boot!
+[RTC] rtc_bbpu_power_on done
+[EMI] mcp_dram_num:0,discrete_dram_num:1,enable_combo_dis:0
+[EMI] PCDDR3
+[Check]mt_get_mdl_number 0x0
+[EMI] eMMC/NAND ID = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+[EMI] MDL number = 0
+[EMI] emi_set eMMC/NAND ID = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+[EMI][Vcore]0x21E=0x48,0x220=0x48
+[EMI][Vmem]0x554=0x0
+wait for frequency meter finish, CLK26CALI = 0x81
+[EMI] PCDDR3 DRAM Clock = 1600012 KHz, MEMPLL MODE = 2 
+[EMI] PCDDR3 RXTDN Calibration:
+Start REXTDN SW calibration...
+drvp=0xB,drvn=0x9
+[EMI] pinmux = 4
+===============================================================================
+
+        dramc_write_leveling_swcal
+===============================================================================
+delay  byte0  byte1  byte2  byte3
+-----------------------------
+0    0    1    1    1    
+1    0    1    1    1    
+2    1    1    1    1    
+3    1    1    1    1    
+4    1    1    1    1    
+5    1    1    1    1    
+6    1    1    1    1    
+7    1    1    1    1    
+8    1    1    1    1    
+9    1    1    1    1    
+10    1    1    1    1    
+11    1    1    1    1    
+12    1    1    1    1    
+13    1    1    1    1    
+14    1    1    1    1    
+15    1    1    1    1    
+pass bytecount = 4
+byte_i    status    best delay
+0    2    2
+1    2    0
+2    2    0
+3    2    0
+========================================
+[write leveling]DQS: 0x2, DQM: 0x2
+[write leveling after remap]DQ byte0 reg: 0x200 val: 0x22220000
+[write leveling after remap]DQ byte1 reg: 0x204 val: 0x2222
+[write leveling after remap]DQ byte2 reg: 0x208 val: 0x0
+[write leveling after remap]DQ byte3 reg: 0x20C val: 0x0
+=============================================
+X-axis: DQS Gating Window Delay (Fine Scale)
+Y-axis: DQS Gating Window Delay (Coarse Scale)
+=============================================
+          0    8   16   24   32   40   48   56   64   72   80   88   96  104  112  120
+      --------------------------------------------------------------------------------
+0000:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0001:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0002:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0003:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0004:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0005:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0006:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0007:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0008:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0009:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+000A:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+000B:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+000C:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+000D:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+000E:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+000F:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0010:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    1    1
+0011:|    0    0    0    0    0    0    0    0    1    1    1    1    1    1    1    1
+0012:|    0    0    0    1    1    1    1    1    1    1    1    1    0    0    0    0
+0013:|    1    1    1    1    1    1    1    0    0    0    0    0    0    0    0    0
+0014:|    1    1    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0015:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0016:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0017:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0018:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+0019:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001A:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001B:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001C:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001D:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001E:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+001F:|    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0    0
+Rank 0 coarse tune value selection : 18, 18
+18
+56
+rank 0 coarse = 18
+rank 0 fine = 56
+00:|    0    0    0    0    0    0    0    0    1    1    1    0
+opt_dle value:13
+==================================================================
+		RX	DQS perbit delay software calibration 
+==================================================================
+1.0-31 bit dq delay value
+==================================================================
+bit|     0  1  2  3  4  5  6  7  8  9
+--------------------------------------
+0 |    0 0 0 0 0 0 0 0 0 0 
+10 |    0 0 0 0 0 0 0 0 0 0 
+20 |    0 0 0 0 0 0 0 0 0 0 
+30 |    0 0 
+--------------------------------------
+==================================================================
+2.dqs window
+x=pass dqs delay value (min~max)center 
+y=0-7bit DQ of every group
+input delay:DQS0 =53 DQS1 = 40 DQS2 =52 DQS3 = 43
+==================================================================
+bit	DQS0	 bit      DQS1     bit     DQS2     bit     DQS3
+0  (20~73)46  8  (8~56)32  16  (21~70)45  24  (17~63)40
+1  (20~69)44  9  (8~58)33  17  (21~67)44  25  (17~58)37
+2  (23~73)48  10  (11~62)36  18  (24~72)48  26  (21~65)43
+3  (19~69)44  11  (15~61)38  19  (20~68)44  27  (19~58)38
+4  (23~75)49  12  (17~63)40  20  (23~74)48  28  (22~65)43
+5  (23~71)47  13  (16~63)39  21  (21~74)47  29  (21~63)42
+6  (25~73)49  14  (15~58)36  22  (25~71)48  30  (17~64)40
+7  (31~75)53  15  (18~63)40  23  (30~74)52  31  (21~63)42
+==================================================================
+3.dq delay value last
+==================================================================
+bit|    0  1  2  3  4  5  6  7  8   9
+--------------------------------------
+0 |    7 9 5 9 4 6 4 0 8 7 
+10 |    4 2 0 1 4 0 7 8 4 8 
+20 |    4 5 4 0 3 6 0 5 0 1 
+30 |    3 1 
+==================================================================
+*DQIDLY1 = 0x9050907
+*DQIDLY2 = 0x40604
+*DQIDLY3 = 0x2040708
+*DQIDLY4 = 0x40100
+*DQIDLY5 = 0x8040807
+*DQIDLY6 = 0x40504
+*DQIDLY7 = 0x5000603
+*DQIDLY8 = 0x1030100
+*DRAMC_R0DELDLY = 0x2B342835
+
+[MEM]CONA:F3A2,conf1:F07486A3
+DM4BitMux = 1 
+DQSO 0 in TX per-bit = 2 <= DQSO 0 in WL = 2  
+DQSO 1 in TX per-bit = 0 <= DQSO 1 in WL = 0  
+[Warning] DQSO 2 in TX per-bit = 8 > DQSO 2 in WL = 0  
+[Warning] DQSO 3 in TX per-bit = 8 > DQSO 3 in WL = 0  
+Tx DQM dly  = 0x1032
+Tx DQM dly bit4 = 0x0
+DRAMC_DQODLY1=2323334h
+DRAMC_DQODLY2=24333133h
+DRAMC_DQODLY3=1102222h
+DRAMC_DQODLY4=12102012h
+Tx DQ dly bit4 = 0x0
+Tx DQS dly = 0x8802
+Tx DQS dly bit4 = 0x0
+TX Byte0: DQ - 14, DQS - 15. win_sum= 28
+TX Byte1: DQ - 18, DQS - 12. win_sum= 29
+TX Byte2: DQ - 7, DQS - 22. win_sum= 28
+TX Byte3: DQ - 6, DQS - 21. win_sum= 26
+DRAMC calibration takes 649603755 CPU cycles
+
+[EMI] DRAMC calibration passed
+
+[MEM] complex R/W mem test pass
+0:dram_rank_size:80000000
+[Dram_Buffer] dram size:-2147483648 
+[Dram_Buffer] structure size: 1725560 
+[Dram_Buffer] MAX_TEE_DRAM_SIZE: 0 
+Boot from SD Card!!
+Load u-boot from SD Card...
+[PLFM] Init Boot Device: OK(0)
+
+[PART] blksz: 512B
+[PART] [0x0000000000000000-0x000000000003FFFF] "PRELOADER" (512 blocks) 
+[PART] [0x0000000000000000-0x000000000003FFFF] "MBR" (512 blocks) 
+[PART] [0x0000000000040000-0x00000000000BFFFF] "UBOOT" (1024 blocks) 
+[PART] [0x00000000000C0000-0x00000000000FFFFF] "CONFIG" (512 blocks) 
+[PART] [0x0000000000100000-0x000000000013FFFF] "FACTORY" (512 blocks) 
+[PART] [0x0000000000140000-0x000000000213FFFF] "BOOTIMG" (65536 blocks) 
+[PART] [0x0000000002140000-0x000000000413FFFF] "RECOVERY" (65536 blocks) 
+[PART] [0x0000000004140000-0x000000004413FFFF] "ROOTFS" (2097152 blocks) 
+[PART] [0x0000000044140000-0x000001FFC413FFFF] "USER" (-4194304 blocks) 
+[platform_vusb_on] PASS
+[TOOL] PMIC not dectect usb cable!
+[TOOL] <UART> listen  ended, receive size:0!
+[TOOL] <UART> wait sync time 150ms->5ms
+[TOOL] <UART> receieved data: ()
+
+Device APC domain init setup:
+
+ bootloader load uboot ,the address of uboot is 81E00000 
+[PART]partition name UBOOT 
+[PART]partition start block 0x200 
+[PART]partition size 0x80000 
+[PART]partition blks 0x400 
+[PART]partition flags 0x0 
+[PART]partition name 0x8 
+[bean] part->startblk(0x200) bdev->blksz(0x200) part->part_id(8) hdr(0xFFB50000)
+[BlkDev.c 101 ]partition block size 0x200 ,blks:0x3B72400
+[BlkDev.c 101 ]partition block erase size 0x200 
+
+[PART] load "UBOOT" from 0x0000000000050000 (dev) to 0x81E00000 (mem) [SUCCESS]
+[PART] load speed: 5625KB/s, 524288 bytes, 91ms
+[BT_SD_PG] device info 0x8590 0x8A00 0xCB01 0x102
+0:dram_rank_size:80000000
+[PLFM] md_type[0] = 255 
+[PLFM] md_type[1] = 255 
+
+[PLFM] boot reason: 0
+[PLFM] boot mode: 0
+[PLFM] META COM0: 0
+[PLFM] <0xFFB7CC10>: 0x0
+[PLFM] boot time: 3084ms
+[PLFM] DDR reserve mode: enable = 0, success = 0
+
+[BLDR] jump to 0x81E00000
+[BLDR] <0x81E00000>=0xEA0000B8
+[BLDR] <0x81E00004>=0xE59FF014
+
+
+U-Boot 2019.07 (Oct 24 2019 - 21:16:30 +0800)
+
+CPU:   MediaTek MT7623 E3
+Model: Bananapi BPI-R2 (EFI)
+DRAM:  2 GiB
+WDT:   Started with servicing (60s timeout)
+MMC:   mmc@11230000: 0, mmc@11240000: 1
+Loading Environment from MMC... Boot From SD(id:1)
+
+*** Warning - bad CRC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Net:   
+Warning: ethernet@1b100000 (eth0) using random MAC address - 5e:be:05:8c:67:0c
+eth0: ethernet@1b100000
+Hit any key to stop autoboot:  3  2  1  0 
+27786 bytes read in 53 ms (511.7 KiB/s)
+** Unrecognized filesystem type **
+switch to partitions #0, OK
+mmc1 is current device
+BPI:devplist=[1]
+Scanning mmc 1:1...
+Found EFI removable media binary efi/boot/bootarm.efi
+7[r[999;999H[6n8Scanning disk mmc@11230000.blk...
+Scanning disk mmc@11240000.blk...
+Found 5 disks
+BootOrder not defined
+EFI boot manager: Cannot load any image
+818176 bytes read in 46 ms (17 MiB/s)
+[?25h[0;30;47mWelcome to GRUB!
+
+[0;37;40m[0;37;40m[0;37;40merror: no suitable video mode found.
+[?25l[0;37;40m[0;37;40m[2J[0;37;40m[2;30HGNU GRUB  version 2.02
+
+[0;36;44m[4;2H┌────────────────────────────────────────────────────────────────────────────┐[5;2H│[5;79H│[6;2H│[6;79H│[7;2H│[7;79H│[8;2H│[8;79H│[9;2H│[9;79H│[10;2H│[10;79H│[11;2H│[11;79H│[12;2H│[12;79H│[13;2H│[13;79H│[14;2H│[14;79H│[15;2H│[15;79H│[16;2H│[16;79H│[17;2H│[17;79H│[18;2H└────────────────────────────────────────────────────────────────────────────┘[0;36;44m[19;2H[20;2H[0;37;40m     Use the ▲ and ▼ keys to select which entry is highlighted.          
+      Press enter to boot the selected OS, `e' to edit the commands       
+      before booting or `c' for a command-line.                           [5;80H [1;37;44m[5;3H*Debian GNU/Linux                                                           [0;36;44m[5;78H[0;37;40m[0;36;44m[6;3H Advanced options for Debian GNU/Linux                                      [0;36;44m[6;78H[0;37;40m[0;36;44m[7;3H Ubuntu 19.04 (19.04) (on /dev/mmcblk0p1)                                   [0;36;44m[7;78H[0;37;40m[0;36;44m[8;3H Advanced options for Ubuntu 19.04 (19.04) (on /dev/mmcblk0p1)              [0;36;44m[8;78H[0;37;40m[0;36;44m[9;3H                                                                            [0;36;44m[9;78H[0;37;40m[0;36;44m[10;3H                                                                            [0;36;44m[10;78H[0;37;40m[0;36;44m[11;3H                                                                            [0;36;44m[11;78H[0;37;40m[0;36;44m[12;3H                                                                            [0;36;44m[12;78H[0;37;40m[0;36;44m[13;3H                                                                            [0;36;44m[13;78H[0;37;40m[0;36;44m[14;3H                                                                            [0;36;44m[14;78H[0;37;40m[0;36;44m[15;3H                                                                            [0;36;44m[15;78H[0;37;40m[0;36;44m[16;3H                                                                            [0;36;44m[16;78H[0;37;40m[0;36;44m[17;3H                                                                            [0;36;44m[17;78H[0;37;40m[17;80H [5;78H[23;1H   The highlighted entry will be executed automatically in 5s.                 [5;78H[23;1H   The highlighted entry will be executed automatically in 4s.                 [5;78H[23;1H   The highlighted entry will be executed automatically in 3s.                 [5;78H[23;1H   The highlighted entry will be executed automatically in 2s.                 [5;78H[23;1H   The highlighted entry will be executed automatically in 1s.                 [5;78H[23;1H   The highlighted entry will be executed automatically in 0s.                 [5;78H[?25h[0;37;40m[2J[0;37;40m[0;37;40m[2J[0;37;40m  Booting `Debian GNU/Linux'
+
+Loading Linux 5-bpi-4.19.55-mtk ...
+Loading initial ramdisk ...
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.51-BPI-R2-Kernel (root@bpi-iot-ros-ai-x64) (gcc version 7.4.1 20181213 [linaro-7.4-2019.02 revision 56ec6f6b99cc167ff0c2f8e1a2eed33b1edc85d4] (Linaro GCC 7.4-2019.02)) #1 SMP Tue Oct 22 15:24:59 CST 2019
+[    0.000000] CPU: ARMv7 Processor [410fc073] revision 3 (ARMv7), cr=10c5387d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: Bananapi BPI-R2
+[    0.000000] bootconsole [earlycon0] enabled
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] efi: Getting EFI parameters from FDT:
+[    0.000000] efi: UEFI not found.
+[    0.000000] [WMT-CONSYS-HW][W]reserve_memory_consys_fn: name: consys-reserve-memory, base: 0xffe00000, size: 0x100000
+[    0.000000] OF: reserved mem: initialized node consys-reserve-memory, compatible id mediatek,consys-reserve-memory
+[    0.000000] cma: Reserved 64 MiB at 0xfb800000
+[    0.000000] On node 0 totalpages: 524031
+[    0.000000]   Normal zone: 1728 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 196608 pages, LIFO batch:63
+[    0.000000]   HighMem zone: 327423 pages, LIFO batch:63
+[    0.000000] random: get_random_bytes called from start_kernel+0x98/0x4a0 with crng_init=0
+[    0.000000] percpu: Embedded 18 pages/cpu s41996 r8192 d23540 u73728
+[    0.000000] pcpu-alloc: s41996 r8192 d23540 u73728 alloc=18*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 522303
+[    0.000000] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-5-bpi-4.19.55-mtk root=UUID=8189a942-3f72-4b3c-8670-c783add7c771 ro earlyprintk console=ttyS2,115200 debug=7
+[    0.000000] Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+[    0.000000] Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Memory: 1986144K/2096124K available (12288K kernel code, 829K rwdata, 3656K rodata, 1024K init, 598K bss, 44444K reserved, 65536K cma-reserved, 1244156K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xf0000000   ( 768 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf000000 - 0xbfe00000   (  14 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (13280 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (1024 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   ( 830 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 599 kB)
+[    0.000000] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] rcu: Hierarchical RCU implementation.
+[    0.000000] rcu: 	RCU event tracing is enabled.
+[    0.000000] rcu: 	RCU restricting CPUs from NR_CPUS=16 to nr_cpu_ids=4.
+[    0.000000] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.000000] NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+[    0.000000] arch_timer: cp15 timer(s) running at 13.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x2ff89eacb, max_idle_ns: 440795202429 ns
+[    0.000006] sched_clock: 56 bits at 13MHz, resolution 76ns, wraps every 4398046511101ns
+[    0.007956] Switching to timer-based delay loop, resolution 76ns
+[    0.014102] clocksource: timer: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 147020034397 ns
+[    0.023267] sched_clock: 32 bits at 13MHz, resolution 76ns, wraps every 165191050201ns
+[    0.031633] Console: colour dummy device 80x30
+[    0.036094] Calibrating delay loop (skipped), value calculated using timer frequency.. 26.00 BogoMIPS (lpj=52000)
+[    0.046304] pid_max: default: 32768 minimum: 301
+[    0.051054] Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.057645] Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+[    0.065324] CPU: Testing write buffer coherency: ok
+[    0.070558] CPU0: update cpu_capacity 1024
+[    0.074662] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.080872] Setting up static identity map for 0x80100000 - 0x80100060
+[    0.087526] rcu: Hierarchical SRCU implementation.
+[    0.093295] EFI services will not be available.
+[    0.098073] smp: Bringing up secondary CPUs ...
+[    0.103125] CPU1: update cpu_capacity 1024
+[    0.103132] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.103770] CPU2: update cpu_capacity 1024
+[    0.103776] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.104358] CPU3: update cpu_capacity 1024
+[    0.104364] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.104470] smp: Brought up 1 node, 4 CPUs
+[    0.137653] SMP: Total of 4 processors activated (104.00 BogoMIPS).
+[    0.143884] CPU: All CPU(s) started in SVC mode.
+[    0.149446] devtmpfs: initialized
+[    0.158477] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 3
+[    0.166357] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 7645041785100000 ns
+[    0.176076] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.184554] xor: measuring software checksum speed
+[    0.229431]    arm4regs  :  1302.000 MB/sec
+[    0.273659]    8regs     :   794.000 MB/sec
+[    0.317884]    32regs    :   878.000 MB/sec
+[    0.362106]    neon      :  1324.000 MB/sec
+[    0.366266] xor: using function: neon (1324.000 MB/sec)
+[    0.371471] pinctrl core: initialized pinctrl subsystem
+[    0.377012] regulator-dummy: no parameters
+[    0.381530] DMI not present or invalid.
+[    0.385798] NET: Registered protocol family 16
+[    0.391970] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.400129] cpuidle: using governor ladder
+[    0.404257] cpuidle: using governor menu
+[    0.408338] No ATAGs?
+[    0.408463] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.418676] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.565945] raid6: int32x1  gen()   177 MB/s
+[    0.638011] raid6: int32x1  xor()   164 MB/s
+[    0.710081] raid6: int32x2  gen()   210 MB/s
+[    0.782138] raid6: int32x2  xor()   172 MB/s
+[    0.854367] raid6: int32x4  gen()   234 MB/s
+[    0.926374] raid6: int32x4  xor()   179 MB/s
+[    0.998599] raid6: int32x8  gen()   234 MB/s
+[    1.070556] raid6: int32x8  xor()   148 MB/s
+[    1.142687] raid6: neonx1   gen()   510 MB/s
+[    1.214726] raid6: neonx1   xor()   475 MB/s
+[    1.286888] raid6: neonx2   gen()   684 MB/s
+[    1.358933] raid6: neonx2   xor()   614 MB/s
+[    1.431093] raid6: neonx4   gen()   826 MB/s
+[    1.503196] raid6: neonx4   xor()   693 MB/s
+[    1.575332] raid6: neonx8   gen()   730 MB/s
+[    1.647420] raid6: neonx8   xor()   632 MB/s
+[    1.651665] raid6: using algorithm neonx4 gen() 826 MB/s
+[    1.656942] raid6: .... xor() 693 MB/s, rmw enabled
+[    1.661788] raid6: using neon recovery algorithm
+[    1.666784] fixed-1.8V: 1800 mV 
+[    1.670120] reg-fixed-voltage regulator-1p8v: fixed-1.8V supplying 1800000uV
+[    1.677258] fixed-3.3V: 3300 mV 
+[    1.680608] reg-fixed-voltage regulator-3p3v: fixed-3.3V supplying 3300000uV
+[    1.687727] fixed-5V: 5000 mV 
+[    1.690858] reg-fixed-voltage regulator-5v: fixed-5V supplying 5000000uV
+[    1.697918] vgaarb: loaded
+[    1.700883] SCSI subsystem initialized
+[    1.704896] libata version 3.00 loaded.
+[    1.708935] usbcore: registered new interface driver usbfs
+[    1.714436] usbcore: registered new interface driver hub
+[    1.719794] usbcore: registered new device driver usb
+[    1.724875] pps_core: LinuxPPS API ver. 1 registered
+[    1.729812] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    1.738908] PTP clock support registered
+[    1.743190] EDAC MC: Ver: 3.0.0
+[    1.747377] Bluetooth: Core ver 2.22
+[    1.750990] NET: Registered protocol family 31
+[    1.755412] Bluetooth: HCI device and connection manager initialized
+[    1.761734] Bluetooth: HCI socket layer initialized
+[    1.766584] Bluetooth: L2CAP socket layer initialized
+[    1.771627] Bluetooth: SCO socket layer initialized
+[    1.777089] clocksource: Switched to clocksource arch_sys_counter
+[    1.859546] NET: Registered protocol family 2
+[    1.864568] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    1.872263] TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+[    1.879361] TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+[    1.885873] TCP: Hash tables configured (established 8192 bind 8192)
+[    1.892305] UDP hash table entries: 512 (order: 2, 16384 bytes)
+[    1.898246] UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+[    1.904780] NET: Registered protocol family 1
+[    1.909670] RPC: Registered named UNIX socket transport module.
+[    1.915609] RPC: Registered udp transport module.
+[    1.920302] RPC: Registered tcp transport module.
+[    1.924981] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    1.931890] PCI: CLS 0 bytes, default 64
+[    1.936025] Trying to unpack rootfs image as initramfs...
+[    2.268273] Freeing initrd memory: 5956K
+[    2.273754] Initialise system trusted keyrings
+[    2.278502] workingset: timestamp_bits=14 max_order=19 bucket_order=5
+[    2.290206] zbud: loaded
+[    2.294090] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    2.300809] NFS: Registering the id_resolver key type
+[    2.305898] Key type id_resolver registered
+[    2.310067] Key type id_legacy registered
+[    2.314067] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    2.320764] ntfs: driver 2.1.32 [Flags: R/O].
+[    2.325441] fuse init (API version 7.27)
+[    2.334972] async_tx: api initialized (async)
+[    2.339346] Key type asymmetric registered
+[    2.343425] Asymmetric key parser 'x509' registered
+[    2.348332] bounce: pool size: 64 pages
+[    2.352206] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 247)
+[    2.359747] io scheduler noop registered
+[    2.363677] io scheduler deadline registered
+[    2.368223] io scheduler cfq registered (default)
+[    2.372915] io scheduler mq-deadline registered
+[    2.377423] io scheduler kyber registered
+[    2.381620] io scheduler bfq registered
+[    2.386305] phy phy-1a149000.pcie-phy.0: Looking up phy-supply from device tree
+[    2.393648] phy phy-1a149000.pcie-phy.0: Looking up phy-supply property in node /pcie-phy@1a149000/pcie-phy@1a149900 failed
+[    2.404955] phy phy-1a14a000.pcie-phy.1: Looking up phy-supply from device tree
+[    2.412241] phy phy-1a14a000.pcie-phy.1: Looking up phy-supply property in node /pcie-phy@1a14a000/pcie-phy@1a14a900 failed
+[    2.423502] phy phy-1a1c4000.usb-phy.2: Looking up phy-supply from device tree
+[    2.430701] phy phy-1a1c4000.usb-phy.2: Looking up phy-supply property in node /usb-phy@1a1c4000/usb-phy@1a1c4800 failed
+[    2.441602] phy phy-1a1c4000.usb-phy.3: Looking up phy-supply from device tree
+[    2.448798] phy phy-1a1c4000.usb-phy.3: Looking up phy-supply property in node /usb-phy@1a1c4000/usb-phy@1a1c4900 failed
+[    2.459782] phy phy-1a244000.usb-phy.4: Looking up phy-supply from device tree
+[    2.466979] phy phy-1a244000.usb-phy.4: Looking up phy-supply property in node /usb-phy@1a244000/usb-phy@1a244800 failed
+[    2.477885] phy phy-1a244000.usb-phy.5: Looking up phy-supply from device tree
+[    2.485081] phy phy-1a244000.usb-phy.5: Looking up phy-supply property in node /usb-phy@1a244000/usb-phy@1a244900 failed
+[    2.505849] mtk-scpsys 10006000.scpsys: Looking up conn-supply from device tree
+[    2.513151] mtk-scpsys 10006000.scpsys: Looking up conn-supply property in node /scpsys@10006000 failed
+[    2.522505] mtk-scpsys 10006000.scpsys: Looking up disp-supply from device tree
+[    2.529777] mtk-scpsys 10006000.scpsys: Looking up disp-supply property in node /scpsys@10006000 failed
+[    2.539120] mtk-scpsys 10006000.scpsys: Looking up mfg-supply from device tree
+[    2.546304] mtk-scpsys 10006000.scpsys: Looking up mfg-supply property in node /scpsys@10006000 failed
+[    2.555571] mtk-scpsys 10006000.scpsys: Looking up vdec-supply from device tree
+[    2.562844] mtk-scpsys 10006000.scpsys: Looking up vdec-supply property in node /scpsys@10006000 failed
+[    2.572187] mtk-scpsys 10006000.scpsys: Looking up isp-supply from device tree
+[    2.579370] mtk-scpsys 10006000.scpsys: Looking up isp-supply property in node /scpsys@10006000 failed
+[    2.588625] mtk-scpsys 10006000.scpsys: Looking up bdp-supply from device tree
+[    2.595809] mtk-scpsys 10006000.scpsys: Looking up bdp-supply property in node /scpsys@10006000 failed
+[    2.605070] mtk-scpsys 10006000.scpsys: Looking up eth-supply from device tree
+[    2.612254] mtk-scpsys 10006000.scpsys: Looking up eth-supply property in node /scpsys@10006000 failed
+[    2.621513] mtk-scpsys 10006000.scpsys: Looking up hif-supply from device tree
+[    2.628698] mtk-scpsys 10006000.scpsys: Looking up hif-supply property in node /scpsys@10006000 failed
+[    2.637956] mtk-scpsys 10006000.scpsys: Looking up ifr_msc-supply from device tree
+[    2.645488] mtk-scpsys 10006000.scpsys: Looking up ifr_msc-supply property in node /scpsys@10006000 failed
+[    2.702810] Serial: 8250/16550 driver, 4 ports, IRQ sharing enabled
+[    2.731169] 11002000.serial: ttyS0 at MMIO 0x11002000 (irq = 195, base_baud = 1625000) is a ST16650V2
+[    2.761591] 11003000.serial: ttyS1 at MMIO 0x11003000 (irq = 196, base_baud = 1625000) is a ST16650V2
+[    2.791823] 11004000.serial: ttyS2 at MMIO 0x11004000 (irq = 197, base_baud = 1625000) is a ST16650V2
+[    2.801039] console [ttyS2] enabled
+[    2.801039] console [ttyS2] enabled
+[    2.807966] bootconsole [earlycon0] disabled
+[    2.807966] bootconsole [earlycon0] disabled
+[    2.817653] 1100c000.serial: ttyS3 at MMIO 0x1100c000 (irq = 202, base_baud = 17062500) is a MediaTek BTIF
+[    2.827705] STMicroelectronics ASC driver initialized
+[    2.833651] mtk_rng 1020f000.rng: registered RNG driver
+[    2.833798] random: fast init done
+[    2.842478] random: crng init done
+[    2.843587] brd: module loaded
+[    2.856567] loop: module loaded
+[    2.860006] [WMT-DETECT][I]wmt_detect_driver_init:driver(major 154) installed success
+[    2.867837] [SDIO-DETECT][I]sdio_detect_init:sdio_register_driver() ret=0
+[    2.876604] mt6323-regulator mt6323-regulator: Chip ID = 0x2023
+[    2.882589] vproc: 700 <--> 1350 mV at 1150 mV 
+[    2.887312] vsys: 1400 <--> 2987 mV at 2200 mV 
+[    2.891990] vpa: 500 <--> 3650 mV at 1000 mV 
+[    2.896705] vtcxo: 2800 mV 
+[    2.899674] vcn28: 2800 mV 
+[    2.902619] vcn33_bt: 3300 <--> 3600 mV at 3600 mV 
+[    2.907652] vcn33_wifi: 3300 <--> 3600 mV at 3600 mV 
+[    2.913190] va: 2800 mV 
+[    2.915866] vcama: 1500 <--> 2800 mV at 2800 mV 
+[    2.920998] vio28: 2800 mV 
+[    2.924308] vusb: 3300 mV 
+[    2.927335] vmc: 1800 <--> 3300 mV at 3300 mV 
+[    2.932107] vmch: 3000 <--> 3300 mV at 3300 mV 
+[    2.936960] vemc3v3: 3000 <--> 3300 mV at 3300 mV 
+[    2.941924] vgp1: 1200 <--> 3300 mV at 2800 mV 
+[    2.946617] vgp2: 1200 <--> 3000 mV at 2500 mV 
+[    2.951312] vgp3: 1200 <--> 1800 mV at 1200 mV 
+[    2.955996] vcn18: 1800 mV 
+[    2.958953] vsim1: 1800 <--> 3000 mV at 1800 mV 
+[    2.963743] vsim2: 1800 <--> 3000 mV at 1800 mV 
+[    2.968515] vrtc: 2800 mV 
+[    2.971394] vcamaf: 1200 <--> 3300 mV at 3300 mV 
+[    2.976257] vibr: 1200 <--> 3300 mV at 1200 mV 
+[    2.980929] vrf18: 1825 mV 
+[    2.984255] vm: 1200 <--> 1800 mV at 1500 mV 
+[    2.989165] vio18: 1800 mV 
+[    2.992124] vcamd: 1200 <--> 1800 mV at 1200 mV 
+[    2.996922] vcamio: 1800 mV 
+[    3.000768] Uniform Multi-Platform E-IDE driver
+[    3.005375] ide-gd driver 1.18
+[    3.010440] libphy: Fixed MDIO Bus: probed
+[    3.037561] libphy: mdio: probed
+[    3.040876] mtk_soc_eth 1b100000.ethernet: generated random MAC address 96:b3:e0:c8:02:fb
+[    3.059547] mtk_soc_eth 1b100000.ethernet: connected mac 0 to PHY at fixed-0:00 [uid=00000000, driver=Generic PHY]
+[    3.070323] mtk_soc_eth 1b100000.ethernet eth0: mediatek frame engine at 0xf08e0000, irq 213
+[    3.079202] xhci-mtk 1a1c0000.usb: Looking up vbus-supply from device tree
+[    3.086143] xhci-mtk 1a1c0000.usb: Linked as a consumer to regulator.3
+[    3.092640] xhci-mtk 1a1c0000.usb: Looking up vusb33-supply from device tree
+[    3.099694] xhci-mtk 1a1c0000.usb: Linked as a consumer to regulator.2
+[    3.106451] xhci-mtk 1a1c0000.usb: xHCI Host Controller
+[    3.111710] xhci-mtk 1a1c0000.usb: new USB bus registered, assigned bus number 1
+[    3.122477] xhci-mtk 1a1c0000.usb: hcc params 0x01401198 hci version 0x96 quirks 0x0000000000210010
+[    3.131537] xhci-mtk 1a1c0000.usb: irq 210, io mem 0x1a1c0000
+[    3.138181] hub 1-0:1.0: USB hub found
+[    3.141988] hub 1-0:1.0: 1 port detected
+[    3.146274] xhci-mtk 1a1c0000.usb: xHCI Host Controller
+[    3.151502] xhci-mtk 1a1c0000.usb: new USB bus registered, assigned bus number 2
+[    3.158867] xhci-mtk 1a1c0000.usb: Host supports USB 3.0  SuperSpeed
+[    3.165267] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    3.173945] hub 2-0:1.0: USB hub found
+[    3.177754] hub 2-0:1.0: 1 port detected
+[    3.182143] xhci-mtk 1a240000.usb: Looking up vbus-supply from device tree
+[    3.189100] xhci-mtk 1a240000.usb: Linked as a consumer to regulator.3
+[    3.195595] xhci-mtk 1a240000.usb: Looking up vusb33-supply from device tree
+[    3.202654] xhci-mtk 1a240000.usb: Linked as a consumer to regulator.2
+[    3.209401] xhci-mtk 1a240000.usb: xHCI Host Controller
+[    3.214652] xhci-mtk 1a240000.usb: new USB bus registered, assigned bus number 3
+[    3.225178] xhci-mtk 1a240000.usb: hcc params 0x01401198 hci version 0x96 quirks 0x0000000000210010
+[    3.234234] xhci-mtk 1a240000.usb: irq 211, io mem 0x1a240000
+[    3.240915] hub 3-0:1.0: USB hub found
+[    3.244718] hub 3-0:1.0: 1 port detected
+[    3.248987] xhci-mtk 1a240000.usb: xHCI Host Controller
+[    3.254206] xhci-mtk 1a240000.usb: new USB bus registered, assigned bus number 4
+[    3.261569] xhci-mtk 1a240000.usb: Host supports USB 3.0  SuperSpeed
+[    3.267966] usb usb4: We don't know the algorithms for LPM for this host, disabling LPM.
+[    3.276667] hub 4-0:1.0: USB hub found
+[    3.280449] hub 4-0:1.0: 1 port detected
+[    3.284940] usbcore: registered new interface driver usb-storage
+[    3.291663] mt6397-rtc mt6323-rtc: registered as rtc0
+[    3.296896] i2c /dev entries driver
+[    3.303217] MTK_WDT_NONRST_REG(0)
+[    3.307183] mtk-wdt 10007000.watchdog: Watchdog enabled (timeout=31 sec, nowayout=0)
+[    3.316668] device-mapper: ioctl: 4.39.0-ioctl (2018-04-03) initialised: dm-devel@redhat.com
+[    3.325460] device-mapper: multipath round-robin: version 1.2.0 loaded
+[    3.331971] device-mapper: multipath queue-length: version 0.2.0 loaded
+[    3.338551] device-mapper: multipath service-time: version 0.3.0 loaded
+[    3.345175] device-mapper: raid: Loading target version 1.14.0
+[    3.351415] cpu cpu0: Looking up proc-supply from device tree
+[    3.357239] cpu cpu0: Linked as a consumer to regulator.4
+[    3.362614] cpu cpu0: Looking up sram-supply from device tree
+[    3.368332] cpu cpu0: Looking up sram-supply property in node /cpus/cpu@0 failed
+[    3.375711] cpu cpu0: dummy supplies not allowed for exclusive requests
+[    3.384169] mtk-msdc 11230000.mmc: Looking up vmmc-supply from device tree
+[    3.391109] mtk-msdc 11230000.mmc: Linked as a consumer to regulator.2
+[    3.397607] mtk-msdc 11230000.mmc: Looking up vqmmc-supply from device tree
+[    3.404568] mtk-msdc 11230000.mmc: Linked as a consumer to regulator.1
+[    3.439483] mtk-msdc 11240000.mmc: Got CD GPIO
+[    3.444301] mtk-msdc 11240000.mmc: Looking up vmmc-supply from device tree
+[    3.451507] mtk-msdc 11240000.mmc: Linked as a consumer to regulator.2
+[    3.458120] mtk-msdc 11240000.mmc: Looking up vqmmc-supply from device tree
+[    3.499745] ledtrig-cpu: registered to indicate activity on CPUs
+[    3.508357] hidraw: raw HID events driver (C) Jiri Kosina
+[    3.509446] mmc0: new high speed MMC card at address 0001
+[    3.513893] usbcore: registered new interface driver usbhid
+[    3.521228] mmcblk0: mmc0:0001 8WPD3R 7.28 GiB 
+[    3.524672] usbhid: USB HID core driver
+[    3.530848] mmcblk0boot0: mmc0:0001 8WPD3R partition 1 4.00 MiB
+[    3.533766] Initializing XFRM netlink socket
+[    3.540557] mmcblk0boot1: mmc0:0001 8WPD3R partition 2 4.00 MiB
+[    3.543632] NET: Registered protocol family 10
+[    3.549200] mmcblk0rpmb: mmc0:0001 8WPD3R partition 3 512 KiB, chardev (241:0)
+[    3.580399] mmc1: host does not support reading read-only switch, assuming write-enable
+[    3.589052] Segment Routing with IPv6
+[    3.592826] NET: Registered protocol family 17
+[    3.597288] NET: Registered protocol family 15
+[    3.597305] mmc1: new high speed SDHC card at address aaaa
+[    3.601748] bridge: filtering via arp/ip/ip6tables is no longer available by default. Update your scripts to load br_netfilter if you need this.
+[    3.620063] 8021q: 802.1Q VLAN Support v1.8
+[    3.622832] mmcblk1: mmc1:aaaa SP32G 29.7 GiB 
+[    3.624462] Key type dns_resolver registered
+[    3.633023] ThumbEE CPU extension supported.
+[    3.637285] Registering SWP/SWPB emulation handler
+[    3.642627] Loading compiled-in X.509 certificates
+[    3.642643]  mmcblk1: p1 p2 p3
+[    3.647512] zswap: loaded using pool lzo/zbud
+[    3.656155] Btrfs loaded, crc32c=crc32c-generic
+[    3.776478] mtk-pcie 1a140000.pcie: Port0 link down
+[    3.811881] mtk-pcie 1a140000.pcie: PCI host bridge to bus 0000:00
+[    3.818074] pci_bus 0000:00: root bus resource [io  0x0000-0xffff] (bus address [0x1a160000-0x1a16ffff])
+[    3.827503] pci_bus 0000:00: root bus resource [mem 0x60000000-0x6fffffff]
+[    3.834347] pci_bus 0000:00: root bus resource [bus 00-ff]
+[    3.839988] pci 0000:00:01.0: [14c3:0801] type 01 class 0x060400
+[    3.846015] pci 0000:00:01.0: reg 0x14: [mem 0x00000000-0x0000ffff]
+[    3.852324] pci 0000:00:01.0: supports D1
+[    3.856325] pci 0000:00:01.0: PME# supported from D0 D1 D3hot
+[    3.864750] PCI: bus0: Fast back to back transfers disabled
+[    3.870337] pci 0000:00:01.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    3.878492] pci 0000:01:00.0: [1b21:0611] type 00 class 0x010185
+[    3.884513] pci 0000:01:00.0: reg 0x10: initial BAR value 0x00000000 invalid
+[    3.891529] pci 0000:01:00.0: reg 0x10: [io  size 0x0008]
+[    3.896912] pci 0000:01:00.0: reg 0x14: initial BAR value 0x00000000 invalid
+[    3.903922] pci 0000:01:00.0: reg 0x14: [io  size 0x0004]
+[    3.909305] pci 0000:01:00.0: reg 0x18: initial BAR value 0x00000000 invalid
+[    3.916315] pci 0000:01:00.0: reg 0x18: [io  size 0x0008]
+[    3.921701] pci 0000:01:00.0: reg 0x1c: initial BAR value 0x00000000 invalid
+[    3.928711] pci 0000:01:00.0: reg 0x1c: [io  size 0x0004]
+[    3.934093] pci 0000:01:00.0: reg 0x20: initial BAR value 0x00000000 invalid
+[    3.941104] pci 0000:01:00.0: reg 0x20: [io  size 0x0010]
+[    3.946486] pci 0000:01:00.0: reg 0x24: [mem 0x00000000-0x000001ff]
+[    3.952730] pci 0000:01:00.0: reg 0x30: [mem 0x00000000-0x0000ffff pref]
+[    3.970571] PCI: bus1: Fast back to back transfers disabled
+[    3.976136] pci_bus 0000:01: busn_res: [bus 01-ff] end is updated to 01
+[    3.982746] pci 0000:00:01.0: BAR 8: assigned [mem 0x60000000-0x600fffff]
+[    3.989494] pci 0000:00:01.0: BAR 9: assigned [mem 0x60100000-0x601fffff pref]
+[    3.996666] pci 0000:00:01.0: BAR 1: assigned [mem 0x60200000-0x6020ffff]
+[    4.003411] pci 0000:00:01.0: BAR 7: assigned [io  0x1000-0x1fff]
+[    4.009467] pci 0000:01:00.0: BAR 6: assigned [mem 0x60100000-0x6010ffff pref]
+[    4.016640] pci 0000:01:00.0: BAR 5: assigned [mem 0x60000000-0x600001ff]
+[    4.023386] pci 0000:01:00.0: BAR 4: assigned [io  0x1000-0x100f]
+[    4.029442] pci 0000:01:00.0: BAR 0: assigned [io  0x1010-0x1017]
+[    4.035496] pci 0000:01:00.0: BAR 2: assigned [io  0x1018-0x101f]
+[    4.041551] pci 0000:01:00.0: BAR 1: assigned [io  0x1020-0x1023]
+[    4.047606] pci 0000:01:00.0: BAR 3: assigned [io  0x1024-0x1027]
+[    4.053661] pci 0000:00:01.0: PCI bridge to [bus 01]
+[    4.058592] pci 0000:00:01.0:   bridge window [io  0x1000-0x1fff]
+[    4.064645] pci 0000:00:01.0:   bridge window [mem 0x60000000-0x600fffff]
+[    4.071387] pci 0000:00:01.0:   bridge window [mem 0x60100000-0x601fffff pref]
+[    4.078751] pcieport 0000:00:01.0: enabling device (0140 -> 0143)
+[    4.084965] pcieport 0000:00:01.0: Signaling PME with IRQ 226
+[    4.090839] pcieport 0000:00:01.0: AER enabled with IRQ 226
+[    4.096599] ahci 0000:01:00.0: version 3.0
+[    4.100695] ahci 0000:01:00.0: enabling device (0140 -> 0143)
+[    4.106504] ahci 0000:01:00.0: SSS flag set, parallel bus scan disabled
+[    4.113126] ahci 0000:01:00.0: AHCI 0001.0200 32 slots 2 ports 6 Gbps 0x3 impl IDE mode
+[    4.121081] ahci 0000:01:00.0: flags: 64bit ncq sntf stag led clo pmp pio slum part ccc sxs 
+[    4.130934] scsi host0: ahci
+[    4.134396] scsi host1: ahci
+[    4.137531] ata1: SATA max UDMA/133 abar m512@0x60000000 port 0x60000100 irq 226
+[    4.144906] ata2: SATA max UDMA/133 abar m512@0x60000000 port 0x60000180 irq 226
+[    4.152539] mtk_hsdma 1b007000.dma-controller: Using 3 as missing dma-requests property
+[    4.160786] mtk_hsdma 1b007000.dma-controller: MediaTek HSDMA driver registered
+[    4.169502] mt6397-rtc mt6323-rtc: setting system clock to 2010-01-01 00:00:18 UTC (1262304018)
+[    4.178361] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    4.204495] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    4.211455] vpa: disabling
+[    4.214196] vusb: disabling
+[    4.216969] vmc: disabling
+[    4.219666] vmch: disabling
+[    4.222451] vemc3v3: disabling
+[    4.225492] vgp1: disabling
+[    4.228282] vcamaf: disabling
+[    4.231783] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[    4.240362] cfg80211: failed to load regulatory.db
+[    4.476012] ata1: SATA link down (SStatus 0 SControl 300)
+[    4.798140] ata2: SATA link down (SStatus 0 SControl 300)
+[    4.805780] Freeing unused kernel memory: 1024K
+[    4.810635] Run /init as init process
+Loading, please wait...
++ '[' -z  ]
++ BOOT=local
++ '[' -n  ]
++ '[' 'UUID=93cc36ff-714c-49a3-8c8a-7759eaa25629' '=' none ]
++ resume='UUID=93cc36ff-714c-49a3-8c8a-7759eaa25629'
++ mount -t tmpfs -o 'noexec,nosuid,size=10%,mode=0755' tmpfs /run
++ mkdir -m 0755 /run/initramfs
++ '[' -n  ]
++ maybe_break top
++ run_scripts /scripts/init-top
++ initdir=/scripts/init-top
++ '[' '!' -d /scripts/init-top ]
++ shift
++ . /scripts/init-top/ORDER
++ /scripts/init-top/all_generic_ide
++ '[' -e /conf/param.conf ]
++ /scripts/init-top/blacklist
++ '[' -e /conf/param.conf ]
++ /scripts/init-top/keymap
++ '[' -e /conf/param.conf ]
++ /scripts/init-top/udev
+Starting version 241
+^[^[[24;80R^[[24;80R^[[24;80R^[[    5.443868] input: gpio-keys as /devices/platform/gpio-keys/input/input0
+[    5.474348] mt7530 mdio-bus:00: Looking up core-supply from device tree
+[    5.481161] mt7530 mdio-bus:00: Linked as a consumer to regulator.6
+[    5.487473] mt7530 mdio-bus:00: Looking up io-supply from device tree
+[    5.494024] mt7530 mdio-bus:00: Linked as a consumer to regulator.17
+[    5.657869] libphy: dsa slave smi: probed
+[    5.663477] mt7530 mdio-bus:00 wan (uninitialized): PHY [dsa-0.0:00] driver [Generic PHY]
+[    5.673820] mt7530 mdio-bus:00 lan0 (uninitialized): PHY [dsa-0.0:01] driver [Generic PHY]
+[    5.693970] mt7530 mdio-bus:00 lan1 (uninitialized): PHY [dsa-0.0:02] driver [Generic PHY]
+[    5.703869] mt7530 mdio-bus:00 lan2 (uninitialized): PHY [dsa-0.0:03] driver [Generic PHY]
+[    5.713984] mt7530 mdio-bus:00 lan3 (uninitialized): PHY [dsa-0.0:04] driver [Generic PHY]
+[    5.736545] DSA: tree 0 setup
++ '[' -e /conf/param.conf ]
++ maybe_break modules
++ '[' n '!=' y ]
++ log_begin_msg 'Loading essential drivers'
++ _log_msg 'Begin: %s ... ' 'Loading essential drivers'
++ '[' n '=' y ]
++ printf 'Begin: %s ... ' 'Loading essential drivers'
+Begin: Loading essential drivers ... + '[' -n  ]
++ load_modules
++ '[' -e /conf/modules ]
++ '[' n '!=' y ]
++ log_end_msg
++ _log_msg 'done.\n'
++ '[' n '=' y ]
++ printf 'done.\n'
+done.
++ '['  ]
++ maybe_break premount
++ '[' n '!=' y ]
++ log_begin_msg 'Running /scripts/init-premount'
++ _log_msg 'Begin: %s ... ' 'Running /scripts/init-premount'
++ '[' n '=' y ]
++ printf 'Begin: %s ... ' 'Running /scripts/init-premount'
+Begin: Running /scripts/init-premount ... + run_scripts /scripts/init-premount
++ initdir=/scripts/init-premount
++ '[' '!' -d /scripts/init-premount ]
++ return
++ '[' n '!=' y ]
++ log_end_msg
++ _log_msg 'done.\n'
++ '[' n '=' y ]
++ printf 'done.\n'
+done.
++ maybe_break mount
++ log_begin_msg 'Mounting root file system'
++ _log_msg 'Begin: %s ... ' 'Mounting root file system'
++ '[' n '=' y ]
++ printf 'Begin: %s ... ' 'Mounting root file system'
+Begin: Mounting root file system ... + . /scripts/local
++ . /scripts/nfs
++ . /scripts/local
++ parse_numeric 'UUID=8189a942-3f72-4b3c-8670-c783add7c771'
++ return
++ maybe_break mountroot
++ mount_top
++ local_top
++ '['  '!=' yes ]
++ '[' n '!=' y ]
++ log_begin_msg 'Running /scripts/local-top'
++ _log_msg 'Begin: %s ... ' 'Running /scripts/local-top'
++ '[' n '=' y ]
++ printf 'Begin: %s ... ' 'Running /scripts/local-top'
+Begin: Running /scripts/local-top ... + run_scripts /scripts/local-top
++ initdir=/scripts/local-top
++ '[' '!' -d /scripts/local-top ]
++ return
++ '[' n '!=' y ]
++ log_end_msg
++ _log_msg 'done.\n'
++ '[' n '=' y ]
++ printf 'done.\n'
+done.
++ local_top_used=yes
++ '[' -z  ]
++ cat /proc/uptime
++ local_top_time='5.78 16.27'
++ local_top_time=5
++ local_top_time=6
++ export local_top_time
++ mount_premount
++ local_premount
++ '['  '!=' yes ]
++ '[' n '!=' y ]
++ log_begin_msg 'Running /scripts/local-premount'
++ _log_msg 'Begin: %s ... ' 'Running /scripts/local-premount'
++ '[' n '=' y ]
++ printf 'Begin: %s ... ' 'Running /scripts/local-premount'
+Begin: Running /scripts/local-premount ... + run_scripts /scripts/local-premount
++ initdir=/scripts/local-premount
++ '[' '!' -d /scripts/local-premount ]
++ shift
++ . /scripts/local-premount/ORDER
++ /scripts/local-premount/resume
++ '[' -e /conf/param.conf ]
++ '[' n '!=' y ]
++ log_end_msg
++ _log_msg 'done.\n'
++ '[' n '=' y ]
++ printf 'done.\n'
+done.
++ local_premount_used=yes
++ mountroot
++ local_mount_root
++ local_top
++ '[' yes '!=' yes ]
++ local_top_used=yes
++ '[' -z 6 ]
++ '[' -z 'UUID=8189a942-3f72-4b3c-8670-c783add7c771' ]
++ local_device_setup 'UUID=8189a942-3f72-4b3c-8670-c783add7c771' 'root file system'
++ local 'dev_id=UUID=8189a942-3f72-4b3c-8670-c783add7c771'
++ local 'name=root file system'
++ local 'may_panic=true'
++ local real_dev
++ local time_elapsed
++ local count
++ wait_for_udev 10
++ command -v udevadm
++ udevadm settle '--timeout=10'
++ '[' -n  ]
++ '[' 'UUID=8189a942-3f72-4b3c-8670-c783add7c771' '=' 'UUID=8189a942-3f72-4b3c-8670-c783add7c771' ]
++ '[' 8189a942-3f72-4b3c-8670-c783add7c771 '=' 'UUID=8189a942-3f72-4b3c-8670-c783add7c771' ]
++ resolve_device 'UUID=8189a942-3f72-4b3c-8670-c783add7c771'
++ DEV='UUID=8189a942-3f72-4b3c-8670-c783add7c771'
++ blkid -l -t 'UUID=8189a942-3f72-4b3c-8670-c783add7c771' -o device
++ DEV=/dev/mmcblk1p2
++ '[' -e /dev/mmcblk1p2 ]
++ echo /dev/mmcblk1p2
++ real_dev=/dev/mmcblk1p2
++ get_fstype /dev/mmcblk1p2
++ local FS FSTYPE
++ FS=/dev/mmcblk1p2
++ FSTYPE=unknown
++ fstype /dev/mmcblk1p2
++ eval 'FSTYPE=ext4
+FSSIZE=6416236544'
++ FSTYPE=ext4
++ FSSIZE=6416236544
++ '[' ext4 '=' unknown ]
++ echo ext4
++ return 0
++ resolve_device 'UUID=8189a942-3f72-4b3c-8670-c783add7c771'
++ DEV='UUID=8189a942-3f72-4b3c-8670-c783add7c771'
++ blkid -l -t 'UUID=8189a942-3f72-4b3c-8670-c783add7c771' -o device
++ DEV=/dev/mmcblk1p2
++ '[' -e /dev/mmcblk1p2 ]
++ echo /dev/mmcblk1p2
++ real_dev=/dev/mmcblk1p2
++ get_fstype /dev/mmcblk1p2
++ local FS FSTYPE
++ FS=/dev/mmcblk1p2
++ FSTYPE=unknown
++ fstype /dev/mmcblk1p2
++ eval 'FSTYPE=ext4
+FSSIZE=6416236544'
++ FSTYPE=ext4
++ FSSIZE=6416236544
++ '[' ext4 '=' unknown ]
++ echo ext4
++ return 0
++ DEV=/dev/mmcblk1p2
++ ROOT=/dev/mmcblk1p2
++ '[' -z  ]
++ get_fstype /dev/mmcblk1p2
++ local FS FSTYPE
++ FS=/dev/mmcblk1p2
++ FSTYPE=unknown
++ fstype /dev/mmcblk1p2
++ eval 'FSTYPE=ext4
+FSSIZE=6416236544'
++ FSTYPE=ext4
++ FSSIZE=6416236544
++ '[' ext4 '=' unknown ]
++ echo ext4
++ return 0
++ FSTYPE=ext4
++ local_premount
++ '[' yes '!=' yes ]
++ local_premount_used=yes
++ '[' y '=' y ]
++ roflag=-r
++ checkfs /dev/mmcblk1p2 root ext4
++ _checkfs_once /dev/mmcblk1p2 root ext4
++ DEV=/dev/mmcblk1p2
++ NAME=root
++ TYPE=ext4
++ '[' root '=' / ]
++ FSCK_LOGFILE=/run/initramfs/fsck.log
++ FSCK_STAMPFILE=/run/initramfs/fsck-root
++ '[' ext4 '=' auto ]
++ FSCKCODE=0
++ '[' -z ext4 ]
++ command -v fsck
++ '[' n '=' y ]
++ '[' n '=' y ]
++ force=
++ '['  '=' y ]
++ '['  '=' n ]
++ fix=-a
++ spinner=
++ '[' -z y ]
++ '[' n '=' n ]
++ log_begin_msg 'Will now check root file system'
++ _log_msg 'Begin: %s ... ' 'Will now check root file system'
++ '[' n '=' y ]
++ printf 'Begin: %s ... ' 'Will now check root file system'
+Begin: Will now check root file system ... + logsave -a -s /run/initramfs/fsck.log fsck -a -V -t ext4 /dev/mmcblk1p2
+fsck from util-linux 2.33.1
+[/sbin/fsck.ext4 (1) -- /dev/mmcblk1p2] fsck.ext4 -a /dev/mmcblk1p2 
+BPI-ROOT: recovering journal
+BPI-ROOT: clean, 70009/391680 files, 517746/1566464 blocks
++ FSCKCODE=0
++ log_end_msg
++ _log_msg 'done.\n'
++ '[' n '=' y ]
++ printf 'done.\n'
+done.
++ '[' 0 -eq 32 ]
++ '[' 0 -eq 4 ]
++ '[' 0 -gt 1 ]
++ true
++ return 0
++ mount -r -t ext4 /dev/mmcblk1p2 /root
+[    6.471753] EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null)
++ log_end_msg
++ _log_msg 'done.\n'
++ '[' n '=' y ]
++ printf 'done.\n'
+done.
++ read_fstab_entry /usr
++ found=1
++ '[' -f /root/etc/fstab ]
++ read -r MNT_FSNAME MNT_DIR MNT_TYPE MNT_OPTS MNT_FREQ MNT_PASS MNT_JUNK
++ continue
++ read -r MNT_FSNAME MNT_DIR MNT_TYPE MNT_OPTS MNT_FREQ MNT_PASS MNT_JUNK
++ continue
++ read -r MNT_FSNAME MNT_DIR MNT_TYPE MNT_OPTS MNT_FREQ MNT_PASS MNT_JUNK
++ continue
++ read -r MNT_FSNAME MNT_DIR MNT_TYPE MNT_OPTS MNT_FREQ MNT_PASS MNT_JUNK
++ continue
++ read -r MNT_FSNAME MNT_DIR MNT_TYPE MNT_OPTS MNT_FREQ MNT_PASS MNT_JUNK
++ continue
++ read -r MNT_FSNAME MNT_DIR MNT_TYPE MNT_OPTS MNT_FREQ MNT_PASS MNT_JUNK
++ continue
++ read -r MNT_FSNAME MNT_DIR MNT_TYPE MNT_OPTS MNT_FREQ MNT_PASS MNT_JUNK
++ continue
++ read -r MNT_FSNAME MNT_DIR MNT_TYPE MNT_OPTS MNT_FREQ MNT_PASS MNT_JUNK
++ continue
++ read -r MNT_FSNAME MNT_DIR MNT_TYPE MNT_OPTS MNT_FREQ MNT_PASS MNT_JUNK
++ '[' / '=' /usr ]
++ read -r MNT_FSNAME MNT_DIR MNT_TYPE MNT_OPTS MNT_FREQ MNT_PASS MNT_JUNK
++ continue
++ read -r MNT_FSNAME MNT_DIR MNT_TYPE MNT_OPTS MNT_FREQ MNT_PASS MNT_JUNK
++ '[' /boot/efi '=' /usr ]
++ read -r MNT_FSNAME MNT_DIR MNT_TYPE MNT_OPTS MNT_FREQ MNT_PASS MNT_JUNK
++ continue
++ read -r MNT_FSNAME MNT_DIR MNT_TYPE MNT_OPTS MNT_FREQ MNT_PASS MNT_JUNK
++ '[' none '=' /usr ]
++ read -r MNT_FSNAME MNT_DIR MNT_TYPE MNT_OPTS MNT_FREQ MNT_PASS MNT_JUNK
++ return 1
++ mount_bottom
++ local_bottom
++ '[' yes '=' yes ]
++ '[' n '!=' y ]
++ log_begin_msg 'Running /scripts/local-bottom'
++ _log_msg 'Begin: %s ... ' 'Running /scripts/local-bottom'
++ '[' n '=' y ]
++ printf 'Begin: %s ... ' 'Running /scripts/local-bottom'
+Begin: Running /scripts/local-bottom ... + run_scripts /scripts/local-bottom
++ initdir=/scripts/local-bottom
++ '[' '!' -d /scripts/local-bottom ]
++ return
++ '[' n '!=' y ]
++ log_end_msg
++ _log_msg 'done.\n'
++ '[' n '=' y ]
++ printf 'done.\n'
+done.
++ local_premount_used=no
++ local_top_used=no
++ unset local_top_time
++ nfs_bottom
++ '['  '=' yes ]
++ '['  '=' yes ]
++ nfs_premount_used=no
++ nfs_top_used=no
++ local_bottom
++ '[' no '=' yes ]
++ '[' no '=' yes ]
++ local_premount_used=no
++ local_top_used=no
++ unset local_top_time
++ maybe_break bottom
++ '[' n '!=' y ]
++ log_begin_msg 'Running /scripts/init-bottom'
++ _log_msg 'Begin: %s ... ' 'Running /scripts/init-bottom'
++ '[' n '=' y ]
++ printf 'Begin: %s ... ' 'Running /scripts/init-bottom'
+Begin: Running /scripts/init-bottom ... + run_scripts /scripts/init-bottom
++ initdir=/scripts/init-bottom
++ '[' '!' -d /scripts/init-bottom ]
++ shift
++ . /scripts/init-bottom/ORDER
++ /scripts/init-bottom/udev
++ '[' -e /conf/param.conf ]
++ '[' n '!=' y ]
++ log_end_msg
++ _log_msg 'done.\n'
++ '[' n '=' y ]
++ printf 'done.\n'
+done.
++ mount -n -o move /run /root/run
++ validate_init /sbin/init
++ run-init -n /root /sbin/init
++ validate_init /sbin/init
++ run-init -n /root /sbin/init
++ maybe_break init
++ unset debug
++ unset MODPROBE_OPTIONS
++ unset DPKG_ARCH
++ unset ROOTFLAGS
++ unset ROOTFSTYPE
++ unset ROOTDELAY
++ unset ROOT
++ unset IP
++ unset BOOT
++ unset BOOTIF
++ unset DEVICE
++ unset UBIMTD
++ unset blacklist
++ unset break
++ unset noresume
++ unset panic
++ unset quiet
++ unset readonly
++ unset resume
++ unset resume_offset
++ unset noresume
++ unset fastboot
++ unset forcefsck
++ unset fsckfix
++ mount -n -o move /sys /root/sys
++ mount -n -o move /proc /root/proc
++ exec run-init /root /sbin/init
+[    7.192405] systemd[1]: System time before build time, advancing clock.
+[    7.311295] systemd[1]: systemd 241 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD -IDN2 +IDN -PCRE2 default-hierarchy=hybrid)
+[    7.333363] systemd[1]: Detected architecture arm.
+
+Welcome to [1mDebian GNU/Linux 10 (buster)[0m!
+
+[    7.363940] systemd[1]: Set hostname to <bpi-iot-ros-ai>.
+[    7.371766] systemd[1]: Failed to bump fs.file-max, ignoring: Invalid argument
+[    8.045136] systemd[1]: Listening on udev Kernel Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mudev Kernel Socket[0m.
+[    8.068381] systemd[1]: Listening on Journal Socket.
+[[0;32m  OK  [0m] Listening on [0;1;39mJournal Socket[0m.
+[    8.092242] systemd[1]: Condition check resulted in Huge Pages File System being skipped.
+[    8.101123] systemd[1]: Condition check resulted in Arbitrary Executable File Formats File System Automount Point being skipped.
+[    8.114630] systemd[1]: Condition check resulted in Set Up Additional Binary Formats being skipped.
+[    8.132908] systemd[1]: Starting Load Kernel Modules...
+         Starting [0;1;39mLoad Kernel Modules[0m...
+[[0;32m  OK  [0m] Listening on [0;1;39mfsck to fsckd communication Socket[0m.
+         Starting [0;1;39mRemount Root and Kernel File Systems[0m...
+[[0;32m  OK  [0m] Created slice [0;1;39mUser and Session Slice[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSlices[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mudev Control Socket[0m.
+         Starting [0;1;39mCreate list of re…odes for the current kernel[0m...
+[    8.289789] EXT4-fs (mmcblk1p2): re-mounted. Opts: errors=remount-ro
+[[0;32m  OK  [0m] Reached target [0;1;39mRemote File Systems[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDispatch Password …ts to Console Directory Watch[0m.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-getty.slice[0m.
+         Starting [0;1;39mudev Coldplug all Devices[0m...
+         Mounting [0;1;39mKernel Debug File System[0m...
+[[0;32m  OK  [0m] Started [0;1;39mForward Password R…uests to Wall Directory Watch[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mPaths[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal Encrypted Volumes[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mJournal Socket (/dev/log)[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mSyslog Socket[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39minitctl Compatibility Named Pipe[0m.
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-systemd\x2dfsck.slice[0m.
+         Starting [0;1;39mJournal Service[0m...
+[[0;32m  OK  [0m] Created slice [0;1;39msystem-serial\x2dgetty.slice[0m.
+         Mounting [0;1;39mPOSIX Message Queue File System[0m...
+         Starting [0;1;39mSet the console keyboard layout[0m...
+[[0;32m  OK  [0m] Started [0;1;39mLoad Kernel Modules[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRemount Root and Kernel File Systems[0m.
+[[0;32m  OK  [0m] Started [0;1;39mCreate list of req… nodes for the current kernel[0m.
+[[0;32m  OK  [0m] Mounted [0;1;39mKernel Debug File System[0m.
+[[0;32m  OK  [0m] Mounted [0;1;39mPOSIX Message Queue File System[0m.
+         Starting [0;1;39mCreate System Users[0m...
+         Starting [0;1;39mLoad/Save Random Seed[0m...
+         Mounting [0;1;39mFUSE Control File System[0m...
+         Mounting [0;1;39mKernel Configuration File System[0m...
+         Starting [0;1;39mApply Kernel Variables[0m...
+[[0;32m  OK  [0m] Mounted [0;1;39mFUSE Control File System[0m.
+[[0;32m  OK  [0m] Mounted [0;1;39mKernel Configuration File System[0m.
+[[0;32m  OK  [0m] Started [0;1;39mCreate System Users[0m.
+[[0;32m  OK  [0m] Started [0;1;39mLoad/Save Random Seed[0m.
+[[0;32m  OK  [0m] Started [0;1;39mApply Kernel Variables[0m.
+[[0;32m  OK  [0m] Started [0;1;39mJournal Service[0m.
+[[0;32m  OK  [0m] Started [0;1;39mSet the console keyboard layout[0m.
+         Starting [0;1;39mFlush Journal to Persistent Storage[0m...
+         Starting [0;1;39mCreate Static Device Nodes in /dev[0m...
+[    9.022292] systemd-journald[237]: Received request to flush runtime journal from PID 1
+[[0;32m  OK  [0m] Started [0;1;39mFlush Journal to Persistent Storage[0m.
+[[0;32m  OK  [0m] Started [0;1;39mCreate Static Device Nodes in /dev[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems (Pre)[0m.
+         Starting [0;1;39mudev Kernel Device Manager[0m...
+[[0;32m  OK  [0m] Started [0;1;39mudev Coldplug all Devices[0m.
+         Starting [0;1;39mHelper to synchronize boot up for ifupdown[0m...
+[[0;32m  OK  [0m] Started [0;1;39mHelper to synchronize boot up for ifupdown[0m.
+[[0;32m  OK  [0m] Started [0;1;39mudev Kernel Device Manager[0m.
+[    9.556993] mtk-thermal 1100b000.thermal: Device not calibrated, using default calibration values
+[    9.568633] Registered IR keymap rc-empty
+[    9.590239] rc rc0: mtk_cir as /devices/platform/10013000.cir/rc/rc0
+[    9.596840] input: mtk_cir as /devices/platform/10013000.cir/rc/rc0/input1
+[    9.604014] rc rc0: lirc_dev: driver mtk_cir registered at minor = 0, raw IR receiver, no transmitter
+[[0;32m  OK  [0[    9.613625] mtk_cir 10013000.cir: Initialized MT7623 IR driver, sample period = 46us
+m] Found device [0;1;39m/dev/ttyS0[0m.
+[[0;32m  OK  [0m] Found device [0;1;39m/dev/ttyS2[0m.
+[[0;32m  OK  [0m] Found device [0;1;39m/dev/disk/by-uuid/C63B-5B54[0m.
+[[0;32m  OK  [0m] Found device [0;1;39m/dev/disk/by-…f-714c-49a3-8c8a-7759eaa25629[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mLoad/Save RF …itch Status /dev/rfkill Watch[0m.
+         Activating swap [0;1;39m/dev/disk/…714c-49a3-8c8a-7759eaa25629[0m...
+         Starting [0;1;39mFile System Check…/dev/disk/by-uuid/C63B-5B54[0m...
+[   14.011782] Adding 524284k swap on /dev/mmcblk1p3.  Priority:-2 extents:1 across:524284k SSFS
+[[0;32m  OK  [0m] Activated swap [0;1;39m/dev/disk/b…f-714c-49a3-8c8a-7759eaa25629[0m.
+[[0;32m  OK  [0m] Started [0;1;39mFile System Check Daemon to report status[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSwap[0m.
+[[0;32m  OK  [0m] Started [0;1;39mFile System Check on /dev/disk/by-uuid/C63B-5B54[0m.
+         Mounting [0;1;39m/boot/efi[0m...
+[[0;32m  OK  [0m] Mounted [0;1;39m/boot/efi[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLocal File Systems[0m.
+         Starting [0;1;39mSet console font and keymap[0m...
+         Starting [0;1;39mRaise network interfaces[0m...
+[[0;32m  OK  [0m] Started [0;1;39mifup for eth0[0m.
+         Starting [0;1;39mCreate Volatile Files and Directories[0m...
+[[0;32m  OK  [0m] Started [0;1;39mSet console font and keymap[0m.
+[[0;32m  OK  [0m] Started [0;1;39mCreate Volatile Files and Directories[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRaise network interfaces[0m.
+         Starting [0;1;39mUpdate UTMP about System Boot/Shutdown[0m...
+         Starting [0;1;39mNetwork Time Synchronization[0m...
+[[0;32m  OK  [0m] Started [0;1;39mUpdate UTMP about System Boot/Shutdown[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Time Synchronization[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Initialization[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily Cleanup of Temporary Directories[0m.
+[[0;32m  OK  [0m] Listening on [0;1;39mD-Bus System Message Bus Socket[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mSockets[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mBasic System[0m.
+[[0;32m  OK  [0m] Started [0;1;39mD-Bus System Message Bus[0m.
+         Starting [0;1;39mSystem Logging Service[0m...
+         Starting [0;1;39mNetwork Manager[0m...
+         Starting [0;1;39mWPA supplicant[0m...
+         Starting [0;1;39mRestore /etc/reso… the ppp link was shut down[0m...
+         Starting [0;1;39mLSB: Banana Pi init script[0m...
+         Starting [0;1;39mModem Manager[0m...
+[[0;32m  OK  [0m] Started [0;1;39mRegular background program processing daemon[0m.
+         Starting [0;1;39mLogin Service[0m...
+[[0;32m  OK  [0m] Reached target [0;1;39mSystem Time Synchronized[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily man-db regeneration[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily rotation of log files[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt download activities[0m.
+[[0;32m  OK  [0m] Started [0;1;39mDaily apt upgrade and clean activities[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mTimers[0m.
+[[0;32m  OK  [0m] Started [0;1;39mSystem Logging Service[0m.
+[[0;32m  OK  [0m] Started [0;1;39mRestore /etc/resol…re the ppp link was shut down[0m.
+[[0;32m  OK  [0m] Started [0;1;39mWPA supplicant[0m.
+[[0;32m  OK  [0m] Started [0;1;39mLogin Service[0m.
+         Starting [0;1;39mAuthorization Manager[0m...
+[[0;32m  OK  [0m] Started [0;1;39mAuthorization Manager[0m.
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Manager[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mNetwork[0m.
+         Starting [0;1;39mOpenBSD Secure Shell server[0m...
+         Starting [0;1;39m/etc/rc.local Compatibility[0m...
+         Starting [0;1;39mPermit User Sessions[0m...
+[[0;32m  OK  [0m] Started [0;1;39mModem Manager[0m.
+         Starting [0;1;39mHostname Service[0m...
+[[0;32m  OK  [0m] Started [0;1;39mPermit User Sessions[0m.
+[[0;32m  OK  [0m] Started [0;1;39mOpenBSD Secure Shell server[0m.
+[[0;32m  OK  [0m] Started [0;1;39m/etc/rc.local Compatibility[0m.
+[[0;32m  OK  [0m] Started [0;1;39mLSB: Banana Pi init script[0m.
+[[0;32m  OK  [0m] Started [0;1;39mHostname Service[0m.
+         Starting [0;1;39mNetwork Manager Script Dispatcher Service[0m...
+[[0;32m  OK  [0m] Started [0;1;39mSerial Getty on ttyS0[0m.
+[[0;32m  OK  [0m] Started [0;1;39mGetty on tty1[0m.
+[[0;32m  OK  [0m] Started [0;1;39mSerial Getty on ttyS2[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mLogin Prompts[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mMulti-User System[0m.
+[[0;32m  OK  [0m] Reached target [0;1;39mGraphical Interface[0m.
+         Starting [0;1;39mUpdate UTMP about System Runlevel Changes[0m...
+[[0;32m  OK  [0m] Started [0;1;39mNetwork Manager Script Dispatcher Service[0m.
+[[0;32m  OK  [0m] Started [0;1;39mUpdate UTMP about System Runlevel Changes[0m.
+
+Debian GNU/Linux 10 bpi-iot-ros-ai ttyS2
+
+bpi-iot-ros-ai login: 
+bpi-iot-ros-ai login: root
+Password: 
+Last login: Thu Oct 24 22:31:49 CST 2019 on ttyS2
+Linux bpi-iot-ros-ai 4.19.51-BPI-R2-Kernel #1 SMP Tue Oct 22 15:24:59 CST 2019 armv7l
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+root@bpi-iot-ros-ai:~# 
