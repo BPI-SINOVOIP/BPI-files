@@ -1,9 +1,23 @@
 #!/bin/bash
 BOARD=$(bpi-hw)
 
+AUDIO=no
 ASOUNDFILE=/var/lib/alsa/asound.state.$BOARD
 
+check_kernel()
+{
+  KVER=$(uname -r)
+  case $KVER in
+    3.4*)
+      AUDIO=yes
+      ;;
+  esac
+}
+
 audio-bpi-m3() {
+  if [ "x$AUDIO" != "xyes" ] ; then
+    return 0
+  fi
   if [ "x$BOARD" != "xbpi-m3" ] ; then
     return 0
   fi
@@ -50,4 +64,5 @@ audio-bpi-m3() {
 }
 
 #main
+check_kernel
 audio-bpi-m3
