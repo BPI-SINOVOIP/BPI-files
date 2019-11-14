@@ -1,0 +1,1036 @@
++++iBoot v1.02 Jan 10 2019 11:20:28
+-- B --
+[d] iboot.c :96
+[d] iboot.c :107
+[d] iboot.c :877
+hw_cfg=0x00007FFF
+bootmode=0x00000007
+[d] iboot.c :820
+
+[sdcard]
+card pin=1
+[d] bootmain.c :116
+dev=3 pin=1
+[d] iboot.c :364
+find file
+[d] fat_boot.c :181
+[d] fat_boot.c :195
+[d] drv_sd_mmc.c :21
+InitChipCtrl
+busclk=200000 div=1012
+[d] drv_sd_mmc.c :23
+IdentifyStorage
+[d] hal_sd_mmc.c :1521
+0x000000AA
+0x00000001
+High Cap
+[d] hal_sd_mmc.c :483
+[d] hal_sd_mmc.c :494
+SPEC=2 BUS_WIDTHS=5
+busclk=5000000 div=40
+[d] hal_sd_mmc.c :1717
+[d] drv_sd_mmc.c :33
+[d] fat_boot.c :218
+[d] fat_boot.c :230
+part@0x00002000
+[d] fat_boot.c :259
+[d] fat_boot.c :295
+[d] fat_boot.c :314
+[d] fat_boot.c :318
+[d] fat_boot.c :321
+[d] fat_boot.c :318
+[d] fat_boot.c :321
+[d] fat_boot.c :318
+[d] fat_boot.c :321
+[d] fat_boot.c :318
+[d] fat_boot.c :321
+[d] fat_boot.c :337
+load file
+mg=0x54554258
+len=0x000062C0
+chk=0x000018EF
+flg=0x00000001
+[d] bootmain.c :338
+OTP pub-key:
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+Verify signature...(AB) FAIL
+signature:
+C2 0F CD B9 DE 1B 54 77 A7 37 B5 98 54 F2 CB F5 
+DC D4 59 9F CA 92 43 55 7C 2A 5A 19 80 79 A3 B1 
+55 01 B3 D0 74 D6 AA 88 13 D1 13 D2 BB B5 39 7B 
+A0 82 23 F1 7B 16 21 66 05 AE 73 F6 65 79 3D 0F 
+tV=88
+OTP Secure Boot is OFF
+boot!
+.34338
+=======================================
+[BPI]+++xBoot Aug  3 2019 14:58:03
+=======================================
+[d] xboot.c :198
+-- B --
+B: b_sysclk=202M abio_ctrl=(16bit,DDR)
+[d] xboot.c :274
+[otp_rw.c]otp_rw in
+��[otp_rw.c]otp_rw out
+mode=0x00000007
+[d] xboot.c :1569
+
+{{sdcard_isp}}
+finding file
+[d] fat/fat_boot.c :181
+[d] fat/fat_boot.c :195
+[d] sdmmc/drv_sd_mmc.c :21
+InitChipCtrl
+busclk=200000 div=1012
+[d] sdmmc/drv_sd_mmc.c :23
+IdentifyStorage
+[d] sdmmc/hal_sd_mmc.c :1502
+0x000000AA
+0x00000001
+High Cap
+[d] sdmmc/hal_sd_mmc.c :464
+[d] sdmmc/hal_sd_mmc.c :475
+SPEC=2 BUS_WIDTHS=5
+4bit mode
+busclk=5000000 div=40
+[d] sdmmc/hal_sd_mmc.c :1694
+[d] sdmmc/drv_sd_mmc.c :33
+[d] fat/fat_boot.c :219
+[d] fat/fat_boot.c :231
+part@0x00002000
+[d] fat/fat_boot.c :260
+[d] fat/fat_boot.c :296
+[d] fat/fat_boot.c :316
+[d] fat/fat_boot.c :320
+[d] fat/fat_boot.c :323
+[d] fat/fat_boot.c :320
+[d] fat/fat_boot.c :323
+[d] fat/fat_boot.c :32�+++iBoot v1.02 Jan 10 2019 11:20:28
+-- B --
+[d] iboot.c :96
+[d] iboot.c :107
+[d] iboot.c :877
+hw_cfg=0x00007FFF
+bootmode=0x00000007
+[d] iboot.c :820
+
+[sdcard]
+card pin=1
+[d] bootmain.c :116
+dev=3 pin=1
+[d] iboot.c :364
+find file
+[d] fat_boot.c :181
+[d] fat_boot.c :195
+[d] drv_sd_mmc.c :21
+InitChipCtrl
+busclk=200000 div=1012
+[d] drv_sd_mmc.c :23
+IdentifyStorage
+[d] hal_sd_mmc.c :1521
+0x000000AA
+0x00000001
+High Cap
+[d] hal_sd_mmc.c :483
+[d] hal_sd_mmc.c :494
+SPEC=2 BUS_WIDTHS=5
+busclk=5000000 div=40
+[d] hal_sd_mmc.c :1717
+[d] drv_sd_mmc.c :33
+[d] fat_boot.c :218
+[d] fat_boot.c :230
+part@0x00002000
+[d] fat_boot.c :259
+[d] fat_boot.c :295
+[d] fat_boot.c :314
+[d] fat_boot.c :318
+[d] fat_boot.c :321
+[d] fat_boot.c :318
+[d] fat_boot.c :321
+[d] fat_boot.c :318
+[d] fat_boot.c :321
+[d] fat_boot.c :318
+[d] fat_boot.c :321
+[d] fat_boot.c :337
+load file
+mg=0x54554258
+len=0x000062C0
+chk=0x000018EF
+flg=0x00000001
+[d] bootmain.c :338
+OTP pub-key:
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 
+Verify signature...(AB) FAIL
+signature:
+C2 0F CD B9 DE 1B 54 77 A7 37 B5 98 54 F2 CB F5 
+DC D4 59 9F CA 92 43 55 7C 2A 5A 19 80 79 A3 B1 
+55 01 B3 D0 74 D6 AA 88 13 D1 13 D2 BB B5 39 7B 
+A0 82 23 F1 7B 16 21 66 05 AE 73 F6 65 79 3D 0F 
+tV=88
+OTP Secure Boot is OFF
+boot!
+.33995
+=======================================
+[BPI]+++xBoot Aug  3 2019 14:58:03
+=======================================
+[d] xboot.c :198
+-- B --
+B: b_sysclk=202M abio_ctrl=(16bit,DDR)
+[d] xboot.c :274
+[otp_rw.c]otp_rw in
+��[otp_rw.c]otp_rw out
+mode=0x00000007
+[d] xboot.c :1569
+
+{{sdcard_isp}}
+finding file
+[d] fat/fat_boot.c :181
+[d] fat/fat_boot.c :195
+[d] sdmmc/drv_sd_mmc.c :21
+InitChipCtrl
+busclk=200000 div=1012
+[d] sdmmc/drv_sd_mmc.c :23
+IdentifyStorage
+[d] sdmmc/hal_sd_mmc.c :1502
+0x000000AA
+0x00000001
+High Cap
+[d] sdmmc/hal_sd_mmc.c :464
+[d] sdmmc/hal_sd_mmc.c :475
+SPEC=2 BUS_WIDTHS=5
+4bit mode
+busclk=5000000 div=40
+[d] sdmmc/hal_sd_mmc.c :1694
+[d] sdmmc/drv_sd_mmc.c :33
+[d] fat/fat_boot.c :219
+[d] fat/fat_boot.c :231
+part@0x00002000
+[d] fat/fat_boot.c :260
+[d] fat/fat_boot.c :296
+[d] fat/fat_boot.c :316
+[d] fat/fat_boot.c :320
+[d] fat/fat_boot.c :323
+[d] fat/fat_boot.c :320
+[d] fat/fat_boot.c :323
+[d] fat/fat_boot.c :320
+[d] fat/fat_boot.c :323
+[d] fat/fat_boot.c :320
+[d] fat/fat_boot.c :323
+[d] fat/fat_boot.c :339
+Run draiminit@0x9E805EC1
+Done draiminit
+dram test 0x00800000 - 0x00800400
+fat load uboot
+load data size=374256
+ start verify in xboot!!!!!
+
+ ******OTP Secure Boot is OFF ,return success******
+uboot_pentagram_board
+boot next @0x00200040
+put bootinfo
+wake up A
+A_G0.11(pll): 0x00445149
+A_G0.3(abio): 0x00020718
+A_G0.18(ioctrl): 0x00F1E004
+B wfi
+
+
+U-Boot 2019.04 (Nov 13 2019 - 14:23:29 +0800)
+
+CONFIG_SYS_CACHELINE_SIZE: 64
+Model: Sunplus Pentagram common board (EFI)
+DRAM:  512 MiB
+MMC:   emmc: 0, sd: 1
+Loading Environment from MMC... *** Warning - !ISP mode, using default environment
+
+OK
+In:    serial@9c000900
+Out:   serial@9c000900
+Err:   serial@9c000900
+
+Reason(s) of reset: REG(116, 22): 0x0012
+
+After cleaning  REG(116, 22): 0x0000
+
+arch/arm/mach-pentagram/cpu.c, arch_misc_init: TBD.
+Net:   
+Warning: l2sw@0x9c108000 using MAC address from ROM
+eth0: l2sw@0x9c108000
+Hit any key to stop autoboot:  0 
+Interface:  MMC
+  Device 1: Vendor: Man 000003 Snr 9c13bf01 Rev: 5.3 Prod: SN128�
+            Type: Removable Hard Disk
+            Capacity: 121942.0 MB = 119.0 GB (249737216 x 512)
+Filesystem: FAT32 "BPI-BOOT   "
+Boot from mmc
+1206 bytes read in 6 ms (196.3 KiB/s)
+Loaded environment from uEnv.txt
+Banana Pi bpi-f2s chip: SP7021 Service: linux
+18613 bytes read in 3 ms (5.9 MiB/s)
+5064928 bytes read in 516 ms (9.4 MiB/s)
+## Booting kernel from Legacy Image at 00307fc0 ...
+   Image Name:   Linux-4.19.37-BPI-F2S-Kernel
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    5064864 Bytes = 4.8 MiB
+   Load Address: 00308000
+   Entry Point:  00308000
+   Verifying Checksum ... OK
+
+ ******OTP Secure Boot is OFF ,return success******
+## Flattened Device Tree blob at 002fffc0
+   Booting using the fdt blob at 0x2fffc0
+   XIP Kernel Image ... OK
+   Loading Device Tree to 09ff8000, end 09fff8b4 ... OK
+
+Starting kernel ...
+
+Uncompressing Linux... done, booting the kernel.
+[    0.000000] Booting Linux on physical CPU 0x0
+[    0.000000] Linux version 4.19.37-BPI-F2S-Kernel (root@bpi-iot-ros-ai-x64-99) (gcc version 7.3.1 20180425 [linaro-7.3-2018.05 revision d29120a424ecfbc167ef90065c0eeb7f91977701] (Linaro GCC 7.3-2018.05)) #1 SMP PREEMPT Wed Nov 13 14:23:52 CST 2019
+[    0.000000] CPU: ARMv7 Processor [410fc075] revision 5 (ARMv7), cr=50c5387d
+[    0.000000] CPU: div instructions available: patching division code
+[    0.000000] CPU: PIPT / VIPT nonaliasing data cache, VIPT aliasing instruction cache
+[    0.000000] OF: fdt: Machine model: Sunplus SP7021 EMU (CA7)
+[    0.000000] Memory policy: Data cache writealloc
+[    0.000000] B_REG 9c000000 -> [f8000000-fa000000]
+[    0.000000] A_REG 9ec00000 -> [fa000000-fa400000]
+[    0.000000] On node 0 totalpages: 130816
+[    0.000000]   Normal zone: 1152 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 130816 pages, LIFO batch:31
+[    0.000000] random: get_random_bytes called from start_kernel+0x5b/0x31c with crng_init=0
+[    0.000000] percpu: Embedded 16 pages/cpu s35212 r8192 d22132 u65536
+[    0.000000] pcpu-alloc: s35212 r8192 d22132 u65536 alloc=16*4096
+[    0.000000] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+[    0.000000] Built 1 zonelists, mobility grouping on.  Total pages: 129664
+[    0.000000] Kernel command line: board=bpi-f2s console=earlyprintk console=tty1 fbcon=map:0 console=ttyS0,115200 root=/dev/mmcblk1p3 rw rootfstype=ext4 rootwait service=linux sdmmc_on= loglevel=8 debug=8 initcall_debug=0 user_debug=255
+[    0.000000] Dentry cache hash table entries: 65536 (order: 6, 262144 bytes)
+[    0.000000] Inode-cache hash table entries: 32768 (order: 5, 131072 bytes)
+[    0.000000] Memory: 508432K/523264K available (5120K kernel code, 976K rwdata, 1808K rodata, 1024K init, 294K bss, 14832K reserved, 0K cma-reserved, 0K highmem)
+[    0.000000] Virtual kernel memory layout:
+[    0.000000]     vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+[    0.000000]     fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)
+[    0.000000]     vmalloc : 0xe0800000 - 0xff800000   ( 496 MB)
+[    0.000000]     lowmem  : 0xc0000000 - 0xe0000000   ( 512 MB)
+[    0.000000]     pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)
+[    0.000000]     modules : 0xbf800000 - 0xbfe00000   (   6 MB)
+[    0.000000]       .text : 0x(ptrval) - 0x(ptrval)   (6112 kB)
+[    0.000000]       .init : 0x(ptrval) - 0x(ptrval)   (1024 kB)
+[    0.000000]       .data : 0x(ptrval) - 0x(ptrval)   ( 977 kB)
+[    0.000000]        .bss : 0x(ptrval) - 0x(ptrval)   ( 295 kB)
+[    0.000000] rcu: Preemptible hierarchical RCU implementation.
+[    0.000000] 	Tasks RCU enabled.
+[    0.000000] NR_IRQS: 205
+[    0.000000] @@@ Sunplus clock init
+[    0.000000] plla                135475200
+[    0.000000] plle                50000000
+[    0.000000] plle_2p5            2500000
+[    0.000000] plle_25             25000000
+[    0.000000] plle_112p5          112500000
+[    0.000000] pllf                202500000
+[    0.000000] plltv               148500000
+[    0.000000] ### sp_pll_enable:603 (26)
+[    0.000000] pllsys              202500000
+[    0.000000] arch_timer: cp15 timer(s) running at 27.00MHz (phys).
+[    0.000000] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x63a1e71a3, max_idle_ns: 440795203123 ns
+[    0.000008] sched_clock: 56 bits at 27MHz, resolution 37ns, wraps every 4398046511093ns
+[    0.000024] Switching to timer-based delay loop, resolution 37ns
+[    0.000485] Console: colour dummy device 80x30
+[    0.001299] console [tty1] enabled
+[    0.001352] Calibrating delay loop (skipped), value calculated using timer frequency.. 54.00 BogoMIPS (lpj=270000)
+[    0.001393] pid_max: default: 32768 minimum: 301
+[    0.001747] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.001784] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.003059] CPU: Testing write buffer coherency: ok
+[    0.003831] CPU0: update cpu_capacity 1024
+[    0.003865] CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+[    0.060174] Setting up static identity map for 0x400000 - 0x400054
+[    0.080129] rcu: Hierarchical SRCU implementation.
+[    0.120241] smp: Bringing up secondary CPUs ...
+[    0.200749] CPU1: update cpu_capacity 1024
+[    0.200761] CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+[    0.280697] CPU2: update cpu_capacity 1024
+[    0.280706] CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+[    0.360784] CPU3: update cpu_capacity 1024
+[    0.360791] CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+[    0.360912] smp: Brought up 1 node, 4 CPUs
+[    0.361054] SMP: Total of 4 processors activated (216.00 BogoMIPS).
+[    0.361077] CPU: All CPU(s) started in SVC mode.
+[    0.362273] devtmpfs: initialized
+[    0.368473] VFP support v0.3: implementor 41 architecture 2 part 30 variant 7 rev 5
+[    0.369373] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.369441] futex hash table entries: 1024 (order: 4, 65536 bytes)
+[    0.370028] xor: measuring software checksum speed
+[    0.460750]    arm4regs  :  1187.600 MB/sec
+[    0.560819]    8regs     :   669.200 MB/sec
+[    0.660902]    32regs    :   819.200 MB/sec
+[    0.660925] xor: using function: arm4regs (1187.600 MB/sec)
+[    0.660958] pinctrl core: initialized pinctrl subsystem
+[    0.661834] NET: Registered protocol family 16
+[    0.662788] DMA: preallocated 256 KiB pool for atomic coherent allocations
+[    0.662844] audit: initializing netlink subsys (disabled)
+[    0.663150] audit: type=2000 audit(0.660:1): state=initialized audit_enabled=0 res=1
+[    0.665056] apply partial clken to save power
+[    0.665529] hw-breakpoint: found 5 (+1 reserved) breakpoint and 4 watchpoint registers.
+[    0.665565] hw-breakpoint: maximum watchpoint size is 8 bytes.
+[    0.665618] 1: ext0-mask=0xf
+[    0.665639] 2: ext1-mask=0xe
+[    0.678422] set hwirq=0 prio=0
+[    0.678505] set hwirq=1 prio=0
+[    0.678540] set hwirq=4 prio=0
+[    0.678571] set hwirq=5 prio=0
+[    0.684747] sppctl pctl: funcs:156 unq_grps:140
+[    0.685095] SP7021 PinCtl by SunPlus/Tibbo Tech.(C) 2019-2019
+[    0.901659] raid6: int32x1  gen()   180 MB/s
+[    1.071697] raid6: int32x1  xor()   146 MB/s
+[    1.241995] raid6: int32x2  gen()   188 MB/s
+[    1.411888] raid6: int32x2  xor()   154 MB/s
+[    1.582222] raid6: int32x4  gen()   175 MB/s
+[    1.752126] raid6: int32x4  xor()   128 MB/s
+[    1.922181] raid6: int32x8  gen()   139 MB/s
+[    2.092441] raid6: int32x8  xor()   103 MB/s
+[    2.092467] raid6: using algorithm int32x2 gen() 188 MB/s
+[    2.092487] raid6: .... xor() 154 MB/s, rmw enabled
+[    2.092506] raid6: using intx1 recovery algorithm
+[    2.093498] SCSI subsystem initialized
+[    2.094104] usbcore: registered new interface driver usbfs
+[    2.094227] usbcore: registered new interface driver hub
+[    2.094486] usbcore: registered new device driver usb
+[    2.094516] usb acc config port= 0
+[    2.094712] videodev: Linux video capture interface: v2.00
+[    2.096353] sunplus,sp7021-ocotp 9c00af00.otp: by SunPlus (C) 2019
+[    2.098867] clocksource: Switched to clocksource arch_sys_counter
+[    2.099320] VFS: Disk quotas dquot_6.6.0
+[    2.099449] VFS: Dquot-cache hash table entries: 1024 (order 0, 4096 bytes)
+[    2.118514] register sunplus_usb_phy0_driver
+[    2.119098] uphy0_irq:36
+[    2.125816] register sunplus_usb_phy1_driver
+[    2.126061] uphy1_irq:37
+[    2.132570] register sunplus_usb_otg0_driver
+[    2.132784] #@#OTG: @@@ otg reg 9c102400 112 irq 11 10000
+[    2.133065] #@#OTG: Init is B device
+[    2.133533] register sunplus_usb_otg1_driver
+[    2.133768] #@#OTG: @@@ otg reg 9c103400 112 irq 10 10000
+[    2.133976] #@#OTG: Init is B device
+[    2.134857] HDMITX installed
+[    2.134948] HDMI rsen in
+[    2.135359] HDMI plug in
+[    2.136418] NET: Registered protocol family 2
+[    2.137502] tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+[    2.137570] TCP established hash table entries: 4096 (order: 2, 16384 bytes)
+[    2.137647] TCP bind hash table entries: 4096 (order: 3, 32768 bytes)
+[    2.137732] TCP: Hash tables configured (established 4096 bind 4096)
+[    2.137935] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    2.138033] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    2.138356] NET: Registered protocol family 1
+[    2.139347] RPC: Registered named UNIX socket transport module.
+[    2.139389] RPC: Registered udp transport module.
+[    2.139408] RPC: Registered tcp transport module.
+[    2.139426] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    2.140951] hw perfevents: no interrupt-affinity property for /arm-pmu, guessing.
+[    2.141483] hw perfevents: enabled with armv7_cortex_a7 PMU driver, 5 counters available
+[    2.145254] Initialise system trusted keyrings
+[    2.145565] workingset: timestamp_bits=14 max_order=17 bucket_order=3
+[    2.146582] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    2.146654] exFAT: Version 1.2.9
+[    2.147131] NFS: Registering the id_resolver key type
+[    2.147182] Key type id_resolver registered
+[    2.147201] Key type id_legacy registered
+[    2.147234] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    2.147742] fuse init (API version 7.27)
+[    2.152150] Key type asymmetric registered
+[    2.152209] Asymmetric key parser 'x509' registered
+[    2.152492] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 252)
+[    2.152538] io scheduler noop registered
+[    2.152557] io scheduler deadline registered
+[    2.152710] io scheduler cfq registered (default)
+[    2.152736] io scheduler mq-deadline registered
+[    2.152756] io scheduler kyber registered
+[    2.157148] K_TTYS: sunplus_uart-ID = 10
+[    2.157205] K_TTYS: Setup DMA Rx 0
+[    2.157222] K_TTYS: Enable DMA clock(s)
+[    2.157261] K_TTYS: Enable clock PERI0
+[    2.157337] K_TTYS: addr_phy: 0x9c008980, membase: 0x(ptrval), irq: 138, which-uart: 1
+[    2.157579] K_TTYS: sunplus_uart-ID = 11
+[    2.157604] K_TTYS: Setup DMA Rx 1
+[    2.157619] K_TTYS: Enable DMA clock(s)
+[    2.157647] K_TTYS: Enable clock PERI1
+[    2.157699] K_TTYS: addr_phy: 0x9c0089c0, membase: 0x(ptrval), irq: 139, which-uart: 2
+[    2.157913] K_TTYS: sunplus_uart-ID = 20
+[    2.157936] K_TTYS: Setup DMA Tx 0
+[    2.157951] K_TTYS: Enable DMA clock(s)
+[    2.157982] K_TTYS: Enable clock PERI0
+[    2.158020] K_TTYS: gdma_phy: 0x9c008880 gdma_membase: 0x(ptrval)
+[    2.158045] K_TTYS: addr_phy: 0x9c008a00, membase: 0x(ptrval), irq: 0, which-uart: 1
+[    2.158270] K_TTYS: sunplus_uart-ID = 21
+[    2.158291] K_TTYS: Setup DMA Tx 1
+[    2.158306] K_TTYS: Enable DMA clock(s)
+[    2.158334] K_TTYS: Enable clock PERI1
+[    2.158376] K_TTYS: gdma_phy: 0x9c008900 gdma_membase: 0x(ptrval)
+[    2.158403] K_TTYS: addr_phy: 0x9c008a40, membase: 0x(ptrval), irq: 0, which-uart: 2
+[    2.158612] K_TTYS: sunplus_uart-ID = 0
+[    2.158669] K_TTYS: Enable UART clock(s)
+[    2.158699] K_TTYS: Enable Rstc(s)
+[    2.158732] K_TTYS: sp_uart0's Rx is in PIO mode.
+[    2.158752] K_TTYS: sp_uart0's Tx is in PIO mode.
+[    2.158788] 9c000900.serial: ttyS0 at MMIO 0x9c000900 (irq = 53, base_baud = 1687500) is a sp_uart0
+[    3.137680] console [ttyS0] enabled
+[    3.142001] K_TTYS: sunplus_uart-ID = 1
+[    3.144865] K_TTYS: Enable UART clock(s)
+[    3.148725] K_TTYS: Enable Rstc(s)
+[    3.152142] K_TTYS: sp_uart1's Rx is in DMA mode.
+[    3.156759] K_TTYS: sp_uart1's Tx is in DMA mode.
+[    3.161476] 9c000980.serial: ttyS1 at MMIO 0x9c000980 (irq = 54, base_baud = 1687500) is a sp_uart1
+[    3.171075] K_TTYS: sunplus_uart-ID = 2
+[    3.174305] K_TTYS: Enable UART clock(s)
+[    3.178181] K_TTYS: Enable Rstc(s)
+[    3.181579] K_TTYS: sp_uart2's Rx is in DMA mode.
+[    3.186225] K_TTYS: sp_uart2's Tx is in DMA mode.
+[    3.190931] 9c000800.serial: ttyS2 at MMIO 0x9c000800 (irq = 55, base_baud = 1687500) is a sp_uart2
+[    3.200517] K_TTYS: sunplus_uart-ID = 3
+[    3.203759] K_TTYS: Enable UART clock(s)
+[    3.207644] K_TTYS: Enable Rstc(s)
+[    3.211046] K_TTYS: sp_uart3's Rx is in PIO mode.
+[    3.215692] K_TTYS: sp_uart3's Tx is in PIO mode.
+[    3.220395] 9c000880.serial: ttyS3 at MMIO 0x9c000880 (irq = 56, base_baud = 1687500) is a sp_uart3
+[    3.230138] K_TTYS: sunplus_uart-ID = 4
+[    3.233245] K_TTYS: Enable UART clock(s)
+[    3.237112] K_TTYS: Enable Rstc(s)
+[    3.240519] K_TTYS: sp_uart4's Rx is in PIO mode.
+[    3.245159] K_TTYS: sp_uart4's Tx is in PIO mode.
+[    3.249861] 9c008780.serial: ttyS4 at MMIO 0x9c008780 (irq = 134, base_baud = 1687500) is a sp_uart4
+[    3.277185] brd: module loaded
+[    3.293075] loop: module loaded
+[    3.321912] hal_iop_set_reserve_base(281) iop_data0=fd04  iop_data1=10 iop_data2=0 
+[    3.322092] hal_iop_set_reserve_size(293) iop_data0=fc04  iop_data1=10 iop_data2=0 
+[    3.327150] libphy: Fixed MDIO Bus: probed
+[    3.330228] CAN device driver interface
+[    3.334217] [L2SW][l2sw_reg_base_set] ls2w_reg_base = 0xf8108000
+[    3.339979] [L2SW][moon5_reg_base_set] moon5_reg_base = 0xf8000280
+[    3.346331] [L2SW] HW Addr = fc:4b:bc:fb:d3:34
+[    3.351363] [L2SW][init_netdev] Registered net device "eth0" successfully.
+[    3.357347] [L2SW][l2sw_probe] net_dev = 0xde1a5800, mac = 0xde1a5cc0, comm = 0xde131400
+[    3.365645] libphy: sp7021_mii_bus: probed
+[    3.371239] net eth0: could not add device link to 9c108000.l2sw-mii:01 err -17
+[    3.378276] [L2SW] HW Addr = fc:4b:bc:fb:d3:35
+[    3.381919] [L2SW][init_netdev] Registered net device "eth1" successfully.
+[    3.388021] [L2SW][l2sw_probe] net_dev = 0xde1a9800, mac = 0xde1a9cc0, comm = 0xde131400
+[    3.396460] usbcore: registered new interface driver r8152
+[    3.401652] usbcore: registered new interface driver asix
+[    3.407021] usbcore: registered new interface driver ax88179_178a
+[    3.413075] usbcore: registered new interface driver cdc_ether
+[    3.418863] usbcore: registered new interface driver cdc_eem
+[    3.424476] usbcore: registered new interface driver net1080
+[    3.430129] usbcore: registered new interface driver cdc_subset
+[    3.435982] usbcore: registered new interface driver zaurus
+[    3.441596] usbcore: registered new interface driver cdc_ncm
+[    3.447118] register ehci0_hcd_sunplus_driver
+[    3.451841] ehci_id:1,irq:14
+[    3.454362] ehci0-sunplus 9c102100.usb: Generic Platform EHCI Controller
+[    3.461048] ehci0-sunplus 9c102100.usb: new USB bus registered, assigned bus number 1
+[    3.469073] ehci0-sunplus 9c102100.usb: irq 14, io mem 0x9c102100
+[    3.498850] ehci0-sunplus 9c102100.usb: USB 2.0 started, EHCI 1.10
+[    3.498991] ehci_irq,id:0,ps:1803
+[    3.500307] hub 1-0:1.0: USB hub found
+[    3.500940] hub 1-0:1.0: 1 port detected
+[    3.505284] hcd_irq:14,14
+[    3.507386] flag ***df73a800 df73a988 672 672 df73ac24
+[    3.512979] register ehci1_hcd_sunplus_driver
+[    3.517128] ehci_id:2,irq:17
+[    3.519771] ehci1-sunplus 9c103100.usb: Generic Platform EHCI Controller
+[    3.526393] ehci1-sunplus 9c103100.usb: new USB bus registered, assigned bus number 2
+[    3.534424] ehci1-sunplus 9c103100.usb: irq 17, io mem 0x9c103100
+[    3.568847] ehci1-sunplus 9c103100.usb: USB 2.0 started, EHCI 1.10
+[    3.569995] hub 2-0:1.0: USB hub found
+[    3.570136] hub 2-0:1.0: 1 port detected
+[    3.571937] hcd_irq:17,17
+[    3.574084] flag ***df734800 df734988 672 672 df734c24
+[    3.579593] register ohci0_hcd_sunplus_driver
+[    3.583809] ohci_id:1,irq:15
+[    3.586435] ohci0-sunplus 9c102080.usb: Generic Platform OHCI Controller
+[    3.593126] ohci0-sunplus 9c102080.usb: new USB bus registered, assigned bus number 3
+[    3.601083] ohci0-sunplus 9c102080.usb: irq 15, io mem 0x9c102080
+[    3.668894] ohci_irq,id:0,ps:10100
+[    3.671885] hub 3-0:1.0: USB hub found
+[    3.672012] hub 3-0:1.0: 1 port detected
+[    3.672544] flag *** 680 680 df4f3c2c
+[    3.672927] register ohci1_hcd_sunplus_driver
+[    3.677005] ohci_id:2,irq:18
+[    3.679766] hub_events,hub:df4f4e00
+[    3.679777] ohci1-sunplus 9c103080.usb: Generic Platform OHCI Controller
+[    3.689795] ohci1-sunplus 9c103080.usb: new USB bus registered, assigned bus number 4
+[    3.697761] ohci1-sunplus 9c103080.usb: irq 18, io mem 0x9c103080
+[    3.718869] hub_events,hub:df73da00
+[    3.718940] port_event in
+[    3.719037] hub_port_connect_change in
+[    3.719104] hub_port_connect start
+[    3.720892] Run in EHCI
+[    3.723316] port num is 0
+[    3.725920] ############# hs_first_start
+[    3.729882] ************* hs_first_enum
+[    3.733658] [usbENUM]hub_port_connect [5954]hub_port_init++
+[    3.771790] hub 4-0:1.0: USB hub found
+[    3.771924] hub 4-0:1.0: 1 port detected
+[    3.772476] flag *** 680 680 df4f342c
+[    3.773052] usbcore: registered new interface driver uas
+[    3.777361] usbcore: registered new interface driver usb-storage
+[    3.783453] usbcore: registered new interface driver ums-realtek
+[    3.789375] udc_init
+[    3.791326] register sunplus_udc0_driver
+[    3.795943] udc-line:4576
+[    3.798008] probe sp udc ok 20151201
+[    3.801657] >>> sp_udc_start...
+[    3.804578] wei ep config
+[    3.807104] wei ep config
+[    3.809745] super speed source/sink: IN/ep1in-bulk, OUT/ep11out-bulk
+[    3.816037] wei ep config
+[    3.818624] wei ep config
+[    3.821249] Gadget Zero, version: Cinco de Mayo 2008
+[    3.826174] zero gadget: zero ready
+[    3.829697] ehci_irq,id:0,ps:3802
+[    3.833331] func:sp_udc_enable line:4365
+[    3.836825] <<< sp_udc_start...
+[    3.839983] ohci_irq,id:0,ps:10101
+[    3.843326] Force to Disconnect
+[    3.846446] <<< sp_udc_pullup...
+[    3.850037] mousedev: PS/2 mouse device common for all mice
+[    3.855630] usbcore: registered new interface driver xpad
+[    3.861266] [RTC] Debug: sp_rtc_init(363)
+[    3.864781] [RTC] Debug: sp_rtc_probe(244)
+[    3.869003] sp_rtc_read_alarm, alarm_time: 0
+[    3.873164] sp7021-rtc 9c003a00.serial: rtc core: registered sp7021-rtc as rtc0
+[    3.880695] i2c /dev entries driver
+[    3.887190] [DISP][_display_probe:2414] disp probe ... 
+[    3.889054] [DISP]irq num:4
+[    3.891618] set hwirq=0 prio=0
+[    3.894712] set hwirq=1 prio=0
+[    3.897719] set hwirq=4 prio=0
+[    3.900830] set hwirq=5 prio=0
+[    3.904759] [DISP][_display_probe:2526] disp probe done 
+[    3.909467] usbcore: registered new interface driver uvcvideo
+[    3.914750] USB Video Class driver (1.1.1)
+[    3.919449] [MIPI] sp_mipi_probe: mipicsi_regs = 0x(ptrval), csiiw_regs = 0x(ptrval)
+[    3.926645] [MIPI] Registered V4L2 device.
+[    3.930909] [MIPI] Registered video device '/dev/video0'.
+[    3.935988] [MIPI] Got i2c adapter #1.
+[    3.941018] [ov5647] Initialized V4L2 I2C subdevice.
+[    3.944839] [ov5647] ERR: Unexpected sensor (id = 0x0000, ret = -5)!
+[    3.951031] ov5647: probe of 1-0036 failed with error -1
+[    3.957170] [MIPI] ERR: Failed to register V4L2 subdevice!
+[    3.962114] sppctl pctl: stpctl_o_mfre(2)
+[    4.000012] spsdc 9c003e80.mmc: Got CD GPIO
+[    4.039462] hidraw: raw HID events driver (C) Jiri Kosina
+[    4.048547] usbcore: registered new interface driver usbhid
+[    4.048697] usbhid: USB HID core driver
+[    4.049825] NET: Registered protocol family 10
+[    4.053188] Segment Routing with IPv6
+[    4.054976] sit: IPv6, IPv4 and MPLS over IPv4 tunneling driver
+[    4.062197] NET: Registered protocol family 17
+[    4.065196] can: controller area network core (rev 20170425 abi 9)
+[    4.071658] NET: Registered protocol family 29
+[    4.076366] can: raw protocol (rev 20170425)
+[    4.080606] can: broadcast manager protocol (rev 20170425 t)
+[    4.085701] can: netlink gateway (rev 20170425) max_hops=1
+[    4.091370] NET: Registered protocol family 37
+[    4.095552] Key type dns_resolver registered
+[    4.099996] Key type ceph registered
+[    4.103765] libceph: loaded (mon/osd proto 15/24)
+[    4.108604] Registering SWP/SWPB emulation handler
+[    4.114174] registered taskstats version 1
+[    4.117137] mmc0: new DDR MMC card at address 0001
+[    4.118970] Loading compiled-in X.509 certificates
+[    4.127743] Btrfs loaded, crc32c=crc32c-generic
+[    4.140408] mmcblk0: mmc0:0001 8GTF4R 7.28 GiB 
+[    4.142807] mmcblk0boot0: mmc0:0001 8GTF4R partition 1 4.00 MiB
+[    4.148652] mmcblk0boot1: mmc0:0001 8GTF4R partition 2 4.00 MiB
+[    4.150098] sp7021-fb soc@B:fb_device: [_sp7021_fb_create_device:289] mem VA 0xe08fc000(PA 0x1d800000), Palette VA 0x0(PA 0x40000000), UI Res 1280x720, size 3686400 + 0
+[    4.163542] sp7021-rtc 9c003a00.serial: setting system clock to 2019-11-14 13:45:53 UTC (1573739153)
+[    4.172601] Waiting for root device /dev/mmcblk1p3...
+[    4.180313] mmc1: new high speed SDXC card at address aaaa
+[    4.183052] mmcblk1: mmc1:aaaa SN128 119 GiB 
+[    4.188176]  mmcblk1: p1 p2 p3
+[    4.240468] EXT4-fs (mmcblk1p3): mounted filesystem with ordered data mode. Opts: (null)
+[    4.240724] VFS: Mounted root (ext4 filesystem) on device 179:27.
+[    4.258250] devtmpfs: mounted
+[    4.260410] Freeing unused kernel memory: 1024K
+[    4.260653] Run /sbin/init as init process
+[    4.429729] random: fast init done
+[    4.698985] Warn,dev disc during wait reset finish
+[    4.699160] [usbENUM]hub_port_init [5702] ret:-107
+[    4.699266] [usbENUM]hub_port_init [5711] --
+[    4.701641] [usbENUM]hub_port_connect [5961]hub_port_init-- -107(ffffff95)
+[    4.708549] [usbENUM]hub_port_connect [6185] status:-107----
+[    4.714206] e_ps:3802
+[    4.716383] Warn, has switched to OHCI, ps:3802
+[    4.720909] ############# hs_first_enum
+[    4.724705] USB vbus power reset to retry enum
+[    4.729134] ************* hs_second_start
+[    4.733107] USB power ++ 500
+[    5.237094] systemd[1]: RTC configured in localtime, applying delta of -300 minutes to system time.
+[    5.248846] USB power -- 500
+[    5.248918] hub_port_connect end
+[    5.248975] hub_port_connect_change out
+[    5.249143] hub_events,hub:df73da00
+[    5.251049] port_event in
+[    5.251575] ehci_irq,id:0,ps:1803
+[    5.253753] hub_port_connect_change in
+[    5.260705] hub_port_connect start
+[    5.264054] Run in EHCI
+[    5.266469] port num is 0
+[    5.269081] Warn, dev disc after debounce
+[    5.460173] systemd[1]: systemd v243-4.gitef67743.fc31 running in system mode. (+PAM +AUDIT +SELINUX +IMA -APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=unified)
+[    5.468943] ############# hs_second_start
+[    5.473188] systemd[1]: Detected architecture arm.
+[    5.476009] ************* hs_second_enum
+[    5.484720] [usbENUM]hub_port_connect [5954]hub_port_init++
+
+Welcome to Fedora 31 (MATE-Compiz)!
+
+[    5.550360] systemd[1]: Set hostname to <localhost.localdomain>.
+[    5.568966] ehci_irq,id:0,ps:3802
+[    6.449052] Warn,dev disc during wait reset finish
+[    6.449237] [usbENUM]hub_port_init [5702] ret:-107
+[    6.449347] [usbENUM]hub_port_init [5711] --
+[    6.451741] [usbENUM]hub_port_connect [5961]hub_port_init-- -107(ffffff95)
+[    6.458655] [usbENUM]hub_port_connect [6185] status:-107----
+[    6.464433] e_ps:3802
+[    6.466478] Warn, has switched to OHCI, ps:3802
+[    6.470990] ############# hs_second_enum
+[    6.474891] ************* fs_first_start
+[    6.478747] fall to fs, retry enum
+[    6.482196] hub_port_connect end
+[    6.485335] hub_port_connect_change out
+[    6.489305] hub_events,hub:de096600
+[    6.492680] hub_events,hub:df4f4200
+[    6.496103] port_event in
+[    6.498901] hub_port_connect_change in
+[    6.502451] hub_port_connect start
+[    6.505817] Run in OHCI
+[    6.508228] port num is 0
+[    6.510846] Warn, dev disc after debounce
+[    6.569438] random: lvmconfig: uninitialized urandom read (4 bytes read)
+[    6.709004] ############# fs_first_start
+[    6.709133] ************* fs_first_enum
+[    6.709244] [usbENUM]hub_port_connect [5954]hub_port_init++
+[    6.918922] 
+[    6.918922] 
+[    6.918922] ### ===	usb start enum	=
+[    6.919125] usb 3-1: new full-speed USB device number 2 using ohci0-sunplus
+[    6.921270] Start get dev descriptor
+[    6.924943] o_ps:103
+[    6.926985] End get dev descriptor
+[    7.138922] [usbENUM]hub_port_init [5555] (ptrval) address [0]
+[    7.139132] o_ps:103
+[    7.189001] o_ps:103
+[    7.189948] [usbENUM][5691] init end
+[    7.190029] [usbENUM]hub_port_init [5702] ret:0
+[    7.190103] [usbENUM]hub_port_init [5711] --
+[    7.192346] [usbENUM]hub_port_connect [5961]hub_port_init-- 0(0)
+[    7.198383] o_ps:103
+[    7.200610] o_ps:103
+[    7.224886] input: Logitech USB Receiver as /devices/platform/soc@B/9c102080.usb/usb3/3-1/3-1:1.0/0003:046D:C534.0001/input/input0
+[    7.290361] hid-generic 0003:046D:C534.0001: input,hidraw0: USB HID v1.11 Keyboard [Logitech USB Receiver] on usb-9c102080.usb-1/input0
+[    7.304141] input: Logitech USB Receiver Mouse as /devices/platform/soc@B/9c102080.usb/usb3/3-1/3-1:1.1/0003:046D:C534.0002/input/input1
+[    7.306166] input: Logitech USB Receiver Consumer Control as /devices/platform/soc@B/9c102080.usb/usb3/3-1/3-1:1.1/0003:046D:C534.0002/input/input2
+[    7.379513] input: Logitech USB Receiver System Control as /devices/platform/soc@B/9c102080.usb/usb3/3-1/3-1:1.1/0003:046D:C534.0002/input/input3
+[    7.382360] hid-generic 0003:046D:C534.0002: input,hiddev96,hidraw1: USB HID v1.11 Mouse [Logitech USB Receiver] on usb-9c102080.usb-1/input1
+[    7.399906] port_num:0,enum success times:1
+[    7.400002] ########################
+[    7.404483] Enumerate Device Success
+[    7.405316] ########################
+[    7.408972] hub_port_connect_change out
+[    7.412793] hub_events,hub:df73da00
+[    7.416199] port_event in
+[    7.418945] hub_port_connect_change in
+[    7.422516] hub_port_connect start
+[    7.426902] Run in EHCI
+[    7.428330] port num is 0
+[    7.430950] Warn, dev disc after debounce
+[    7.629026] hub_port_connect_change out
+[    7.629198] hub_events,hub:df4f4200
+[    7.629268] port_event in
+[    7.799051] systemd[1]: /usr/lib/systemd/system/ovs-vswitchd.service:12: PIDFile= references a path below legacy directory /var/run/, updating /var/run/openvswitch/ovs-vswitchd.pid → /run/openvswitch/ovs-vswitchd.pid; please update the unit file accordingly.
+[    7.818772] systemd[1]: /usr/lib/systemd/system/ovsdb-server.service:10: PIDFile= references a path below legacy directory /var/run/, updating /var/run/openvswitch/ovsdb-server.pid → /run/openvswitch/ovsdb-server.pid; please update the unit file accordingly.
+[    8.066114] systemd[1]: /usr/lib/systemd/system/sssd.service:12: PIDFile= references a path below legacy directory /var/run/, updating /var/run/sssd.pid → /run/sssd.pid; please update the unit file accordingly.
+[    8.377518] systemd[1]: /usr/lib/systemd/system/sssd-kcm.socket:7: ListenStream= references a path below legacy directory /var/run/, updating /var/run/.heim_org.h5l.kcm-socket → /run/.heim_org.h5l.kcm-socket; please update the unit file accordingly.
+[    8.394812] systemd[1]: /usr/lib/systemd/system/pcscd.socket:5: ListenStream= references a path below legacy directory /var/run/, updating /var/run/pcscd/pcscd.comm → /run/pcscd/pcscd.comm; please update the unit file accordingly.
+[    8.413713] systemd[1]: /usr/lib/systemd/system/cups.socket:6: ListenStream= references a path below legacy directory /var/run/, updating /var/run/cups/cups.sock → /run/cups/cups.sock; please update the unit file accordingly.
+[    8.456704] random: systemd: uninitialized urandom read (16 bytes read)
+[    8.463205] systemd[1]: Created slice system-getty.slice.
+[  OK  ] Created slice system-getty.slice.
+[    8.489253] random: systemd: uninitialized urandom read (16 bytes read)
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+[    8.519288] random: systemd: uninitialized urandom read (16 bytes read)
+[  OK  ] Created slice system-sshd\x2dkeygen.slice.
+[  OK  ] Created slice User and Session Slice.
+[  OK  ] Started Forward Password R…uests to Wall Directory Watch.
+[  OK  ] Set up automount Arbitrary…s File System Automount Point.
+[  OK  ] Reached target Slices.
+[  OK  ] Listening on Device-mapper event daemon FIFOs.
+[  OK  ] Listening on LVM2 poll daemon socket.
+[  OK  ] Listening on multipathd control socket.
+[  OK  ] Listening on Process Core Dump Socket.
+[  OK  ] Listening on initctl Compatibility Named Pipe.
+[  OK  ] Listening on Journal Audit Socket.
+[  OK  ] Listening on Journal Socket (/dev/log).
+[  OK  ] Listening on Journal Socket.
+[  OK  ] Listening on udev Control Socket.
+[  OK  ] Listening on udev Kernel Socket.
+         Mounting POSIX Message Queue File System...
+         Mounting Kernel Debug File System...
+         Starting Monitoring of LVM…meventd or progress polling...
+         Starting Preprocess NFS configuration convertion...
+         Starting Journal Service...
+         Mounting FUSE Control File System...
+         Mounting Kernel Configuration File System...
+         Starting Remount Root and Kernel File Systems...
+         Starting Apply Kernel Variables...
+         Starting udev Coldplug all Devices...
+         Starting Setup Virtual Console...
+         Starting Enable compressed swap in memory using zram...
+[  OK  ] Mounted POSIX Message Queue File System.
+[  OK  ] Mounted Kernel Debug File System.
+[  OK  ] Started Preprocess NFS configuration convertion.
+[    9.643228] audit: type=1130 audit(1573757158.973:2): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=nfs-convert comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[    9.652198] audit: type=1131 audit(1573757158.973:3): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=nfs-convert comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  OK  ] Mounted FUSE Control File System.
+[  OK  ] Mounted Kernel Configuration File System.
+[  OK  ] Started Apply Kernel Variables.
+[    9.770097] audit: type=1130 audit(1573757159.103:4): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-sysctl comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  OK  ] Started Journal Service.
+[    9.857015] audit: type=1130 audit(1573757159.183:5): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-journald comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  OK  ] Started Enable compressed swap in memory using zram.
+[   10.081233] audit: type=1130 audit(1573757159.413:6): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=zram-swap comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  OK  ] Reached target Swap.
+[   10.138296] EXT4-fs (mmcblk1p3): re-mounted. Opts: (null)
+[  OK  ] Started Remount Root and Kernel File Systems.
+[   10.160542] audit: type=1130 audit(1573757159.493:7): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-remount-fs comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+         Starting Flush Journal to Persistent Storage...
+         Starting Load/Save Random Seed...
+         Starting Create Static Device Nodes in /dev...
+[   10.321286] systemd-journald[984]: Received client request to flush runtime journal.
+[  OK  ] Started Setup Virtual Console.
+[   10.389750] audit: type=1130 audit(1573757159.723:8): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-vconsole-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   10.398010] audit: type=1131 audit(1573757159.723:9): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-vconsole-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  OK  ] Started udev Coldplug all Devices.
+[   10.449625] audit: type=1130 audit(1573757159.783:10): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-udev-trigger comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+         Starting udev Wait for Complete Device Initialization...
+[  OK  ] Started Create Static Device Nodes in /dev.
+[   10.741394] audit: type=1130 audit(1573757160.073:11): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+         Starting udev Kernel Device Manager...
+[  OK  ] Started Flush Journal to Persistent Storage.
+[  OK  ] Started udev Kernel Device Manager.
+         Starting Show Plymouth Boot Screen...
+[  OK  ] Started Show Plymouth Boot Screen.
+[  OK  ] Started Forward Password R…s to Plymouth Directory Watch.
+[  OK  ] Found device /dev/ttyS0.
+[   12.561155] tpm_tis_i2c 1-002e: 2.0 TPM (device-id 0x0, rev-id 78)
+[  OK  ] Found device /dev/disk/by-uuid/B6F7-F766.
+[  OK  ] Found device /dev/disk/by-…e-ca46-44db-96cf-124e9c132651.
+[  OK  ] Started Monitoring of LVM2… dmeventd or progress polling.
+[  OK  ] Started udev Wait for Complete Device Initialization.
+[   14.696814] kauditd_printk_skb: 4 callbacks suppressed
+[   14.696831] audit: type=1130 audit(1573757164.023:16): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-udev-settle comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+         Starting Activation of DM RAID sets...
+[  OK  ] Started Activation of DM RAID sets.[   14.876365] audit: type=1130 audit(1573757164.203:17): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=dmraid-activation comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   14.889944] audit: type=1131 audit(1573757164.203:18): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=dmraid-activation comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+
+[  OK  ] Reached target Local Encrypted Volumes.
+[  OK  ] Reached target Local File Systems (Pre).
+         Mounting /boot...
+[   14.970763] EXT4-fs (mmcblk1p2): mounted filesystem with ordered data mode. Opts: (null)
+[  OK  ] Mounted /boot.
+         Mounting /boot/efi...
+[   15.013401] FAT-fs (mmcblk1p1): utf8 is not a recommended IO charset for FAT filesystems, filesystem will be case sensitive!
+[  OK  ] Mounted /boot/efi.
+[  OK  ] Reached target Local File Systems.
+         Starting Restore /run/initramfs on shutdown...
+         Starting Tell Plymouth To Write Out Runtime Data...
+         Starting Create Volatile Files and Directories...
+[  OK  ] Started Restore /run/initramfs on shutdown.[   15.079041] audit: type=1130 audit(1573757164.403:19): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=dracut-shutdown comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+
+[  OK  ] Started Tell Plymouth To Write Out Runtime Data.
+[   15.106891] audit: type=1130 audit(1573757164.433:20): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=plymouth-read-write comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   15.120541] audit: type=1131 audit(1573757164.433:21): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=plymouth-read-write comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[   15.288735] audit: type=1130 audit(1573757164.613:22): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  OK  ] Started Create Volatile Files and Directories.
+         Mounting RPC Pipe File System...
+         Starting Security Auditing Service...
+[  OK  ] Mounted RPC Pipe File System.
+[  OK  ] Reached target rpc_pipefs.target.
+[   15.419739] audit: type=1305 audit(1573757164.753:23): audit_enabled=1 old=1 auid=4294967295 ses=4294967295 res=1
+[   15.419975] audit: type=1305 audit(1573757164.753:24): audit_pid=1656 old=0 auid=4294967295 ses=4294967295 res=1
+[  OK  ] Started Security Auditing Service.
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Started Update UTMP about System Boot/Shutdown.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Started CUPS Scheduler.
+[  OK  ] Started dnf makecache --timer.
+[  OK  ] Started Updates mlocate database every day.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Started daily update of the root trust anchor for DNSSEC.
+[  OK  ] Reached target Paths.
+[  OK  ] Reached target Timers.
+[  OK  ] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Listening on CUPS Scheduler.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Listening on PC/SC Smart Card Daemon Activation Socket.
+[  OK  ] Listening on SSSD Kerberos…ache Manager responder socket.
+[  OK  ] Reached target Sockets.
+         Starting D-Bus System Message Bus...
+[  OK  ] Started D-Bus System Message Bus.
+[  OK  ] Reached target Basic System.
+         Starting Modem Manager...
+         Starting ABRT Automated Bug Reporting Tool...
+         Starting Avahi mDNS/DNS-SD Stack...
+         Starting NTP client/server...
+         Starting firewalld - dynamic firewall daemon...
+         Starting GSSAPI Proxy Daemon...
+[  OK  ] Started irqbalance daemon.
+         Starting Hardware Monitoring Sensors...
+[  OK  ] Started Hardware RNG Entropy Gatherer Daemon.
+         Starting System Logging Service...
+         Starting RealtimeKit Scheduling Policy Service...
+         Starting Self Monitoring a…g Technology (SMART) Daemon...
+[  OK  ] Reached target sshd-keygen.target.
+         Starting System Security Services Daemon...
+         Starting Disk Manager...
+[  OK  ] Started RealtimeKit Scheduling Policy Service.
+[  OK  ] Started Avahi mDNS/DNS-SD Stack.
+[FAILED] Failed to start Hardware Monitoring Sensors.
+See 'systemctl status lm_sensors.service' for details.
+[  OK  ] Started System Logging Service.
+[  OK  ] Started NTP client/server.
+[  OK  ] Started Self Monitoring an…ing Technology (SMART) Daemon.
+         Starting Authorization Manager...
+[  OK  ] Started Modem Manager.
+[  OK  ] Started ABRT Automated Bug Reporting Tool.
+[  OK  ] Started Creates ABRT problems from coredumpctl messages.
+[  OK  ] Started ABRT kernel log watcher.
+[  OK  ] Started ABRT Xorg log watcher.
+[  OK  ] Started Authorization Manager.
+[  OK  ] Started Disk Manager.
+[*     ] (1 of 4) A start job is running for…c firewall daemon (20s / 1min 37s)
+[**    ] (1 of 4) A start job is running for…c firewall daemon (20s / 1min 37s)
+[***   ] (1 of 4) A start job is running for…c firewall daemon (21s / 1min 37s)
+[ ***  ] (2 of 4) A start job is running for…y Services Daemon (21s / 1min 38s)
+[  *** ] (2 of 4) A start job is running for…y Services Daemon (22s / 1min 38s)
+[   ***] (2 of 4) A start job is running for…y Services Daemon (23s / 1min 38s)
+[  OK  ] Started firewalld - dynamic firewall daemon.
+[  OK  ] Reached target Network (Pre).
+         Starting Network Manager...
+[   36.171780] random: crng init done
+[   36.171929] random: 6 urandom warning(s) missed due to ratelimiting
+[  OK  ] Started Load/Save Random Seed.
+[  OK  ] Started GSSAPI Proxy Daemon.
+[  OK  ] Reached target NFS client services.
+[  OK  ] Reached target Remote File Systems (Pre).
+[  OK  ] Reached target Remote File Systems.
+[  OK  ] Started System Security Services Daemon.
+[  OK  ] Reached target User and Group Name Lookups.
+         Starting Accounts Service...
+         Starting Login Service...
+[  OK  ] Started Network Manager.
+[  OK  ] Reached target Network.
+         Starting Network Manager Wait Online...
+         Starting CUPS Scheduler...
+         Starting OpenSSH server daemon...
+         Starting Permit User Sessions...
+[  OK  ] Started Accounts Service.
+         Starting Hostname Service...
+[  OK  ] Started Permit User Sessions.
+[  OK  ] Started Deferred execution scheduler.
+[  OK  ] Started Command Scheduler.
+         Starting Light Display Manager...
+         Starting Hold until boot process finishes up...
+[  OK  ] Started OpenSSH server daemon.
+[  OK  ] Started CUPS Scheduler.
+[  OK  ] Started Hostname Service.
+[  OK  ] Started Login Service.
+         Starting Network Manager Script Dispatcher Service...
+[   39.303797] IPv6: ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   39.555136] IPv6: ADDRCONF(NETDEV_UP): eth1: link is not ready
+[   45.868418] sp7021-rtc 9c003a00.serial: sp_rtc_set_mmss, secs = 1573721195
+
+Fedora 31 (MATE-Compiz)
+Kernel 4.19.37-BPI-F2S-Kernel on an armv7l (ttyS0)
+
+localhost login: [  OK  ] Stopped Permit User Sessions.
+[  OK  ] Stopped target Network.
+[  OK  ] Stopped target User and Group Name Lookups.
+[  OK  ] Stopped target Remote File Systems.
+[  OK  ] Stopped target Remote File Systems (Pre).
+[  OK  ] Stopped target NFS client services.
+         Stopping Network Manager...
+         Stopping GSSAPI Proxy Daemon...
+         Stopping System Security Services Daemon...
+[  OK  ] Started Show Plymouth Power Off Screen.
+[  OK  ] Stopped GSSAPI Proxy Daemon.
+[  OK  ] Stopped System Security Services Daemon.
+[  OK  ] Stopped Network Manager.
+[  OK  ] Stopped target Basic System.
+[  OK  ] Stopped Forward Password R…s to Plymouth Directory Watch.
+[  OK  ] Stopped target Network (Pre).
+[  OK  ] Stopped target Paths.
+[  OK  ] Stopped CUPS Scheduler.
+[  OK  ] Stopped target Slices.
+[  OK  ] Removed slice User and Session Slice.
+[  OK  ] Stopped target Sockets.
+[  OK  ] Closed Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Closed CUPS Scheduler.
+[  OK  ] Closed PC/SC Smart Card Daemon Activation Socket.
+[  OK  ] Closed SSSD Kerberos Cache Manager responder socket.
+         Stopping D-Bus System Message Bus...
+[  OK  ] Stopped D-Bus System Message Bus.
+[  OK  ] Closed D-Bus System Message Bus Socket.
+[  OK  ] Stopped target System Initialization.
+[  OK  ] Stopped target Local Encrypted Volumes.
+[  OK  ] Stopped Forward Password R…uests to Wall Directory Watch.
+[  OK  ] Stopped target Swap.
+[  OK  ] Stopped Apply Kernel Variables.
+         Stopping Update UTMP about System Boot/Shutdown...
+[  OK  ] Stopped Update UTMP about System Boot/Shutdown.
+         Stopping Security Auditing Service...
+[  148.301200] audit: type=1305 audit(1573739296.937:145): audit_pid=0 old=1656 auid=4294967295 ses=4294967295 res=1
+[  OK  ] Stopped Security Auditing Service.[  148.351318] audit: type=1131 audit(1573739296.987:146): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=auditd comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  148.364538] audit: type=1131 audit(1573739296.997:147): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-setup comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+
+[  OK  ] Stopped Create Volatile Files and Directories.
+[  OK  ] Stopped target Local File Systems.
+         Unmounting /boot/efi...
+[  OK  ] Unmounted /boot/efi.
+         Unmounting /boot...
+[  OK  ] Unmounted /boot.
+[  OK  ] Stopped target Local File Systems (Pre).
+[  OK  ] Reached target Unmount[  148.550734] audit: type=1131 audit(1573739297.187:148): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-remount-fs comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  148.562176] audit: type=1131 audit(1573739297.197:149): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-tmpfiles-setup-dev comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+ All Filesystems.
+         Stopping Monitoring of LVM…meventd or progress polling...
+[  OK  ] Stopped Remount Root and Kernel File Systems.
+[  OK  ] Stopped Create Static Device Nodes in /dev.
+[  OK  ] Stopped Monitoring of LVM2… dmeventd or progress polling.[  149.150293] audit: type=1131 audit(1573739297.787:150): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=lvm2-monitor comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  149.168858] audit: type=1130 audit(1573739297.807:151): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-poweroff comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+[  149.184345] audit: type=1131 audit(1573739297.807:152): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=systemd-poweroff comm="systemd" exe="/usr/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+
+[  OK  ] Reached target Shutdown.
+[  OK  ] Reached target Final Step.
+[  OK  ] Started Power-Off.
+[  OK  ] Reached target Power-Off.
+[  149.401751] systemd-shutdow: 41 output lines suppressed due to ratelimiting
+[  149.733392] systemd-shutdown[1]: Syncing filesystems and block devices.
+[  150.252951] systemd-shutdown[1]: Sending SIGTERM to remaining processes...
+[  150.271051] systemd-journald[984]: Received SIGTERM from PID 1 (systemd-shutdow).
+[  150.398244] systemd-shutdown[1]: Sending SIGKILL to remaining processes...
+[  150.415168] systemd-shutdown[1]: Unmounting file systems.
+[  150.421280] [2515]: Remounting '/' read-only in with options '(null)'.
+[  150.490410] EXT4-fs (mmcblk1p3): re-mounted. Opts: (null)
+[  150.512717] systemd-shutdown[1]: All filesystems unmounted.
+[  150.512892] systemd-shutdown[1]: Deactivating swaps.
+[  150.513523] systemd-shutdown[1]: All swaps deactivated.
+[  150.517742] systemd-shutdown[1]: Detaching loop devices.
+[  150.529616] systemd-shutdown[1]: All loop devices detached.
+[  150.529759] systemd-shutdown[1]: Detaching DM devices.
+[  151.336963] reboot: Power down
+[  151.337097] PD RG_PLL_PDN a�
